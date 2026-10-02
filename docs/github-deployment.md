@@ -23,15 +23,15 @@ npm ci
 npm run build:pages
 ```
 
-使用实际静态文件服务器验证 `dist`，或上线后确认首页、三个分类、30 条作品、关于页可直接打开和刷新，视频能播放与拖动进度。`vite preview` 的 SPA 回退行为不能单独证明 Pages 深层链接正常。
+使用实际静态文件服务器验证 `dist`，或上线后确认首页、三个分类、48 条作品、关于页可直接打开和刷新，视频能播放与拖动进度。`vite preview` 的 SPA 回退行为不能单独证明 Pages 深层链接正常。
 
 ## 更新与恢复
 
-2026-10-02 的作品目录采用去重后的 30 条精选：AI 短片 12 条、动画影像 6 条、带货预热 12 条。22 条作品关联 295 张共用的制作图片或项目参考图；另有 60 张单独标注的成片截图。参考图未全部确认是实际生成输入。作品详情按需显示图片，缩略图与大图分别加载。
+作品目录保留原有 18 条作品的名称、顺序、链接和文件，追加 30 条精选，共 48 条：AI 短片 17 条、动画影像 8 条、带货预热 23 条。新增作品中，22 条关联 295 张共用的制作图片或项目参考图；另有 60 张单独标注的成片截图。参考图未全部确认是实际生成输入。作品详情按需显示图片，缩略图与大图分别加载。`docs/original-collection.json` 保存旧目录快照，CI 校验旧条目没有遗漏或被改写。
 
-`scripts/prepare-selected-collection.py` 读取本机选片 JSON，生成完整时长的 H.264/AAC 网页版、封面及图片。原片不修改，源路径不写入公开元数据。视频保留原始比例，使用 faststart，限制峰值码率；详情页沿用已恢复的直接 MP4 播放方式。
+`scripts/prepare-selected-collection.py` 读取本机选片 JSON，生成完整时长的 H.264/AAC 网页版、封面及图片。导入通过 `merge-work-collection.mjs` 按 slug 追加或更新，并保留导入清单之外的已有作品与编号。原片不修改，绝对源路径不写入公开元数据。视频保留原始比例，使用 faststart，限制峰值码率；详情页沿用已恢复的直接 MP4 播放方式。
 
-上传前运行 `npm run verify:collection`、`npm run verify:playback`、`npm run build:pages`。工作流会重复验证。`build:pages` 仅在生成的 `dist/videos` 中保留当前目录引用的 30 条视频；历史文件继续保留在源码和 Git 版本中。
+上传前运行 `npm run verify:collection`、`npm run verify:playback`、`npm run build:pages`。工作流会重复验证已有作品完整性和重复导入行为。`build:pages` 不再移除旧视频，`public` 中已有资源全部随构建发布，保留原链接的可用性。
 
 修改后执行 `git add`、`git commit`、`git push origin main`。工作流完成后网站更新。
 

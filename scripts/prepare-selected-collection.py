@@ -20,8 +20,8 @@ def digest(path):
         for chunk in iter(lambda:f.read(4*1024*1024),b''):h.update(chunk)
     return h.hexdigest()
 
-def run(args):
-    result=subprocess.run(args,capture_output=True,text=True,encoding='utf-8',errors='replace')
+def run(args, input_text=None):
+    result=subprocess.run(args,input=input_text,capture_output=True,text=True,encoding='utf-8',errors='replace')
     if result.returncode:raise RuntimeError(result.stderr[-3000:])
     return result.stdout
 
@@ -127,11 +127,12 @@ def main():
     old_text=works_file.read_text('utf-8')
     prefix=old_text[:old_text.index('export const WORKS: Work[] =')]
     suffix=old_text[old_text.index('export const findWorkBySlug'):]
-    prefix=re.sub(r'^/\*\*[\s\S]*?\*/','/** 已去重的 30 条精选作品；封面为成片画面，参考素材与截图分别标注。 */',prefix,count=1)
+    prefix=re.sub(r'^/\*\*[\s\S]*?\*/','/** 保留已有作品，追加或更新本次选片；参考素材与成片截图分别标注。 */',prefix,count=1)
     if 'export interface WorkMaterial' not in prefix:
         prefix=prefix.replace('export interface Work {',"export interface WorkMaterial {\n  src: string\n  thumbnail: string\n  title: string\n  kind: 'reference' | 'screenshot'\n}\n\nexport interface Work {")
         prefix=prefix.replace('  isPlaceholder: boolean','  materials?: WorkMaterial[]\n  screenshots?: WorkMaterial[]\n  isPlaceholder: boolean')
-    literal=json.dumps(works,ensure_ascii=False,indent=2)
+    merged=json.loads(run(['node',str(PROJECT/'scripts/merge-work-collection.mjs'),str(works_file)],json.dumps(works,ensure_ascii=False)))
+    literal=json.dumps(merged,ensure_ascii=False,indent=2)
     literal=re.sub(r'^(\s*)"([A-Za-z][A-Za-z0-9]*)":',r'\1\2:',literal,flags=re.M)
     works_file.write_text(prefix+'export const WORKS: Work[] = '+literal+'\n\n'+suffix,'utf-8')
 

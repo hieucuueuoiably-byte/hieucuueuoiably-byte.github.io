@@ -1,7 +1,4 @@
-/**
- * 去重后的 30 条精选作品，展示名来自本次整理；时长和比例来自源片。
- * 封面为成片画面，制作参考图与成片截图分别标注；不填写未经确认的履历信息。
- */
+/** 保留原有 18 条作品，追加 30 条精选；制作参考图与成片截图分别标注。 */
 
 export type VideoAspect = '16 / 9' | '9 / 16' | '1 / 1' | '4 / 3' | '21 / 9' | `${number} / ${number}`
 
@@ -34,7 +31,7 @@ export interface Work {
   video: string
   /** 保持视频原比例的真实抽帧 */
   poster?: string
-  /** 本机素材库的作品编号，不包含私人文件路径 */
+  /** 原作品的相对文件名或本机素材库编号，不包含绝对路径 */
   sourceFile?: string
   /**
    * 该视频是否为**用于验证播放链路的测试片**（不是真实作品）。
@@ -63,9 +60,495 @@ export interface Work {
 
 export const WORKS: Work[] = [
   {
+    id: "work-01",
+    slug: "film-0821",
+    no: "01",
+    title: "08.21 · AI 短片",
+    category: "AI 短片",
+    tags: [
+      "AI 短片",
+      "竖屏"
+    ],
+    cover: "/covers/film-0821.jpg",
+    video: "/videos/film-0821.mp4",
+    poster: "/media/film-0821-poster.jpg",
+    sourceFile: "8月21日.mp4",
+    videoIsTestClip: false,
+    videoAspect: "9 / 16",
+    duration: "01:57",
+    description: "AI 短片 · 竖屏 · 01:57",
+    longDescription: "竖屏AI 短片，时长 01:57。以原始画幅播放，并保留原片声音；封面取自本片画面。",
+    role: [],
+    process: [],
+    themeColors: [
+      "#EB8DB7",
+      "#F87800"
+    ],
+    isPlaceholder: false
+  },
+  {
+    id: "work-02",
+    slug: "film-0823-02",
+    no: "02",
+    title: "08.23 · AI 短片",
+    category: "AI 短片",
+    tags: [
+      "AI 短片",
+      "竖屏"
+    ],
+    cover: "/covers/film-0823-02.jpg",
+    video: "/videos/film-0823-02.mp4",
+    poster: "/media/film-0823-02-poster.jpg",
+    sourceFile: "8月23日(2).mp4",
+    videoIsTestClip: false,
+    videoAspect: "9 / 16",
+    duration: "01:55",
+    description: "AI 短片 · 竖屏 · 01:55",
+    longDescription: "竖屏AI 短片，时长 01:55。以原始画幅播放，并保留原片声音；封面取自本片画面。",
+    role: [],
+    process: [],
+    themeColors: [
+      "#EB8DB7",
+      "#7E7EFF"
+    ],
+    isPlaceholder: false
+  },
+  {
+    id: "work-03",
+    slug: "film-0824",
+    no: "03",
+    title: "08.24 · AI 短片",
+    category: "AI 短片",
+    tags: [
+      "AI 短片",
+      "竖屏"
+    ],
+    cover: "/covers/film-0824.jpg",
+    video: "/videos/film-0824.mp4",
+    poster: "/media/film-0824-poster.jpg",
+    sourceFile: "8月24日.mp4",
+    videoIsTestClip: false,
+    videoAspect: "9 / 16",
+    duration: "01:26",
+    description: "AI 短片 · 竖屏 · 01:26",
+    longDescription: "竖屏AI 短片，时长 01:26。以原始画幅播放，并保留原片声音；封面取自本片画面。",
+    role: [],
+    process: [],
+    themeColors: [
+      "#7E7EFF",
+      "#F87800"
+    ],
+    isPlaceholder: false
+  },
+  {
+    id: "work-04",
+    slug: "film-0824-01",
+    no: "04",
+    title: "08.24 · AI 短片 · 版本 02",
+    category: "AI 短片",
+    tags: [
+      "AI 短片",
+      "竖屏"
+    ],
+    cover: "/covers/film-0824-01.jpg",
+    video: "/videos/film-0824-01.mp4",
+    poster: "/media/film-0824-01-poster.jpg",
+    sourceFile: "8月24日(1).mp4",
+    videoIsTestClip: false,
+    videoAspect: "9 / 16",
+    duration: "01:31",
+    description: "AI 短片 · 竖屏 · 01:31",
+    longDescription: "竖屏AI 短片，时长 01:31。以原始画幅播放，并保留原片声音；封面取自本片画面。",
+    role: [],
+    process: [],
+    themeColors: [
+      "#FFBC03",
+      "#ED1E24"
+    ],
+    isPlaceholder: false
+  },
+  {
+    id: "work-05",
+    slug: "film-0901-01",
+    no: "05",
+    title: "09.01 · 动画影像",
+    category: "动画影像",
+    tags: [
+      "动画影像",
+      "横屏"
+    ],
+    cover: "/covers/film-0901-01.jpg",
+    video: "/videos/film-0901-01.mp4",
+    poster: "/media/film-0901-01-poster.jpg",
+    sourceFile: "9月1日 (1).mp4",
+    videoIsTestClip: false,
+    videoAspect: "16 / 9",
+    duration: "01:30",
+    description: "动画影像 · 横屏 · 01:30",
+    longDescription: "横屏动画影像，时长 01:30。以原始画幅播放，并保留原片声音；封面取自本片画面。",
+    role: [],
+    process: [],
+    themeColors: [
+      "#ED1E24",
+      "#7E7EFF"
+    ],
+    isPlaceholder: false
+  },
+  {
+    id: "work-06",
+    slug: "film-0903-02",
+    no: "06",
+    title: "09.03 · 动画影像",
+    category: "动画影像",
+    tags: [
+      "动画影像",
+      "横屏"
+    ],
+    cover: "/covers/film-0903-02.jpg",
+    video: "/videos/film-0903-02.mp4",
+    poster: "/media/film-0903-02-poster.jpg",
+    sourceFile: "9月3日 (2).mp4",
+    videoIsTestClip: false,
+    videoAspect: "16 / 9",
+    duration: "01:00",
+    description: "动画影像 · 横屏 · 01:00",
+    longDescription: "横屏动画影像，时长 01:00。以原始画幅播放，并保留原片声音；封面取自本片画面。",
+    role: [],
+    process: [],
+    themeColors: [
+      "#EB8DB7",
+      "#F87800"
+    ],
+    isPlaceholder: false
+  },
+  {
+    id: "work-07",
+    slug: "film-0920",
+    no: "07",
+    title: "09.20 · AI 短片",
+    category: "AI 短片",
+    tags: [
+      "AI 短片",
+      "竖屏"
+    ],
+    cover: "/covers/film-0920.jpg",
+    video: "/videos/film-0920.mp4",
+    poster: "/media/film-0920-poster.jpg",
+    sourceFile: "9月20日.mp4",
+    videoIsTestClip: false,
+    videoAspect: "9 / 16",
+    duration: "00:49",
+    description: "AI 短片 · 竖屏 · 00:49",
+    longDescription: "竖屏AI 短片，时长 00:49。以原始画幅播放，并保留原片声音；封面取自本片画面。",
+    role: [],
+    process: [],
+    themeColors: [
+      "#EB8DB7",
+      "#7E7EFF"
+    ],
+    isPlaceholder: false
+  },
+  {
+    id: "work-08",
+    slug: "preview-0928-164227",
+    no: "08",
+    title: "09.28 · 带货预热 01",
+    category: "带货预热",
+    tags: [
+      "带货预热",
+      "竖屏"
+    ],
+    cover: "/covers/preview-0928-164227.jpg",
+    video: "/videos/preview-0928-164227.mp4",
+    poster: "/media/preview-0928-164227-poster.jpg",
+    sourceFile: "带货预热视频/下载 - 2026-09-28T164227.002_剪辑版.mp4",
+    videoIsTestClip: false,
+    videoAspect: "9 / 16",
+    duration: "00:25",
+    description: "带货预热 · 竖屏 · 00:25",
+    longDescription: "竖屏带货预热，时长 00:25。以原始画幅播放，并保留原片声音；封面取自本片画面。",
+    role: [],
+    process: [],
+    themeColors: [
+      "#7E7EFF",
+      "#F87800"
+    ],
+    isPlaceholder: false
+  },
+  {
+    id: "work-09",
+    slug: "preview-0928-164230",
+    no: "09",
+    title: "09.28 · 带货预热 02",
+    category: "带货预热",
+    tags: [
+      "带货预热",
+      "竖屏"
+    ],
+    cover: "/covers/preview-0928-164230.jpg",
+    video: "/videos/preview-0928-164230.mp4",
+    poster: "/media/preview-0928-164230-poster.jpg",
+    sourceFile: "带货预热视频/下载 - 2026-09-28T164230.231_剪辑版.mp4",
+    videoIsTestClip: false,
+    videoAspect: "9 / 16",
+    duration: "00:25",
+    description: "带货预热 · 竖屏 · 00:25",
+    longDescription: "竖屏带货预热，时长 00:25。以原始画幅播放，并保留原片声音；封面取自本片画面。",
+    role: [],
+    process: [],
+    themeColors: [
+      "#FFBC03",
+      "#ED1E24"
+    ],
+    isPlaceholder: false
+  },
+  {
+    id: "work-10",
+    slug: "preview-0928-164234",
+    no: "10",
+    title: "09.28 · 带货预热 03",
+    category: "带货预热",
+    tags: [
+      "带货预热",
+      "竖屏"
+    ],
+    cover: "/covers/preview-0928-164234.jpg",
+    video: "/videos/preview-0928-164234.mp4",
+    poster: "/media/preview-0928-164234-poster.jpg",
+    sourceFile: "带货预热视频/下载 - 2026-09-28T164234.621_剪辑版.mp4",
+    videoIsTestClip: false,
+    videoAspect: "9 / 16",
+    duration: "00:25",
+    description: "带货预热 · 竖屏 · 00:25",
+    longDescription: "竖屏带货预热，时长 00:25。以原始画幅播放，并保留原片声音；封面取自本片画面。",
+    role: [],
+    process: [],
+    themeColors: [
+      "#ED1E24",
+      "#7E7EFF"
+    ],
+    isPlaceholder: false
+  },
+  {
+    id: "work-11",
+    slug: "preview-0928-164735",
+    no: "11",
+    title: "09.28 · 带货预热 04",
+    category: "带货预热",
+    tags: [
+      "带货预热",
+      "竖屏"
+    ],
+    cover: "/covers/preview-0928-164735.jpg",
+    video: "/videos/preview-0928-164735.mp4",
+    poster: "/media/preview-0928-164735-poster.jpg",
+    sourceFile: "带货预热视频/下载 - 2026-09-28T164735.502_剪辑版.mp4",
+    videoIsTestClip: false,
+    videoAspect: "9 / 16",
+    duration: "00:25",
+    description: "带货预热 · 竖屏 · 00:25",
+    longDescription: "竖屏带货预热，时长 00:25。以原始画幅播放，并保留原片声音；封面取自本片画面。",
+    role: [],
+    process: [],
+    themeColors: [
+      "#EB8DB7",
+      "#F87800"
+    ],
+    isPlaceholder: false
+  },
+  {
+    id: "work-12",
+    slug: "preview-0928-180224",
+    no: "12",
+    title: "09.28 · 带货预热 05",
+    category: "带货预热",
+    tags: [
+      "带货预热",
+      "竖屏"
+    ],
+    cover: "/covers/preview-0928-180224.jpg",
+    video: "/videos/preview-0928-180224.mp4",
+    poster: "/media/preview-0928-180224-poster.jpg",
+    sourceFile: "带货预热视频/下载 - 2026-09-28T180224.004_剪辑版.mp4",
+    videoIsTestClip: false,
+    videoAspect: "9 / 16",
+    duration: "00:25",
+    description: "带货预热 · 竖屏 · 00:25",
+    longDescription: "竖屏带货预热，时长 00:25。以原始画幅播放，并保留原片声音；封面取自本片画面。",
+    role: [],
+    process: [],
+    themeColors: [
+      "#EB8DB7",
+      "#7E7EFF"
+    ],
+    isPlaceholder: false
+  },
+  {
+    id: "work-13",
+    slug: "preview-0928-180226",
+    no: "13",
+    title: "09.28 · 带货预热 06",
+    category: "带货预热",
+    tags: [
+      "带货预热",
+      "竖屏"
+    ],
+    cover: "/covers/preview-0928-180226.jpg",
+    video: "/videos/preview-0928-180226.mp4",
+    poster: "/media/preview-0928-180226-poster.jpg",
+    sourceFile: "带货预热视频/下载 - 2026-09-28T180226.930_剪辑版.mp4",
+    videoIsTestClip: false,
+    videoAspect: "9 / 16",
+    duration: "00:25",
+    description: "带货预热 · 竖屏 · 00:25",
+    longDescription: "竖屏带货预热，时长 00:25。以原始画幅播放，并保留原片声音；封面取自本片画面。",
+    role: [],
+    process: [],
+    themeColors: [
+      "#7E7EFF",
+      "#F87800"
+    ],
+    isPlaceholder: false
+  },
+  {
+    id: "work-14",
+    slug: "preview-0928-180306",
+    no: "14",
+    title: "09.28 · 带货预热 07",
+    category: "带货预热",
+    tags: [
+      "带货预热",
+      "竖屏"
+    ],
+    cover: "/covers/preview-0928-180306.jpg",
+    video: "/videos/preview-0928-180306.mp4",
+    poster: "/media/preview-0928-180306-poster.jpg",
+    sourceFile: "带货预热视频/下载 - 2026-09-28T180306.125_剪辑版.mp4",
+    videoIsTestClip: false,
+    videoAspect: "9 / 16",
+    duration: "00:25",
+    description: "带货预热 · 竖屏 · 00:25",
+    longDescription: "竖屏带货预热，时长 00:25。以原始画幅播放，并保留原片声音；封面取自本片画面。",
+    role: [],
+    process: [],
+    themeColors: [
+      "#FFBC03",
+      "#ED1E24"
+    ],
+    isPlaceholder: false
+  },
+  {
+    id: "work-15",
+    slug: "preview-0928-180315",
+    no: "15",
+    title: "09.28 · 带货预热 08",
+    category: "带货预热",
+    tags: [
+      "带货预热",
+      "竖屏"
+    ],
+    cover: "/covers/preview-0928-180315.jpg",
+    video: "/videos/preview-0928-180315.mp4",
+    poster: "/media/preview-0928-180315-poster.jpg",
+    sourceFile: "带货预热视频/下载 - 2026-09-28T180315.242_剪辑版.mp4",
+    videoIsTestClip: false,
+    videoAspect: "9 / 16",
+    duration: "00:25",
+    description: "带货预热 · 竖屏 · 00:25",
+    longDescription: "竖屏带货预热，时长 00:25。以原始画幅播放，并保留原片声音；封面取自本片画面。",
+    role: [],
+    process: [],
+    themeColors: [
+      "#ED1E24",
+      "#7E7EFF"
+    ],
+    isPlaceholder: false
+  },
+  {
+    id: "work-16",
+    slug: "preview-0929-164520",
+    no: "16",
+    title: "09.29 · 带货预热 09",
+    category: "带货预热",
+    tags: [
+      "带货预热",
+      "竖屏"
+    ],
+    cover: "/covers/preview-0929-164520.jpg",
+    video: "/videos/preview-0929-164520.mp4",
+    poster: "/media/preview-0929-164520-poster.jpg",
+    sourceFile: "带货预热视频/苏生阁视频_20260929_164520.mp4",
+    videoIsTestClip: false,
+    videoAspect: "9 / 16",
+    duration: "00:30",
+    description: "带货预热 · 竖屏 · 00:30",
+    longDescription: "竖屏带货预热，时长 00:30。以原始画幅播放，并保留原片声音；封面取自本片画面。",
+    role: [],
+    process: [],
+    themeColors: [
+      "#EB8DB7",
+      "#F87800"
+    ],
+    isPlaceholder: false
+  },
+  {
+    id: "work-17",
+    slug: "preview-0929-164551",
+    no: "17",
+    title: "09.29 · 带货预热 10",
+    category: "带货预热",
+    tags: [
+      "带货预热",
+      "竖屏"
+    ],
+    cover: "/covers/preview-0929-164551.jpg",
+    video: "/videos/preview-0929-164551.mp4",
+    poster: "/media/preview-0929-164551-poster.jpg",
+    sourceFile: "带货预热视频/下载 - 2026-09-29T164551.506.mp4",
+    videoIsTestClip: false,
+    videoAspect: "9 / 16",
+    duration: "00:30",
+    description: "带货预热 · 竖屏 · 00:30",
+    longDescription: "竖屏带货预热，时长 00:30。以原始画幅播放，并保留原片声音；封面取自本片画面。",
+    role: [],
+    process: [],
+    themeColors: [
+      "#EB8DB7",
+      "#7E7EFF"
+    ],
+    isPlaceholder: false
+  },
+  {
+    id: "work-18",
+    slug: "preview-0929-164557",
+    no: "18",
+    title: "09.29 · 带货预热 11",
+    category: "带货预热",
+    tags: [
+      "带货预热",
+      "竖屏"
+    ],
+    cover: "/covers/preview-0929-164557.jpg",
+    video: "/videos/preview-0929-164557.mp4",
+    poster: "/media/preview-0929-164557-poster.jpg",
+    sourceFile: "带货预热视频/下载 - 2026-09-29T164557.830.mp4",
+    videoIsTestClip: false,
+    videoAspect: "9 / 16",
+    duration: "00:30",
+    description: "带货预热 · 竖屏 · 00:30",
+    longDescription: "竖屏带货预热，时长 00:30。以原始画幅播放，并保留原片声音；封面取自本片画面。",
+    role: [],
+    process: [],
+    themeColors: [
+      "#7E7EFF",
+      "#F87800"
+    ],
+    isPlaceholder: false
+  },
+  {
     id: "work-v0023",
     slug: "curated-v0023",
-    no: "01",
+    no: "19",
     title: "疑案 · 审讯与线索",
     category: "AI 短片",
     tags: [
@@ -138,7 +621,7 @@ export const WORKS: Work[] = [
   {
     id: "work-v0026",
     slug: "curated-v0026",
-    no: "02",
+    no: "20",
     title: "疑案 · 霓虹追踪",
     category: "AI 短片",
     tags: [
@@ -205,7 +688,7 @@ export const WORKS: Work[] = [
   {
     id: "work-v0027",
     slug: "curated-v0027",
-    no: "03",
+    no: "21",
     title: "城市关系 · 对话与抉择",
     category: "AI 短片",
     tags: [
@@ -266,7 +749,7 @@ export const WORKS: Work[] = [
   {
     id: "work-v0028",
     slug: "curated-v0028",
-    no: "04",
+    no: "22",
     title: "草木灵宗 · 荒山复苏",
     category: "AI 短片",
     tags: [
@@ -658,7 +1141,7 @@ export const WORKS: Work[] = [
   {
     id: "work-v0057",
     slug: "curated-v0057",
-    no: "05",
+    no: "23",
     title: "寒夜与记忆 · 亲情短片",
     category: "AI 短片",
     tags: [
@@ -768,7 +1251,7 @@ export const WORKS: Work[] = [
   {
     id: "work-v0069",
     slug: "curated-v0069",
-    no: "06",
+    no: "24",
     title: "雨夜危机 · 剧情片段",
     category: "AI 短片",
     tags: [
@@ -859,7 +1342,7 @@ export const WORKS: Work[] = [
   {
     id: "work-v0102",
     slug: "curated-v0102",
-    no: "07",
+    no: "25",
     title: "身份反转 · 酒店门前",
     category: "AI 短片",
     tags: [
@@ -1058,7 +1541,7 @@ export const WORKS: Work[] = [
   {
     id: "work-v0189",
     slug: "curated-v0189",
-    no: "08",
+    no: "26",
     title: "云海到战机 · 幻想转场",
     category: "AI 短片",
     tags: [
@@ -1100,7 +1583,7 @@ export const WORKS: Work[] = [
   {
     id: "work-v0224",
     slug: "curated-v0224",
-    no: "09",
+    no: "27",
     title: "红衣女战士 · 巨兽对决",
     category: "AI 短片",
     tags: [
@@ -1143,7 +1626,7 @@ export const WORKS: Work[] = [
   {
     id: "work-v0226",
     slug: "curated-v0226",
-    no: "10",
+    no: "28",
     title: "海边回望 · 人物情绪",
     category: "AI 短片",
     tags: [
@@ -1186,7 +1669,7 @@ export const WORKS: Work[] = [
   {
     id: "work-v0601",
     slug: "curated-v0601",
-    no: "11",
+    no: "29",
     title: "雨巷里的断亲声明",
     category: "AI 短片",
     tags: [
@@ -1307,7 +1790,7 @@ export const WORKS: Work[] = [
   {
     id: "work-v0747",
     slug: "curated-v0747",
-    no: "12",
+    no: "30",
     title: "冰洞剑影 · 群像对峙",
     category: "AI 短片",
     tags: [
@@ -1350,7 +1833,7 @@ export const WORKS: Work[] = [
   {
     id: "work-v0017",
     slug: "curated-v0017",
-    no: "13",
+    no: "31",
     title: "纸箱骑士",
     category: "动画影像",
     tags: [
@@ -1922,7 +2405,7 @@ export const WORKS: Work[] = [
   {
     id: "work-v0018",
     slug: "curated-v0018",
-    no: "14",
+    no: "32",
     title: "亡羊补牢",
     category: "动画影像",
     tags: [
@@ -2134,7 +2617,7 @@ export const WORKS: Work[] = [
   {
     id: "work-v0043",
     slug: "curated-v0043",
-    no: "15",
+    no: "33",
     title: "橘猫与女孩 · 日常陪伴",
     category: "动画影像",
     tags: [
@@ -2189,7 +2672,7 @@ export const WORKS: Work[] = [
   {
     id: "work-v0044",
     slug: "curated-v0044",
-    no: "16",
+    no: "34",
     title: "橘猫 · 身体里的微观世界",
     category: "动画影像",
     tags: [
@@ -2244,7 +2727,7 @@ export const WORKS: Work[] = [
   {
     id: "work-v0045",
     slug: "curated-v0045",
-    no: "17",
+    no: "35",
     title: "人类与机器人 · 数据故事",
     category: "动画影像",
     tags: [
@@ -2299,7 +2782,7 @@ export const WORKS: Work[] = [
   {
     id: "work-v0749",
     slug: "curated-v0749",
-    no: "18",
+    no: "36",
     title: "黑夜里的微光",
     category: "动画影像",
     tags: [
@@ -2517,7 +3000,7 @@ export const WORKS: Work[] = [
   {
     id: "work-v0032",
     slug: "curated-v0032",
-    no: "19",
+    no: "37",
     title: "金毛的变化 · 宠物剧情广告",
     category: "带货预热",
     tags: [
@@ -2566,7 +3049,7 @@ export const WORKS: Work[] = [
   {
     id: "work-v0033",
     slug: "curated-v0033",
-    no: "20",
+    no: "38",
     title: "宠粮近景 · 食欲与照护",
     category: "带货预热",
     tags: [
@@ -2615,7 +3098,7 @@ export const WORKS: Work[] = [
   {
     id: "work-v0035",
     slug: "curated-v0035",
-    no: "21",
+    no: "39",
     title: "宠物检测 · 产品演示",
     category: "带货预热",
     tags: [
@@ -2670,7 +3153,7 @@ export const WORKS: Work[] = [
   {
     id: "work-v0036",
     slug: "curated-v0036",
-    no: "22",
+    no: "40",
     title: "微观清洁 · 功能演示",
     category: "带货预热",
     tags: [
@@ -2712,7 +3195,7 @@ export const WORKS: Work[] = [
   {
     id: "work-v0048",
     slug: "curated-v0048",
-    no: "23",
+    no: "41",
     title: "宠物肠道 · 三维功能演示",
     category: "带货预热",
     tags: [
@@ -2827,7 +3310,7 @@ export const WORKS: Work[] = [
   {
     id: "work-v0049",
     slug: "curated-v0049",
-    no: "24",
+    no: "42",
     title: "柯基 · 眼睛与消化演示",
     category: "带货预热",
     tags: [
@@ -2882,7 +3365,7 @@ export const WORKS: Work[] = [
   {
     id: "work-v0050",
     slug: "curated-v0050",
-    no: "25",
+    no: "43",
     title: "柯基 · 关节与活力演示",
     category: "带货预热",
     tags: [
@@ -2937,7 +3420,7 @@ export const WORKS: Work[] = [
   {
     id: "work-v0051",
     slug: "curated-v0051",
-    no: "26",
+    no: "44",
     title: "柯基 · 微观神经演示",
     category: "带货预热",
     tags: [
@@ -2992,7 +3475,7 @@ export const WORKS: Work[] = [
   {
     id: "work-v0207",
     slug: "curated-v0207",
-    no: "27",
+    no: "45",
     title: "数字人 · 口播讲解",
     category: "带货预热",
     tags: [
@@ -3047,7 +3530,7 @@ export const WORKS: Work[] = [
   {
     id: "work-v0214",
     slug: "curated-v0214",
-    no: "28",
+    no: "46",
     title: "宠粮手机 · 科技展示",
     category: "带货预热",
     tags: [
@@ -3090,7 +3573,7 @@ export const WORKS: Work[] = [
   {
     id: "work-v0216",
     slug: "curated-v0216",
-    no: "29",
+    no: "47",
     title: "宠粮工厂 · 人物展示",
     category: "带货预热",
     tags: [
@@ -3133,7 +3616,7 @@ export const WORKS: Work[] = [
   {
     id: "work-v0537",
     slug: "curated-v0537",
-    no: "30",
+    no: "48",
     title: "中秋囤粮 · 字幕广告",
     category: "带货预热",
     tags: [

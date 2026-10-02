@@ -1,15 +1,26 @@
 import { readFileSync, existsSync, statSync } from 'node:fs'
 import { resolve } from 'node:path'
-import vm from 'node:vm'
-import ts from 'typescript'
 import assert from 'node:assert/strict'
+import { readWorkCollection, mergeWorkCollection } from './merge-work-collection.mjs'
 
 const source = readFileSync(new URL('../src/data/works.ts', import.meta.url), 'utf8')
-const code = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS } }).outputText
-const exports = {}
-vm.runInNewContext(code, { exports })
-const works = exports.WORKS
+const allWorks = readWorkCollection(source)
 const report = JSON.parse(readFileSync(new URL('../docs/selected-collection-report.json', import.meta.url)))
+const originals = JSON.parse(readFileSync(new URL('../docs/original-collection.json', import.meta.url))).works
+for (const original of originals) {
+  const restored = allWorks.find(work => work.slug === original.slug)
+  assert(restored, `Missing existing work: ${original.slug}`)
+  assert.deepEqual(Object.fromEntries(Object.keys(original).map(key => [key, restored[key]])), original,
+    `Existing work changed: ${original.slug}`)
+}
+const selectedSlugs = new Set(report.works.map(work => work.slug))
+const works = allWorks.filter(work => selectedSlugs.has(work.slug))
+assert(allWorks.length >= originals.length + works.length)
+for (const key of ['id', 'slug', 'video', 'no']) assert.equal(new Set(allWorks.map(work => work[key])).size, allWorks.length, key)
+// Reimporting the shortlist must preserve old entries, numbering and order.
+assert.deepEqual(mergeWorkCollection(allWorks, works), allWorks)
+assert.deepEqual(mergeWorkCollection(allWorks, [works[0]]), allWorks)
+assert.equal(mergeWorkCollection(originals, works).length, originals.length + works.length)
 const publicRoot = resolve('public')
 assert.equal(works.length, 30)
 assert.equal(new Set(works.map(w => w.video)).size, 30)
@@ -19,8 +30,10 @@ assert.equal(works.filter(w => w.category === 'AI 短片').length, 12)
 assert.equal(works.filter(w => w.category === '动画影像').length, 6)
 assert.equal(works.filter(w => w.category === '带货预热').length, 12)
 const files = new Set()
+for (const work of allWorks) {
+  for (const path of [work.video, work.cover, work.poster, ...[...(work.materials ?? []), ...(work.screenshots ?? [])].flatMap(m => [m.src, m.thumbnail])]) if (path) files.add(path)
+}
 for (const work of works) {
-  for (const path of [work.video, work.cover, work.poster, ...[...work.materials, ...work.screenshots].flatMap(m => [m.src, m.thumbnail])]) files.add(path)
   assert(work.materials.every(m => m.kind === 'reference'))
   assert(work.screenshots.every(m => m.kind === 'screenshot'))
   assert.equal(work.screenshots.length, 2)
@@ -48,5 +61,5 @@ for (const path of files) {
 }
 assert.equal(new Set(works.flatMap(w => w.materials.map(m => m.src))).size, 295)
 const categories = readFileSync(new URL('../src/data/categories.ts', import.meta.url), 'utf8')
-for (const cover of [...categories.matchAll(/coverSlug: '([^']+)'/g)].map(m => m[1])) assert(works.some(w => w.slug === cover))
-console.log(`PASS: 30 unique videos, 12/6/12 categories, 295 shared reference images, 60 labeled screenshots, ${files.size} valid assets, H.264/AAC and faststart.`)
+for (const cover of [...categories.matchAll(/coverSlug: '([^']+)'/g)].map(m => m[1])) assert(allWorks.some(w => w.slug === cover))
+console.log(`PASS: ${originals.length} original works preserved, ${works.length} selected additions, ${allWorks.length} total works, additive/idempotent imports, ${files.size} valid assets, H.264/AAC and faststart for selected videos.`)
