@@ -9,7 +9,6 @@ body.is-transitioning .works__card-target { pointer-events: none; }
 body[data-reader-webgl='ready'] .works__inline-stage { background: transparent; }
 body[data-reader-webgl='ready'] .works__inline-stage video { opacity: 0; }
 body[data-reader-webgl='ready'] .works__inline-stage video:fullscreen { opacity: 1; background: #171717; }
-body[data-reader-video='native'] .works__inline-stage video { opacity:1; }
 body[data-route='collection'] .works__edition,
 body[data-route='player'] .works__edition,
 body[data-route='collection'] .works__gesture,

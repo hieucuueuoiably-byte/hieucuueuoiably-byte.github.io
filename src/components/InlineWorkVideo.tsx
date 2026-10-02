@@ -1,10 +1,9 @@
-import { useEffect, useRef, useState, type CSSProperties } from 'react'
+import { useEffect, useRef, type CSSProperties } from 'react'
 import { findWorkIndexBySlug, type Work } from '../data/works'
 import { video } from '../state/videoController'
 import { navigator } from '../state/navController'
 import { useNav } from '../state/useNav'
 import { PlayIcon } from './icons'
-import { playbackSource, preferLightVideo } from '../lib/playbackSource'
 
 /** One real video sits on the selected original-ratio cover without changing routes. */
 export function InlineWorkVideo({ work, settled }: { work: Work; settled: boolean }) {
@@ -12,8 +11,6 @@ export function InlineWorkVideo({ work, settled }: { work: Work; settled: boolea
   const gesture=useRef({id:-1,x:0,y:0,lastX:0,t:0,moved:false})
   const previousWork=useRef(work.slug)
   const autoplayPending=useRef(video.hasStartedPlayback)
-  const [lightVideo] = useState(preferLightVideo)
-  const source = playbackSource(work, lightVideo)
   const nav = useNav()
   const buffering = nav.playbackState === 'loading' && video.isPlaying
   const index = findWorkIndexBySlug(work.slug)
@@ -30,7 +27,7 @@ export function InlineWorkVideo({ work, settled }: { work: Work; settled: boolea
     const fullscreen = () => { if(element)element.controls=document.fullscreenElement===element }
     document.addEventListener('fullscreenchange',fullscreen)
     return () => { element?.removeEventListener('playing',playing);document.removeEventListener('fullscreenchange',fullscreen);video.unregister(element) }
-  }, [index, source, work.slug])
+  }, [index, work.video, work.slug])
   useEffect(() => {
     if(!settled){
       // A short gesture that settles back on the same film should also resume it.
@@ -71,7 +68,7 @@ export function InlineWorkVideo({ work, settled }: { work: Work; settled: boolea
     onPointerCancel={()=>{if(gesture.current.moved)navigator.setDragging(false);gesture.current.id=-1}}
     onClick={e=>{if(document.fullscreenElement||(e.target as HTMLElement).closest('.works__inline-error')||(e.detail>0&&gesture.current.moved))return;video.toggle()}}
     onDoubleClick={()=>{if(!document.fullscreenElement&&!gesture.current.moved)void ref.current?.requestFullscreen?.().catch(()=>{})}}>
-    <video ref={ref} src={source} poster={work.poster ?? work.cover} playsInline preload={video.hasStartedPlayback ? 'auto' : 'metadata'} controls={false}
+    <video ref={ref} src={work.video} poster={work.poster ?? work.cover} playsInline preload="metadata" controls={false}
       aria-label={`${work.title} 视频`} />
     {nav.playbackState !== 'playing' && !buffering ? <button className="works__inline-play" type="button" aria-label={`播放 ${work.title}`} disabled={!settled}><PlayIcon /></button> : null}
     {buffering ? <div className="works__inline-buffering" role="status" aria-live="polite"><span className="works__inline-spinner" aria-hidden="true" />正在缓冲…</div> : null}

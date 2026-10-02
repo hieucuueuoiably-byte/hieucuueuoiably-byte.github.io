@@ -598,9 +598,8 @@ export class WorksScene {
       this.camera.position.x=0;this.camera.rotation.set(0,0,0);this.camera.updateMatrixWorld()
       this.reader.update(dt,read,this.pointer,this.directoryFluid.texture,slug=>this.allCovers.find(c=>c.work.slug===slug)?.texture??null,document.querySelector<HTMLVideoElement>('.works__inline-stage video'),this.reduceBend,(1-this.routeOut)*this.routeIn)
       document.body.dataset.readerWebgl='ready'
-      document.body.dataset.readerVideo=this.reader.usesNativeVideo?'native':'texture'
       if(this.inspectDirectoryMotion)this.canvas.dataset.readerState=JSON.stringify(this.reader.diagnostics())
-    }else { delete document.body.dataset.readerWebgl;delete document.body.dataset.readerVideo }
+    }else delete document.body.dataset.readerWebgl
     this.updateState(dt,read,now)
     if(this.transition){
       const t=this.transition
