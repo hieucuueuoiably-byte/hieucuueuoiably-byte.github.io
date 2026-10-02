@@ -3,9 +3,9 @@ import { WORKS, type Work } from './works'
 export type WorkCategoryId = 'all' | 'ai-shorts' | 'animation' | 'product-previews'
 
 const collections = [
-  { id: 'ai-shorts' as const, label: 'AI 短片', description: '人物、情绪与故事', coverSlug: 'film-0824' },
-  { id: 'animation' as const, label: '动画影像', description: '角色、空间与想象', coverSlug: 'film-0903-02' },
-  { id: 'product-previews' as const, label: '带货预热', description: '产品与商业影像', coverSlug: 'preview-0928-164227' },
+  { id: 'ai-shorts' as const, label: 'AI 短片', description: '人物、情绪与故事', coverSlug: 'curated-v0028' },
+  { id: 'animation' as const, label: '动画影像', description: '角色、空间与想象', coverSlug: 'curated-v0017' },
+  { id: 'product-previews' as const, label: '带货预热', description: '产品与商业影像', coverSlug: 'curated-v0537' },
 ]
 
 export const WORK_CATEGORIES = [

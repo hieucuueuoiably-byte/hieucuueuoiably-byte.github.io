@@ -60,10 +60,11 @@ export function useWorksInput({ enabled, wheel, drag, keyboard, onStepWork, inne
   useEffect(() => {
     if (!enabled) return
     const el: HTMLElement | Window = inner ?? window
+    const hasOpenDialog = () => document.querySelector('dialog[open]') !== null
 
     /* ---------------- 滚轮 ---------------- */
     const onWheel = (e: WheelEvent) => {
-      if (!wheel) return
+      if (!wheel || hasOpenDialog()) return
       // 只接管作品浏览区域：可滚动内容滚到边界后仍然把事件留给页面
       if (inner) {
         const atTop = inner.scrollTop <= 0
@@ -119,7 +120,7 @@ export function useWorksInput({ enabled, wheel, drag, keyboard, onStepWork, inne
     }
 
     const onTouchStart = (e: TouchEvent) => {
-      if (!drag || e.touches.length !== 1) return
+      if (!drag || hasOpenDialog() || e.touches.length !== 1) return
       if ((e.target as HTMLElement | null)?.closest('button, a, input, select, textarea, video, [role="slider"]')) return
       beginDrag(e.touches[0].clientX, e.touches[0].clientY)
     }
@@ -135,7 +136,7 @@ export function useWorksInput({ enabled, wheel, drag, keyboard, onStepWork, inne
     const onTouchCancel = () => endDrag(lastX, true)
 
     const onPointerDown = (e: PointerEvent) => {
-      if (!drag || e.pointerType === 'touch') return // 触摸走 touch 分支，避免重复
+      if (!drag || hasOpenDialog() || e.pointerType === 'touch') return // 触摸走 touch 分支，避免重复
       if (e.button !== 0) return
       const t = e.target as HTMLElement | null
       // 按钮、链接、视频控件上不要抢
@@ -175,7 +176,7 @@ export function useWorksInput({ enabled, wheel, drag, keyboard, onStepWork, inne
     }
 
     const onKey = (e: KeyboardEvent) => {
-      if (keyboard === 'none') return
+      if (keyboard === 'none' || hasOpenDialog()) return
       if (e.metaKey || e.ctrlKey || e.altKey) return
       if (shouldIgnoreKey(e)) return
 

@@ -5,6 +5,7 @@ import { useNav } from '../state/useNav'
 import { StaticWorks } from '../components/StaticWorks'
 import { InlineWorkVideo } from '../components/InlineWorkVideo'
 import { CardTargets } from '../components/CardTargets'
+import { WorkMaterials } from '../components/MaterialGallery'
 
 interface WorksPageProps {
   works: Work[]
@@ -84,6 +85,7 @@ export function WorksPage({ works, category, onCategory, webgl, onEnter, onJump 
         <>
           {webgl ? <CardTargets works={works} index={index} isRoot={isRoot} onEnter={onEnter} onJump={onJump} /> : null}
           {!isRoot && work ? <InlineWorkVideo work={work} settled={settled} /> : null}
+          {!isRoot && work ? <WorkMaterials work={work} disabled={!settled} /> : null}
           {isRoot && work ? <div className="works__collection-label" aria-hidden="true"><strong>{work.title}</strong><span>{work.description}</span></div> : null}
 
           {/* 进度点：点击直达某件作品 */}

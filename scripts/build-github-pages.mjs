@@ -1,4 +1,4 @@
-import { readFile, mkdir, copyFile, writeFile } from 'node:fs/promises'
+import { readFile, mkdir, copyFile, writeFile, readdir, unlink } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import ts from 'typescript'
@@ -61,6 +61,21 @@ async function routeValues(relativeFile, variableName, propertyName) {
 
 const works = await routeValues('src/data/works.ts', 'WORKS', 'slug')
 const categories = await routeValues('src/data/categories.ts', 'collections', 'id')
+// Publish only videos in the current collection. Old files stay in public/Git
+// for recovery; pruning affects the generated deployment output alone.
+const selectedVideos = new Set(works.map(slug => `${slug}.mp4`))
+for (const folder of ['videos', 'videos/mobile']) {
+  const directory = join(output, folder)
+  const files = await readdir(directory, { withFileTypes: true }).catch(error => {
+    if (error.code === 'ENOENT') return []
+    throw error
+  })
+  for (const file of files) {
+    if (file.isFile() && file.name.endsWith('.mp4') && !selectedVideos.has(file.name)) {
+      await unlink(join(directory, file.name))
+    }
+  }
+}
 const routes = [
   '/works',
   '/about',

@@ -32,6 +32,8 @@ jobs:
         run: npm ci
       - name: Verify playback buffering
         run: npm run verify:playback
+      - name: Verify selected videos and material references
+        run: npm run verify:collection
       - name: Configure Pages
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         id: pages
