@@ -1,4 +1,5 @@
 /* Playback reader: chapter-3 palette and paper stage, with native video controls. */
+:root { --reader-safe-top:env(safe-area-inset-top,0px);--reader-safe-bottom:env(safe-area-inset-bottom,0px); }
 .works__card-targets { position: fixed; inset: 0; pointer-events: none; }
 .works__card-target { position: absolute; z-index: 1; visibility: hidden; padding: 0; border: 0; background: transparent; pointer-events: auto; cursor: pointer; touch-action: none; user-select: none; }
 .works__card-target:focus-visible { background: rgba(255,246,240,.16); }
@@ -8,6 +9,7 @@ body.is-transitioning .works__card-target { pointer-events: none; }
 body[data-reader-webgl='ready'] .works__inline-stage { background: transparent; }
 body[data-reader-webgl='ready'] .works__inline-stage video { opacity: 0; }
 body[data-reader-webgl='ready'] .works__inline-stage video:fullscreen { opacity: 1; background: #171717; }
+body[data-reader-video='native'] .works__inline-stage video { opacity:1; }
 body[data-route='collection'] .works__edition,
 body[data-route='player'] .works__edition,
 body[data-route='collection'] .works__gesture,
@@ -31,27 +33,40 @@ body.static-mode[data-route='player'] .gl-stage { background: #f87800; backgroun
 body.static-mode .works__inline-stage { border: 12px solid #ffece3; box-sizing: content-box; box-shadow: 6px 7px 0 #ba9a88, 8px 10px 0 rgba(23,23,23,.3); }
 @media(max-width:700px){
   body[data-route='collection'] .works__breadcrumb,
-  body[data-route='player'] .works__breadcrumb { top: 103px; left: 12px; font-size: 10px; }
+  body[data-route='player'] .works__breadcrumb { top:calc(88px + env(safe-area-inset-top,0px));left:16px;font-size:12px; }
   body[data-route='collection'] .control-bar,
-  body[data-route='player'] .control-bar { display: flex; flex-wrap: wrap; justify-content: center; width: calc(100vw - 24px); max-width: 410px; gap: 4px; min-height: 100px; border-radius: 27px; padding: 8px 10px; bottom: calc(17px + env(safe-area-inset-bottom)); }
+  body[data-route='player'] .control-bar { display:grid;grid-template-columns:44px minmax(0,1fr) auto;grid-template-rows:44px 32px;column-gap:8px;row-gap:4px;width:calc(100vw - 32px);max-width:410px;min-height:0;border-radius:24px;padding:8px 12px;bottom:calc(16px + env(safe-area-inset-bottom)); }
+  body[data-route='collection'] .bar-btn--play,
+  body[data-route='player'] .bar-btn--play { grid-column:1;grid-row:1; }
   body[data-route='collection'] .bar__meta,
-  body[data-route='player'] .bar__meta { display: flex; flex: 1 1 calc(100% - 54px); min-width: 0; }
+  body[data-route='player'] .bar__meta { display:flex;grid-column:2;grid-row:1;min-width:0;padding:0;gap:4px; }
   body[data-route='collection'] .bar__title,
-  body[data-route='player'] .bar__title { max-width: 100%; font-size: 13px; }
+  body[data-route='player'] .bar__title { max-width:100%;font-size:13px;letter-spacing:0; }
   body[data-route='collection'] .bar__sub,
-  body[data-route='player'] .bar__sub { max-width: 100%; }
+  body[data-route='player'] .bar__sub { max-width:100%;font-size:11px; }
   body[data-route='collection'] .bar__scrub,
-  body[data-route='player'] .bar__scrub { flex: 1 1 55px; max-width: 105px; width: auto !important; margin-right: 4px !important; padding: 10px 0; }
+  body[data-route='player'] .bar__scrub { grid-column:1 / 3;grid-row:2;width:auto !important;max-width:none;min-width:0;margin:0 !important;padding:12px 0; }
   body[data-route='collection'] .bar__scrub-track,
   body[data-route='player'] .bar__scrub-track { width: 100%; }
   body[data-route='collection'] .bar__time,
-  body[data-route='player'] .bar__time { display: inline; font-size: 8px; }
+  body[data-route='player'] .bar__time { grid-column:3;grid-row:2;display:block;font-size:11px;font-variant-numeric:tabular-nums;letter-spacing:0;justify-self:end; }
   body[data-route='collection'] .bar__nav,
-  body[data-route='player'] .bar__nav { gap: 0; }
+  body[data-route='player'] .bar__nav { grid-column:3;grid-row:1;gap:4px; }
+  body[data-route='player'] .bar__nav [aria-label='返回作品列表'] { display:none; }
   body[data-route='collection'] .bar-btn,
   body[data-route='player'] .bar-btn { width: 44px; min-width: 44px; min-height: 44px; }
   body[data-route='collection'] .bar__sep,
   body[data-route='player'] .bar__sep,
   body[data-route='collection'] .bar__index,
   body[data-route='player'] .bar__index { display: none; }
+  body[data-route='collection'] .works__counter,
+  body[data-route='player'] .works__counter,
+  body[data-route='collection'] .works__dots,
+  body[data-route='player'] .works__dots { display:none; }
+}
+@media(max-height:500px) and (min-aspect-ratio:1/1){
+  body[data-route='collection'] .bar__time,
+  body[data-route='player'] .bar__time,
+  body[data-route='collection'] .bar__sub,
+  body[data-route='player'] .bar__sub { font-size:11px; }
 }

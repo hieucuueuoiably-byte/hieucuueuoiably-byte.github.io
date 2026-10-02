@@ -109,7 +109,7 @@ export function ControlBar({ mode, index, works, onPrev, onNext, onEnter, onBack
   },[work?.slug,reducedMotion])
 
   const hasVideo = !!work?.video
-  const playing = nav.playbackState === 'playing'
+  const playing = nav.playbackState === 'playing' || (nav.playbackState === 'loading' && video.isPlaying)
 
   const onPlayClick = () => {
     if (!isPlayback) {

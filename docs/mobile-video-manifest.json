@@ -1,0 +1,205 @@
+{
+  "videoCount": 18,
+  "totalBytes": 53196265,
+  "desktopTotalBytes": 141760749,
+  "videos": [
+    {
+      "slug": "film-0821",
+      "video": "/videos/mobile/film-0821.mp4",
+      "bytes": 6751639,
+      "desktopBytes": 13736144,
+      "bitrate": 460717,
+      "duration": 117.237007,
+      "width": 432,
+      "height": 768,
+      "savingPercent": 50.8
+    },
+    {
+      "slug": "film-0823-02",
+      "video": "/videos/mobile/film-0823-02.mp4",
+      "bytes": 6258780,
+      "desktopBytes": 14288642,
+      "bitrate": 437038,
+      "duration": 114.567007,
+      "width": 432,
+      "height": 768,
+      "savingPercent": 56.2
+    },
+    {
+      "slug": "film-0824-01",
+      "video": "/videos/mobile/film-0824-01.mp4",
+      "bytes": 4481607,
+      "desktopBytes": 9708402,
+      "bitrate": 393892,
+      "duration": 91.021995,
+      "width": 432,
+      "height": 768,
+      "savingPercent": 53.8
+    },
+    {
+      "slug": "film-0824",
+      "video": "/videos/mobile/film-0824.mp4",
+      "bytes": 4224565,
+      "desktopBytes": 9172976,
+      "bitrate": 391580,
+      "duration": 86.308005,
+      "width": 432,
+      "height": 768,
+      "savingPercent": 53.9
+    },
+    {
+      "slug": "film-0901-01",
+      "video": "/videos/mobile/film-0901-01.mp4",
+      "bytes": 6705372,
+      "desktopBytes": 29807298,
+      "bitrate": 594652,
+      "duration": 90.209002,
+      "width": 960,
+      "height": 540,
+      "savingPercent": 77.5
+    },
+    {
+      "slug": "film-0903-02",
+      "video": "/videos/mobile/film-0903-02.mp4",
+      "bytes": 4220143,
+      "desktopBytes": 17974333,
+      "bitrate": 565305,
+      "duration": 59.721995,
+      "width": 960,
+      "height": 540,
+      "savingPercent": 76.5
+    },
+    {
+      "slug": "film-0920",
+      "video": "/videos/mobile/film-0920.mp4",
+      "bytes": 3395431,
+      "desktopBytes": 7949214,
+      "bitrate": 553373,
+      "duration": 49.087007,
+      "width": 432,
+      "height": 768,
+      "savingPercent": 57.3
+    },
+    {
+      "slug": "preview-0928-164227",
+      "video": "/videos/mobile/preview-0928-164227.mp4",
+      "bytes": 1469641,
+      "desktopBytes": 3097821,
+      "bitrate": 469502,
+      "duration": 25.041667,
+      "width": 432,
+      "height": 768,
+      "savingPercent": 52.6
+    },
+    {
+      "slug": "preview-0928-164230",
+      "video": "/videos/mobile/preview-0928-164230.mp4",
+      "bytes": 1627051,
+      "desktopBytes": 3647091,
+      "bitrate": 519789,
+      "duration": 25.041667,
+      "width": 432,
+      "height": 768,
+      "savingPercent": 55.4
+    },
+    {
+      "slug": "preview-0928-164234",
+      "video": "/videos/mobile/preview-0928-164234.mp4",
+      "bytes": 1517628,
+      "desktopBytes": 3088452,
+      "bitrate": 484832,
+      "duration": 25.041667,
+      "width": 432,
+      "height": 768,
+      "savingPercent": 50.9
+    },
+    {
+      "slug": "preview-0928-164735",
+      "video": "/videos/mobile/preview-0928-164735.mp4",
+      "bytes": 1461952,
+      "desktopBytes": 3355088,
+      "bitrate": 467046,
+      "duration": 25.041667,
+      "width": 432,
+      "height": 768,
+      "savingPercent": 56.4
+    },
+    {
+      "slug": "preview-0928-180224",
+      "video": "/videos/mobile/preview-0928-180224.mp4",
+      "bytes": 1670787,
+      "desktopBytes": 3805330,
+      "bitrate": 533762,
+      "duration": 25.041667,
+      "width": 432,
+      "height": 768,
+      "savingPercent": 56.1
+    },
+    {
+      "slug": "preview-0928-180226",
+      "video": "/videos/mobile/preview-0928-180226.mp4",
+      "bytes": 1732382,
+      "desktopBytes": 5189557,
+      "bitrate": 553439,
+      "duration": 25.041667,
+      "width": 432,
+      "height": 768,
+      "savingPercent": 66.6
+    },
+    {
+      "slug": "preview-0928-180306",
+      "video": "/videos/mobile/preview-0928-180306.mp4",
+      "bytes": 1431117,
+      "desktopBytes": 2996779,
+      "bitrate": 457195,
+      "duration": 25.041667,
+      "width": 432,
+      "height": 768,
+      "savingPercent": 52.2
+    },
+    {
+      "slug": "preview-0928-180315",
+      "video": "/videos/mobile/preview-0928-180315.mp4",
+      "bytes": 1373046,
+      "desktopBytes": 2763332,
+      "bitrate": 438643,
+      "duration": 25.041667,
+      "width": 432,
+      "height": 768,
+      "savingPercent": 50.3
+    },
+    {
+      "slug": "preview-0929-164520",
+      "video": "/videos/mobile/preview-0929-164520.mp4",
+      "bytes": 1797565,
+      "desktopBytes": 4431414,
+      "bitrate": 478685,
+      "duration": 30.041667,
+      "width": 432,
+      "height": 768,
+      "savingPercent": 59.4
+    },
+    {
+      "slug": "preview-0929-164551",
+      "video": "/videos/mobile/preview-0929-164551.mp4",
+      "bytes": 1628341,
+      "desktopBytes": 3713842,
+      "bitrate": 432882,
+      "duration": 30.092993,
+      "width": 432,
+      "height": 768,
+      "savingPercent": 56.2
+    },
+    {
+      "slug": "preview-0929-164557",
+      "video": "/videos/mobile/preview-0929-164557.mp4",
+      "bytes": 1449218,
+      "desktopBytes": 3035034,
+      "bitrate": 385263,
+      "duration": 30.092993,
+      "width": 432,
+      "height": 768,
+      "savingPercent": 52.3
+    }
+  ]
+}

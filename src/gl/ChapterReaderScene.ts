@@ -66,6 +66,7 @@ export class ChapterReaderScene {
   private videoElement:HTMLVideoElement|null=null
   private videoTexture:THREE.VideoTexture|null=null
   private videoSlug=''
+  private nativeVideo=false
   private read:Read={current:0,target:0,velocity:0,selectedIndex:0,count:1}
   private totalTime=0
 
@@ -108,8 +109,12 @@ export class ChapterReaderScene {
   setSize(width:number,height:number,dpr:number){this.width=width;this.height=height;this.dpr=dpr;this.layoutSizes()}
   private layoutSizes(){
     const mobile=this.width<700
-    const top=mobile?126:Math.max(126,Math.min(160,this.height*.185))
-    const bottom=this.height-(mobile?174:124)
+    const landscapePhone=this.height<500&&this.width>this.height
+    const safeStyle=getComputedStyle(document.documentElement)
+    const safeTop=parseFloat(safeStyle.getPropertyValue('--reader-safe-top'))||0
+    const safeBottom=parseFloat(safeStyle.getPropertyValue('--reader-safe-bottom'))||0
+    const top=(landscapePhone?78:mobile?134:Math.max(126,Math.min(160,this.height*.185)))+safeTop
+    const bottom=this.height-(landscapePhone?94:mobile?138:124)-safeBottom
     const available=Math.max(100,bottom-top)
     this.centerY=(top+bottom)/2
     this.unitsPerPixel=2*this.camera.position.z*Math.tan(THREE.MathUtils.degToRad(this.camera.fov/2))/this.height
@@ -117,8 +122,8 @@ export class ChapterReaderScene {
     let x=0
     this.sheets.forEach((sheet,index)=>{
       const [aw,ah]=sheet.work.videoAspect.split('/').map(Number),ratio=aw/ah
-      const pad=mobile?10:16
-      const videoHeight=Math.min(available-pad*2,(this.width*(mobile?.83:.76)-pad*2)/ratio)
+      const pad=mobile?8:16
+      const videoHeight=Math.min(available-pad*2,(this.width*(mobile?.90:.76)-pad*2)/ratio)
       sheet.width=videoHeight*ratio+pad*2;sheet.height=videoHeight+pad*2;sheet.padding=pad
       if(index)x+=(this.sheets[index-1].width+sheet.width)/2+gap
       sheet.x=x
@@ -136,10 +141,12 @@ export class ChapterReaderScene {
   update(dt:number,read:Read,pointer:THREE.Vector2,fluid:THREE.Texture,getPoster:(slug:string)=>THREE.Texture|null,element:HTMLVideoElement|null,reduced:boolean,alpha:number){
     this.read=read;this.totalTime+=reduced?0:dt
     const selected=this.sheets[read.selectedIndex]
-    if(element!==this.videoElement||selected?.work.slug!==this.videoSlug){
+    const nativeVideo=this.width<700||this.height<500
+    if(element!==this.videoElement||selected?.work.slug!==this.videoSlug||nativeVideo!==this.nativeVideo){
       this.videoTexture?.dispose();this.videoTexture=null
       this.videoElement=element;this.videoSlug=selected?.work.slug??''
-      if(element){this.videoTexture=new THREE.VideoTexture(element);this.videoTexture.colorSpace=THREE.SRGBColorSpace;this.videoTexture.minFilter=THREE.LinearFilter}
+      this.nativeVideo=nativeVideo
+      if(element&&!nativeVideo){this.videoTexture=new THREE.VideoTexture(element);this.videoTexture.colorSpace=THREE.SRGBColorSpace;this.videoTexture.minFilter=THREE.LinearFilter}
     }
     const scroll=this.scrollX(read.current)
     const pitch=this.sheets.length>1?(this.sheets[this.sheets.length-1].x/(this.sheets.length-1))*this.unitsPerPixel:1
@@ -153,11 +160,11 @@ export class ChapterReaderScene {
       s.mesh.position.set(x,y,0);s.mesh.scale.set(s.width*this.unitsPerPixel,s.height*this.unitsPerPixel,1)
       s.mesh.rotation.set(0,0,0);s.mesh.updateMatrixWorld()
       const u=s.mesh.material.uniforms,poster=getPoster(s.work.slug)
-      const live=index===read.selectedIndex&&element&&element.readyState>=2&&(!element.paused||element.currentTime>.01)
+      const live=!nativeVideo&&index===read.selectedIndex&&element&&element.readyState>=2&&(!element.paused||element.currentTime>.01)
       u.tMap.value=live?this.videoTexture:poster;u.uVideoMap.value=live?1:0;u.uMapReady.value=u.tMap.value?1:0;u.tNormal.value=this.normal;u.uVelocity.value=velocity;u.uTime.value=this.totalTime;u.uView.value=1;u.uAlpha.value=alpha
     })
     this.camera.updateMatrixWorld();this.raycaster.setFromCamera(pointer,this.camera)
-    const hit=reduced?undefined:this.raycaster.intersectObjects(this.sheets.filter(s=>s.mesh.visible).map(s=>s.mesh),false)[0]
+    const hit=reduced||nativeVideo?undefined:this.raycaster.intersectObjects(this.sheets.filter(s=>s.mesh.visible).map(s=>s.mesh),false)[0]
     this.sheets.forEach(s=>{
       const hovered=hit?.object===s.mesh,local=hovered?s.mesh.worldToLocal(hit.point.clone()):null
       s.hover=THREE.MathUtils.damp(s.hover,hovered?1:0,8,dt)
@@ -175,6 +182,7 @@ export class ChapterReaderScene {
     if(!s)return null
     return {x:this.width/2+s.x-this.scrollX(this.read.current)-s.width/2+s.padding,y:this.centerY-s.height/2+s.padding,w:s.width-s.padding*2,h:s.height-s.padding*2}
   }
+  get usesNativeVideo(){return this.nativeVideo}
   getCardTargets(){
     return this.sheets.flatMap((s,index)=>{
       const u=s.mesh.material.uniforms,offset=u.uEdgeOffset.value as THREE.Vector2,corners:THREE.Vector3[]=[]

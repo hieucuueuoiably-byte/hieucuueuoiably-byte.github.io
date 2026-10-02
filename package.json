@@ -8,6 +8,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "build:pages": "npm run build && node scripts/build-github-pages.mjs",
+    "verify:playback": "node scripts/verify-video-buffering.mjs",
     "preview": "vite preview",
     "typecheck": "tsc -b --noEmit false --emitDeclarationOnly false || tsc -p tsconfig.app.json --noEmit",
     "gen:placeholders": "node scripts/gen-placeholders.mjs"

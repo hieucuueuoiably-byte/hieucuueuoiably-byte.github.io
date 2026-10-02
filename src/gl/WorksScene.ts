@@ -310,7 +310,7 @@ export class WorksScene {
     this.width=this.canvas.clientWidth||window.innerWidth
     this.height=this.canvas.clientHeight||window.innerHeight
     this.aspect=this.width/Math.max(1,this.height)
-    this.dpr=Math.min(window.devicePixelRatio||1,V.bg.maxDpr)
+    this.dpr=Math.min(window.devicePixelRatio||1,this.width<700?1.5:V.bg.maxDpr)
     this.renderer.setPixelRatio(this.dpr)
     this.renderer.setSize(this.width,this.height,false)
     this.camera.aspect=this.aspect
@@ -598,8 +598,9 @@ export class WorksScene {
       this.camera.position.x=0;this.camera.rotation.set(0,0,0);this.camera.updateMatrixWorld()
       this.reader.update(dt,read,this.pointer,this.directoryFluid.texture,slug=>this.allCovers.find(c=>c.work.slug===slug)?.texture??null,document.querySelector<HTMLVideoElement>('.works__inline-stage video'),this.reduceBend,(1-this.routeOut)*this.routeIn)
       document.body.dataset.readerWebgl='ready'
+      document.body.dataset.readerVideo=this.reader.usesNativeVideo?'native':'texture'
       if(this.inspectDirectoryMotion)this.canvas.dataset.readerState=JSON.stringify(this.reader.diagnostics())
-    }else delete document.body.dataset.readerWebgl
+    }else { delete document.body.dataset.readerWebgl;delete document.body.dataset.readerVideo }
     this.updateState(dt,read,now)
     if(this.transition){
       const t=this.transition

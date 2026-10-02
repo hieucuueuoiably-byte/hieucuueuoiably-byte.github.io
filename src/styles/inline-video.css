@@ -17,6 +17,10 @@
 .works__inline-aspect { position: absolute; pointer-events: none; top: 10px; right: 10px; font-size: 10px; padding: 5px 8px; border-radius: 20px; color: #fff6f0; background: rgba(23,23,23,.5); }
 .works__inline-error { position: absolute; inset: 0; display: grid; place-content: center; gap: 16px; padding: 18px; text-align: center; color: #fff6f0; background: #171717; font-size: 12px; }
 .works__inline-error button { padding: 10px; border: 1px solid currentColor; border-radius: 20px; }
+.works__inline-buffering { position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;color:#fff6f0;background:rgba(23,23,23,.22);font-size:13px;font-weight:600;pointer-events:none; }
+.works__inline-spinner { width:32px;height:32px;border:2px solid rgba(255,246,240,.35);border-top-color:#fff6f0;border-radius:50%;animation:video-buffer-spin .8s linear infinite; }
+@keyframes video-buffer-spin { to { transform:rotate(360deg); } }
+@media(prefers-reduced-motion:reduce) { .works__inline-spinner { animation:none;border-style:dotted; } }
 .control-bar--inline { gap: 8px; }
 .control-bar--inline .bar__title { max-width: 230px; }
 .control-bar--inline .bar__sub { max-width: 230px; }

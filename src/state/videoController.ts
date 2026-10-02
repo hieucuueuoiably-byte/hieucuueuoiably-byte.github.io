@@ -51,22 +51,28 @@ class VideoController {
     const onTimeUpdate = () => this.syncPlaybackState()
 
     el.addEventListener('play', onPlay)
+    el.addEventListener('playing', onCanPlay)
     el.addEventListener('pause', onPause)
     el.addEventListener('waiting', onWaiting)
     el.addEventListener('canplay', onCanPlay)
     el.addEventListener('error', onErr)
     el.addEventListener('ended', onEnded)
     el.addEventListener('loadedmetadata', onCanPlay)
+    el.addEventListener('seeking', onWaiting)
+    el.addEventListener('seeked', onCanPlay)
     el.addEventListener('timeupdate', onTimeUpdate)
 
     this.cleanupFns = () => {
       el.removeEventListener('play', onPlay)
+      el.removeEventListener('playing', onCanPlay)
       el.removeEventListener('pause', onPause)
       el.removeEventListener('waiting', onWaiting)
       el.removeEventListener('canplay', onCanPlay)
       el.removeEventListener('error', onErr)
       el.removeEventListener('ended', onEnded)
       el.removeEventListener('loadedmetadata', onCanPlay)
+      el.removeEventListener('seeking', onWaiting)
+      el.removeEventListener('seeked', onCanPlay)
       el.removeEventListener('timeupdate', onTimeUpdate)
     }
     this.wired = true
@@ -127,7 +133,7 @@ class VideoController {
       navigator.setPlayback('error', idx)
       return
     }
-    if (el.seeking || (el.readyState < 2 && !el.paused)) {
+    if (el.seeking || (el.readyState < 3 && !el.paused)) {
       navigator.setPlayback('loading', idx)
       return
     }

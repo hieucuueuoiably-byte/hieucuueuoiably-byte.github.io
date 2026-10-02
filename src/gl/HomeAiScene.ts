@@ -193,7 +193,7 @@ export class HomeAiScene {
     this.fluid.setSize(width,height);this.output.material.uniforms.uAspect.value=this.aspect
     this.particles.setSize(width,height,dpr)
     // Less horizontal enlargement on short/narrow desktop windows.
-    this.portal.material.uniforms.uMaskScale.value=this.portrait?.95:Math.min(1,this.aspect/1.6)
+    this.portal.material.uniforms.uMaskScale.value=this.portrait?.82:Math.min(1,this.aspect/1.6)
     this.portal.material.uniforms.uStageWidth.value=width
   }
   setReducedMotion(on:boolean) {
@@ -258,7 +258,7 @@ export class HomeAiScene {
       if(part===1)y-=(1-fit)*150
       if(part===5)y-=85
       if(this.portrait) {
-        if(part===1){sx=sy=.55;x=0;y=8}else if(part===2){sx=sy=.40;x=-viewW*.20;y=-179}else if(part===3){sx=sy=.40;x=viewW*.12;y=-170}
+        if(part===1){sx=sy=.55;x=0;y=8}else if(part===2){sx=sy=.34;x=-viewW*.22;y=-179}else if(part===3){sx=sy=.34;x=viewW*.27;y=-170}
         else{x=viewW*.28+(phase-7)*5;y=H*.20+(anchor.y-H*.33)*.5;sx=sy=.65}
       }
       const entrance=part===1?this.intro.director:part===2?this.intro.octopus:part===3?this.intro.bird:this.intro.stage
