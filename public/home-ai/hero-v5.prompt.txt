@@ -1,0 +1,28 @@
+Use case: style-transfer / precise-object-edit.
+Asset type: ONE wide 16:9 homepage hero illustration, no UI.
+Input image 1 (hero-v4.png): EDIT TARGET for the three newly created film-crew character identities.
+Input image 2 (user's full-screen homepage screenshot): the PRIMARY REFERENCE for screen-filling composition, palette, stage silhouette proportions, flat ink style, character hierarchy and cloud arrangement. This reference takes precedence over the previous version's background layout. The user has explicitly chosen the reference palette: BLUE-PURPLE EXTERIOR + ORANGE INTERIOR.
+
+REDESIGN THE STAGING TO FOLLOW IMAGE 2:
+- Full-bleed periwinkle BLUE-PURPLE (#7E7EFF) exterior background. Remove ALL pale cream paper margins. It must feel like an immersive full-screen homepage, not a framed print or centered sticker.
+- A HUGE flat golden-orange (#FFAD12) organic stage silhouette: tall central rounded crown cropped off the top edge, broad stretched rounded horizontal lobes reaching approximately x=6% and x=94% around y=25–48%, and a wide round lower body reaching near the bottom. Smooth asymmetric rounded contours with a fine black hand-inked outline. Use the reference's proportion and playful broad-stage feeling, without copying its sheep-headed mask shape exactly. The orange shape should occupy most of the central screen. The exterior is visibly purple, the interior visibly ORANGE. NO blue interior.
+- Simplified muted teal studio buildings, palm silhouettes and large speakers/film lights sit BEHIND the crew inside the orange scene. Place the tallest studio cluster behind the center between x=38–62% and y=30–76%. Avoid the current image's detailed panorama spreading into exterior purple.
+- A deep vivid red-orange stage ground under the characters, and a squat bright-orange box-shaped projector podium in the center. The podium may have one simple dark lens-circle inset, not a flower logo or lettering.
+
+NEW CHARACTER HIERARCHY — KEEP THE ORIGINAL NEW CREW, NOT REFERENCE CHARACTERS:
+1. The cream one-eyed projector creature with orange film-reel curls, snaggletooth smile, tiny red scarf and rubber-hose limbs stands CENTER on the podium. Its entire head/body is approximately y=25–69%. Shrink it about 20–25% relative to image 1 and remove the gigantic flying-kick shoe coming toward the viewer. Both feet rest on the podium. Arms make an amusing theatrical directing gesture sideways rather than reaching into the title space. Leave the top central y=0–25% visually calm for actual website lettering added later.
+2. The lavender skeptical octopus director is a LARGE LOWER-LEFT foreground figure spanning approximately y=48–94%, with its long tentacles, crooked beret, half-lidded expression and striped unlettered clapperboard. Enlarge its face about 15–20% compared to image 1 and move it downward.
+3. The mint-green lanky bird sound operator is a LARGE LOWER-RIGHT figure spanning approximately y=42–98%, yellow long beak, purple headphones and humorous side-eye. Enlarge it about 15–20% and lower it. Aim its boom pole to the side of the scene. Keep the fuzzy microphone at y=35–47%, so it does not invade the title area.
+All crew and their gear remain within the ORANGE stage silhouette, with their lowest feet/tentacle tips obscured by foreground clouds. No sheep, wolf, dinosaur, beer cups or frying pan from the reference. Keep the newly designed characters unmistakably their own.
+
+CLOUDS MUST FOLLOW IMAGE 2:
+- One CONTINUOUS large flat candy-pink foreground cloud sea spanning the entire bottom width, all the way to the canvas edges, IN FRONT of the stage and crew.
+- Left cloud enters at y=75%, broad slowly undulating lobes descend toward a central valley around y=96–99%, then rise at the right edge near y=73%. Few broad organic lobes, fine black outline, near-solid pink. Do not create tall cloud walls or lots of repetitive shaded cotton balls.
+- Foreground cloud obscures only the bottom of the supporting characters and stage, like the reference. Upper faces, central podium and gestures remain clearly readable.
+- Behind the crew, broad flat pink ribbon-shaped clouds cross the orange sky around y=23–35%, with one wider irregular pink cloud mass just behind the upper-left supporting character. Black delicate contours, flat printed-pink color.
+- Two or three small whimsical orange/pink/red balloons may float in the upper-right side, outside the reserved title area, with very simple newly drawn funny faces and thin curved strings. No flower badge.
+
+ART DIRECTION:
+Closely follow reference image 2's graphic FLAT hand-drawn 2D cartoon style: simple saturated color planes, fine slightly wobbly black contour, sparse interior lines, tiny understated paper grain. Dramatically reduce the target's scratch shading, speckle, heavy hatching and storybook render detail. No lighting gradients, airbrushed modeling, realistic shadows, 3D or glossy materials. Original awkward comic personalities and expressive curve design, clean bold outlines and generous flat color.
+
+Strict exclusions: NO actual text, title, lettering, navigation, buttons, badge, logo, watermark or website UI. Do not reproduce the screenshot's title or reference-site characters. Keep a wide 16:9 landscape and deliver one polished illustration only. The visual relationship must be PURPLE OUTSIDE / ORANGE INSIDE / LARGE PINK CLOUD FOREGROUND, matching the user's screenshot.

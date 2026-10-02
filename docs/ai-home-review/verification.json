@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-01",
+  "desktop": [
+    1280,
+    720
+  ],
+  "mobile": [
+    375,
+    812
+  ],
+  "motion": {
+    "before": {
+      "engine": "three.js r169",
+      "homeArm": "0.0633",
+      "homeArtwork": "ai-hero-v5",
+      "homeFluid": "gpu",
+      "homeFrame": "8052",
+      "homeHover": "0.000",
+      "homeLayers": "7",
+      "homePointerMoves": "0",
+      "homeReduced": "false",
+      "homeTime": "44.878",
+      "sceneMode": "home"
+    },
+    "after": {
+      "engine": "three.js r169",
+      "homeArm": "-0.0065",
+      "homeArtwork": "ai-hero-v5",
+      "homeFluid": "gpu",
+      "homeFrame": "10356",
+      "homeHover": "0.000",
+      "homeLayers": "7",
+      "homePointerMoves": "8",
+      "homeReduced": "false",
+      "homeTime": "57.683",
+      "sceneMode": "home"
+    },
+    "focusHover": {
+      "engine": "three.js r169",
+      "homeArm": "-0.0589",
+      "homeArtwork": "ai-hero-v5",
+      "homeFluid": "gpu",
+      "homeFrame": "16980",
+      "homeHover": "1.000",
+      "homeLayers": "7",
+      "homePointerMoves": "8",
+      "homeReduced": "false",
+      "homeTime": "94.483",
+      "sceneMode": "home"
+    }
+  },
+  "devReturn": {
+    "canvas": {
+      "engine": "three.js r169",
+      "homeArm": "0.0635",
+      "homeArtwork": "ai-hero-v5",
+      "homeFluid": "gpu",
+      "homeFrame": "7380",
+      "homeHover": "0.000",
+      "homeLayers": "7",
+      "homePointerMoves": "0",
+      "homeReduced": "false",
+      "homeTime": "41.722",
+      "sceneMode": "home"
+    },
+    "canvasCount": 1,
+    "hostOpacity": "1",
+    "path": "/",
+    "videoCount": 0
+  },
+  "prodErrors": []
+}

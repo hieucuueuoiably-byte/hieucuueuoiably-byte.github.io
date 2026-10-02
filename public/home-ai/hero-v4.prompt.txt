@@ -1,0 +1,43 @@
+PASS 1 — ORIGINAL-STYLE CLOUD LAYERS
+
+Use case: precise-object-edit / style-transfer.
+Asset type: ONE revised wide 16:9 homepage hero illustration.
+Input image 1 (hero-v3.png) is the EDIT TARGET.
+Input image 2 (home-desktop.png) is a REFERENCE ONLY for the foreground-cloud shapes, scale, layering and original homepage staging. Do not copy its characters, logo, badge, typography or interface.
+
+USER REQUEST: add the substantial clouds seen on the original homepage. The tiny pink puffs in image 1 do not satisfy this. Make the clouds a defining part of the composition.
+
+KEEP: the three original eccentric film-crew characters from image 1 (cream one-eyed projector creature with orange reels and scarf, lavender skeptical octopus director with clapperboard, green long-necked bird sound operator with purple headphones and boom microphone); their distinctive silhouettes and expressions; periwinkle BLUE scene mask. All characters remain INSIDE this blue mask, as explicitly requested. Maintain their relative positions and inked flat 2D illustration style. The scene interior stays visibly BLUE.
+
+CLOUD REVISION — closely study image 2:
+1. Add huge connected CANDY-PINK CLOUD BANKS in the FOREGROUND, growing from the lower-left and lower-right canvas edges and spanning the entire bottom edge. These clouds are outside and in front of the blue scene mask, not trapped as tiny decorations inside it.
+2. Match the reference's long smooth irregular cloud contours: a few broad lobes and gently wavy sweeping edges with a fine black ink outline, flat pink color and subtle grain. Avoid repeated small round cotton balls, cream rims, bevels, airbrush, 3D volume or fluffy photorealistic cloud texture.
+3. Left and right foreground banks rise to roughly 65–70% of the canvas height at the extreme side edges, then descend into a broad curved central valley around 85–90% height. Their lower masses fill approximately the bottom quarter of the canvas. This creates the original homepage's stage-framing cloud arrangement while keeping the three faces, torso gestures and props readable.
+4. Add a second receding pink cloud layer behind the characters within the blue scene, plus two long thin pink wind-cloud ribbons across the upper-middle blue sky. Obvious front/middle/back cloud depth. A crescent and sparse tiny stars may remain.
+5. Lower ribbons of film can be partly concealed by the foreground clouds. It is fine to hide some feet and lower tentacles, but do not cover faces, clapperboard or the central lens eye. Do not move characters out of the blue mask.
+6. Scale the central blue scene to feel like an immersive full-screen stage rather than a little sticker: approximately 90% canvas width, near the top edge. Keep its irregular contour visible above and beside the foreground clouds. Quiet warm cream exterior in the upper corners, a large calm blue area above the crew suitable for HTML title later.
+
+Simplify excessive studio detail so the clouds, three character silhouettes and blue mask dominate. Preserve the established flat saturated periwinkle/amber/pink/cream/mint palette and clean slightly wobbly hand-drawn black contours. Reduce coarse grain and scratch shading relative to image 1: the reference's large flat areas and clean contours should guide the finish.
+
+NO lettering, title, logos, navigation, buttons, badges, watermark or UI from reference image 2. No sheep/wolf/dinosaur or any original-site character. Do not revert the BLUE mask to orange. Deliver one polished full-bleed 16:9 illustration with unmistakable large layered pink clouds framing the scene.
+
+PASS 2 — LOWER FOREGROUND CLOUD BANKS
+
+Use case: precise-object-edit.
+Input image 1 is the latest blue-mask film-crew illustration with oversized pink cloud walls: EDIT TARGET.
+Input image 2 is the original homepage: REFERENCE FOR THE CLOUD CONTOUR ONLY.
+Make ONE targeted correction to image 1: lower and simplify the foreground cloud banks so their composition matches image 2. Keep ALL existing character designs, blue scene mask, colors, studio objects and inked style.
+
+The present pink cloud walls begin near the TOP of the side edges and enclose the illustration. REMOVE those tall walls. The upper 65 percent of the left and right edges must be free of foreground cloud banks, showing the existing quiet cream exterior and visible blue mask. Preserve the thin horizontal pink sky ribbons inside the blue mask behind the crew.
+
+Foreground cloud contour precise geometry:
+- At the far LEFT edge the TOP edge of the foreground pink cloud bank starts at y = 68% of the image height.
+- Sweep gently downward in large irregular broad lobes, reaching y = 80% near x = 25%.
+- At image CENTER (x = 50%), the top edge dips to y = 92% of image height.
+- At x = 75%, the top edge rises back to y = 80%.
+- At far RIGHT, its top edge is y = 68%.
+Thus the foreground is a low, broad, shallow U-shaped cloud SEA along the bottom, like reference image 2, NOT a frame of tall clouds.
+Use one unified continuous candy-pink cloud foreground with a thin black gently wobbling outline. A second slightly smaller receding pink cloud layer may be visible directly behind it, but do not add repetitive puffs or many heavy internal black outlines. Flat pink color, subtle texture only.
+Hide a little of the characters' lowest feet and tentacle tips, but keep their full faces, torso gestures, clapperboard, most film ribbon and lens creature's large central shoe clearly visible above the low cloud valley. All characters remain INSIDE the BLUE mask. Never put their bodies in the outside cream area.
+
+Do not change the scene mask color from BLUE. Do not add logos, title, UI, badges, letters or original-site characters from image 2. Preserve wide 16:9 and deliver one refined cohesive illustration.

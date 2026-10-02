@@ -1,0 +1,70 @@
+<div id="__nuxt">
+  <main class="app-container">
+    <header class="app-header">
+      <div class="app-header__title-wrapper">
+        <div>
+          <h1 class="app-header__title">
+            <a aria-current="page" href="/" class="router-link-active router-link-exact-active">
+              <svg width="332" height="130" fill="none">
+            <span>
+              | by Justine Soulié and Patrick Heng
+      <div class="app-header__links">
+        <a href="/chapters" class="app-header__link app-header__link--chapters">
+          <span class="app-header__link-text">
+            | chapters
+        <a href="/about" class="app-header__link app-header__link--about">
+          <span class="app-header__link-text">
+            | about
+    <div class="page home">
+      <h1>
+        | Ponpon Mania
+      <p>
+        | By Patrick HENG &amp; Justine Soulié
+      <div class="home__vynil">
+        <svg width="211" height="212" class="home__vynil" fill="none">
+      <div class="home__button-container">
+        <button class="home__button">
+          | read now
+    <div class="webgl-container">
+      <canvas class="webgl-canvas">
+    <div class="preloader">
+      <div class="preloader__container">
+        <div class="preloader__ponpon-container">
+          <svg class="preloader__ponpon" width="1947" height="1947" fill="none">
+            <g>
+        <svg class="preloader__svg" width="311" height="6" fill="none">
+        <svg class="preloader__svg preloader__svg-progress" width="311" height="6" fill="none">
+    <div class="in-loader">
+      <div class="progress-container">
+        <div class="progress-bar">
+    <button class="fullscreen">
+      <svg class="fullscreen__enter" width="100%" height="100%" version="1.1" xml:space="preserve" style="">
+        <g>
+        <g>
+        <g>
+        <g>
+      | !---->
+    <div class="lang-selector">
+      <div class="lang-selector__inner">
+        <button class="active lang-button">
+          | EN
+        <span class="lang-divider">
+          | |
+        <button class="lang-button">
+          | FR
+    | !---->
+    <div class="surprise">
+      <div class="surprise__overlay">
+      | !---->
+      <div class="surprise__content">
+        | !---->
+    <footer class="app-footer">
+      <div class="app-footer__container">
+        <a href="/legal" class="app-footer__link">
+          <span>
+            | legal notice &amp; terms of use
+      <div class="app-footer__gradient">
+    <div class="edge-blocker left">
+    <div class="edge-blocker right">
+    <div class="debug-tools">
+<div id="teleports">

@@ -1,0 +1,584 @@
+{
+  "build": "index-B0XSlYUR.js",
+  "samples": [],
+  "desktop": {
+    "about": {
+      "centerX": 844.8,
+      "centerY": 36,
+      "height": 44,
+      "width": 70.03,
+      "x": 809.78,
+      "y": 14
+    },
+    "aboutText": {
+      "centerX": 844.8,
+      "centerY": 36,
+      "height": 20,
+      "width": 30.03,
+      "x": 829.78,
+      "y": 26
+    },
+    "caption": {
+      "centerX": 640,
+      "centerY": 156.73,
+      "height": 14.97,
+      "width": 205.28,
+      "x": 537.36,
+      "y": 149.25
+    },
+    "glyphs": [
+      {
+        "letter": "作",
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "letter": "品",
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "letter": "集",
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "letter": "网",
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "letter": "站",
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      }
+    ],
+    "headerColor": "rgb(254, 236, 227)",
+    "height": 720,
+    "mark": {
+      "centerX": 640,
+      "centerY": 108.13,
+      "height": 64.25,
+      "width": 264.34,
+      "x": 507.83,
+      "y": 76
+    },
+    "route": "home",
+    "scrollWidth": 1280,
+    "sparks": [
+      {
+        "animation": "home-title-spark",
+        "transform": "matrix(0.900199, 0.0015705, -0.0015705, 0.900199, 0, 0)"
+      },
+      {
+        "animation": "home-title-spark",
+        "transform": "matrix(0.00188383, 1.0798, -1.0798, 0.00188383, 0, 0)"
+      }
+    ],
+    "titleTransform": "none",
+    "width": 1280,
+    "worksGroup": {
+      "centerX": 435.19,
+      "centerY": 36,
+      "height": 44,
+      "width": 96.03,
+      "x": 387.17,
+      "y": 14
+    },
+    "worksText": {
+      "centerX": 422.19,
+      "centerY": 36,
+      "height": 20,
+      "width": 30.03,
+      "x": 407.17,
+      "y": 26
+    }
+  },
+  "pointer": {
+    "about": {
+      "centerX": 844.8,
+      "centerY": 36,
+      "height": 44,
+      "width": 70.03,
+      "x": 809.78,
+      "y": 14
+    },
+    "aboutText": {
+      "centerX": 844.8,
+      "centerY": 36,
+      "height": 20,
+      "width": 30.03,
+      "x": 829.78,
+      "y": 26
+    },
+    "caption": {
+      "centerX": 643.37,
+      "centerY": 155.7,
+      "height": 15.45,
+      "width": 205.23,
+      "x": 540.76,
+      "y": 147.97
+    },
+    "glyphs": [
+      {
+        "letter": "作",
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "letter": "品",
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "letter": "集",
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "letter": "网",
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "letter": "站",
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      }
+    ],
+    "headerColor": "rgb(254, 236, 227)",
+    "height": 720,
+    "mark": {
+      "centerX": 642.93,
+      "centerY": 106.93,
+      "height": 64.74,
+      "width": 264.15,
+      "x": 510.85,
+      "y": 74.56
+    },
+    "route": "home",
+    "scrollWidth": 1280,
+    "sparks": [
+      {
+        "animation": "home-title-spark",
+        "transform": "matrix(0.188771, 1.04252, -1.04252, 0.188771, 0, 0)"
+      },
+      {
+        "animation": "home-title-spark",
+        "transform": "matrix(0.905797, 0.164015, -0.164015, 0.905797, 0, 0)"
+      }
+    ],
+    "titleTransform": "matrix3d(0.999048, 0, -0.0436194, 0, 0.000634393, 0.999894, 0.01453, 0, 0.0436148, -0.0145438, 0.998943, 0, 4, -1.1111, 0, 1)",
+    "width": 1280,
+    "worksGroup": {
+      "centerX": 435.19,
+      "centerY": 36,
+      "height": 44,
+      "width": 96.03,
+      "x": 387.17,
+      "y": 14
+    },
+    "worksText": {
+      "centerX": 422.19,
+      "centerY": 36,
+      "height": 20,
+      "width": 30.03,
+      "x": 407.17,
+      "y": 26
+    }
+  },
+  "menu": {
+    "left": 387.171875,
+    "links": 4,
+    "open": true,
+    "right": 631.171875
+  },
+  "mobile": {
+    "about": {
+      "centerX": 338.98,
+      "centerY": 36,
+      "height": 44,
+      "width": 48.03,
+      "x": 314.97,
+      "y": 14
+    },
+    "aboutText": {
+      "centerX": 338.98,
+      "centerY": 36,
+      "height": 16,
+      "width": 24.03,
+      "x": 326.97,
+      "y": 28
+    },
+    "caption": {
+      "centerX": 187.49,
+      "centerY": 152.55,
+      "height": 13,
+      "width": 161.52,
+      "x": 106.73,
+      "y": 146.05
+    },
+    "glyphs": [
+      {
+        "letter": "作",
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "letter": "品",
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "letter": "集",
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "letter": "网",
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "letter": "站",
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      }
+    ],
+    "headerColor": "rgb(254, 236, 227)",
+    "height": 812,
+    "mark": {
+      "centerX": 187.5,
+      "centerY": 109.65,
+      "height": 48.8,
+      "width": 200.81,
+      "x": 87.09,
+      "y": 85.25
+    },
+    "route": "home",
+    "scrollWidth": 375,
+    "sparks": [
+      {
+        "animation": "home-title-spark",
+        "transform": "matrix(0.0199367, 1.0777, -1.0777, 0.0199367, 0, 0)"
+      },
+      {
+        "animation": "home-title-spark",
+        "transform": "matrix(0.901965, 0.0166858, -0.0166858, 0.901965, 0, 0)"
+      }
+    ],
+    "titleTransform": "matrix(1, 0, 0, 1, 0, 0)",
+    "width": 375,
+    "worksGroup": {
+      "centerX": 53,
+      "centerY": 36,
+      "height": 44,
+      "width": 82,
+      "x": 12,
+      "y": 14
+    },
+    "worksText": {
+      "centerX": 35,
+      "centerY": 36,
+      "height": 16,
+      "width": 24.03,
+      "x": 22.98,
+      "y": 28
+    }
+  },
+  "narrow": {
+    "about": {
+      "centerX": 283.98,
+      "centerY": 36,
+      "height": 44,
+      "width": 48.03,
+      "x": 259.97,
+      "y": 14
+    },
+    "aboutText": {
+      "centerX": 283.98,
+      "centerY": 36,
+      "height": 16,
+      "width": 24.03,
+      "x": 271.97,
+      "y": 28
+    },
+    "caption": {
+      "centerX": 159.99,
+      "centerY": 147.13,
+      "height": 13,
+      "width": 161.52,
+      "x": 79.23,
+      "y": 140.63
+    },
+    "glyphs": [
+      {
+        "letter": "作",
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "letter": "品",
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "letter": "集",
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "letter": "网",
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "letter": "站",
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      }
+    ],
+    "headerColor": "rgb(254, 236, 227)",
+    "height": 568,
+    "mark": {
+      "centerX": 160,
+      "centerY": 106.31,
+      "height": 44.63,
+      "width": 183.56,
+      "x": 68.22,
+      "y": 84
+    },
+    "route": "home",
+    "scrollWidth": 320,
+    "sparks": [
+      {
+        "animation": "home-title-spark",
+        "transform": "matrix(0.0189766, 1.07782, -1.07782, 0.0189766, 0, 0)"
+      },
+      {
+        "animation": "home-title-spark",
+        "transform": "matrix(0.901878, 0.0158789, -0.0158789, 0.901878, 0, 0)"
+      }
+    ],
+    "titleTransform": "matrix(1, 0, 0, 1, 0, 0)",
+    "width": 320,
+    "worksGroup": {
+      "centerX": 53,
+      "centerY": 36,
+      "height": 44,
+      "width": 82,
+      "x": 12,
+      "y": 14
+    },
+    "worksText": {
+      "centerX": 35,
+      "centerY": 36,
+      "height": 16,
+      "width": 24.03,
+      "x": 22.98,
+      "y": 28
+    }
+  },
+  "productionEntry": {
+    "about": {
+      "centerX": 844.8,
+      "centerY": 36,
+      "height": 44,
+      "width": 70.03,
+      "x": 809.78,
+      "y": 14
+    },
+    "aboutText": {
+      "centerX": 844.8,
+      "centerY": 36,
+      "height": 20,
+      "width": 30.03,
+      "x": 829.78,
+      "y": 26
+    },
+    "caption": {
+      "centerX": 640,
+      "centerY": 156.73,
+      "height": 14.97,
+      "width": 205.28,
+      "x": 537.36,
+      "y": 149.25
+    },
+    "glyphs": [
+      {
+        "letter": "作",
+        "opacity": "0",
+        "transform": "matrix3d(1, 0, 0, 0, 0, 0.573576, -0.819152, 0, 0, 0.819152, 0.573576, 0, 0, 69.1438, 0, 1)"
+      },
+      {
+        "letter": "品",
+        "opacity": "0",
+        "transform": "matrix3d(1, 0, 0, 0, 0, 0.573576, -0.819152, 0, 0, 0.819152, 0.573576, 0, 0, 69.1438, 0, 1)"
+      },
+      {
+        "letter": "集",
+        "opacity": "0",
+        "transform": "matrix3d(1, 0, 0, 0, 0, 0.573576, -0.819152, 0, 0, 0.819152, 0.573576, 0, 0, 69.1438, 0, 1)"
+      },
+      {
+        "letter": "网",
+        "opacity": "0",
+        "transform": "matrix3d(1, 0, 0, 0, 0, 0.573576, -0.819152, 0, 0, 0.819152, 0.573576, 0, 0, 69.1438, 0, 1)"
+      },
+      {
+        "letter": "站",
+        "opacity": "0",
+        "transform": "matrix3d(1, 0, 0, 0, 0, 0.573576, -0.819152, 0, 0, 0.819152, 0.573576, 0, 0, 69.1438, 0, 1)"
+      }
+    ],
+    "headerColor": "rgb(254, 236, 227)",
+    "height": 720,
+    "mark": {
+      "centerX": 640,
+      "centerY": 108.13,
+      "height": 64.25,
+      "width": 264.34,
+      "x": 507.83,
+      "y": 76
+    },
+    "route": "home",
+    "scrollWidth": 1280,
+    "sparks": [
+      {
+        "animation": "home-title-spark",
+        "transform": "matrix(0.871921, 0.365704, -0.365704, 0.871921, 0, 0)"
+      },
+      {
+        "animation": "home-title-spark",
+        "transform": "matrix(0.400121, 0.953979, -0.953979, 0.400121, 0, 0)"
+      }
+    ],
+    "titleTransform": "none",
+    "width": 1280,
+    "worksGroup": {
+      "centerX": 435.19,
+      "centerY": 36,
+      "height": 44,
+      "width": 96.03,
+      "x": 387.17,
+      "y": 14
+    },
+    "worksText": {
+      "centerX": 422.19,
+      "centerY": 36,
+      "height": 20,
+      "width": 30.03,
+      "x": 407.17,
+      "y": 26
+    }
+  },
+  "productionReady": {
+    "about": {
+      "centerX": 844.8,
+      "centerY": 36,
+      "height": 44,
+      "width": 70.03,
+      "x": 809.78,
+      "y": 14
+    },
+    "aboutText": {
+      "centerX": 844.8,
+      "centerY": 36,
+      "height": 20,
+      "width": 30.03,
+      "x": 829.78,
+      "y": 26
+    },
+    "caption": {
+      "centerX": 640,
+      "centerY": 156.73,
+      "height": 14.97,
+      "width": 205.28,
+      "x": 537.36,
+      "y": 149.25
+    },
+    "glyphs": [
+      {
+        "letter": "作",
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "letter": "品",
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "letter": "集",
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "letter": "网",
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "letter": "站",
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      }
+    ],
+    "headerColor": "rgb(254, 236, 227)",
+    "height": 720,
+    "mark": {
+      "centerX": 640,
+      "centerY": 108.13,
+      "height": 64.25,
+      "width": 264.34,
+      "x": 507.83,
+      "y": 76
+    },
+    "route": "home",
+    "scrollWidth": 1280,
+    "sparks": [
+      {
+        "animation": "home-title-spark",
+        "transform": "matrix(0.715516, 0.679977, -0.679977, 0.715516, 0, 0)"
+      },
+      {
+        "animation": "home-title-spark",
+        "transform": "matrix(0.683997, 0.719745, -0.719745, 0.683997, 0, 0)"
+      }
+    ],
+    "titleTransform": "none",
+    "width": 1280,
+    "worksGroup": {
+      "centerX": 435.19,
+      "centerY": 36,
+      "height": 44,
+      "width": 96.03,
+      "x": 387.17,
+      "y": 14
+    },
+    "worksText": {
+      "centerX": 422.19,
+      "centerY": 36,
+      "height": 20,
+      "width": 30.03,
+      "x": 407.17,
+      "y": 26
+    }
+  },
+  "prodErrors": [],
+  "devErrors": [],
+  "checks": {
+    "desktopCentered": true,
+    "desktopNavAligned": true,
+    "mobileCentered": true,
+    "mobileNavAligned": true,
+    "narrowCentered": true,
+    "noMobileOverflow": true,
+    "titleMousePerspective": true,
+    "sparkAnimation": true,
+    "entryStartsHidden": true,
+    "entryCompletes": true,
+    "menuWorks": true,
+    "noConsoleErrors": true
+  }
+}

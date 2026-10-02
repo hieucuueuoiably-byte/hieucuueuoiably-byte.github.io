@@ -1,0 +1,170 @@
+{
+  "works": {
+    "viewport": [
+      1440,
+      900
+    ],
+    "stage": null,
+    "videoEl": null,
+    "bar": {
+      "x": 521,
+      "y": 672,
+      "w": 398,
+      "h": 82,
+      "bottom": 754,
+      "cx": 720,
+      "cy": 713
+    },
+    "cover": {
+      "mesh": {
+        "x": 0,
+        "y": 0,
+        "scaleX": 0.63,
+        "scaleY": 0.63,
+        "rotZ": 0
+      },
+      "mode": "works",
+      "focus": 0,
+      "fit": null
+    },
+    "bg": {
+      "blobR": 0.7,
+      "colorA": "e9d9c3",
+      "colorB": "7f9bb5"
+    },
+    "cssCover": "0.891"
+  },
+  "detail-16x9": {
+    "viewport": [
+      1440,
+      900
+    ],
+    "stage": {
+      "x": 192,
+      "y": 109,
+      "w": 1056,
+      "h": 594,
+      "bottom": 703,
+      "cx": 720,
+      "cy": 406
+    },
+    "videoEl": {
+      "w": 1056,
+      "h": 594,
+      "bottom": 703,
+      "ratio": 1.7778,
+      "intrinsic": "1280x720"
+    },
+    "bar": {
+      "x": 455,
+      "y": 671,
+      "w": 701,
+      "h": 84,
+      "bottom": 754,
+      "cx": 806,
+      "cy": 713
+    },
+    "cover": {
+      "mesh": {
+        "x": 0,
+        "y": 0.04932,
+        "scaleX": 1.17333,
+        "scaleY": 0.66,
+        "rotZ": 0
+      },
+      "mode": "player",
+      "focus": 1,
+      "fit": null
+    },
+    "bg": {
+      "blobR": 0.7,
+      "colorA": "e9d9c3",
+      "colorB": "7f9bb5"
+    },
+    "cssCover": "0.891"
+  },
+  "detail-9x16": {
+    "viewport": [
+      1440,
+      900
+    ],
+    "stage": {
+      "x": 553,
+      "y": 109,
+      "w": 334,
+      "h": 594,
+      "bottom": 703,
+      "cx": 720,
+      "cy": 406
+    },
+    "videoEl": {
+      "w": 334,
+      "h": 594,
+      "bottom": 703,
+      "ratio": 0.5625,
+      "intrinsic": "720x1280"
+    },
+    "bar": {
+      "x": 383,
+      "y": 671,
+      "w": 674,
+      "h": 84,
+      "bottom": 754,
+      "cx": 720,
+      "cy": 713
+    },
+    "cover": {
+      "mesh": {
+        "x": 0,
+        "y": 0.04932,
+        "scaleX": 0.37125,
+        "scaleY": 0.66,
+        "rotZ": 0
+      },
+      "mode": "player",
+      "focus": 1,
+      "fit": null
+    },
+    "bg": {
+      "blobR": 0.672,
+      "colorA": "f3a6b8",
+      "colorB": "ffd98e"
+    },
+    "cssCover": "0.891"
+  },
+  "works-phone": {
+    "viewport": [
+      390,
+      844
+    ],
+    "stage": null,
+    "videoEl": null,
+    "bar": {
+      "x": 42,
+      "y": 527,
+      "w": 306,
+      "h": 70,
+      "bottom": 597,
+      "cx": 195,
+      "cy": 562
+    },
+    "cover": {
+      "mesh": {
+        "x": 0,
+        "y": 0,
+        "scaleX": 0.34194,
+        "scaleY": 0.34194,
+        "rotZ": 0
+      },
+      "mode": "works",
+      "focus": 0,
+      "fit": null
+    },
+    "bg": {
+      "blobR": 0.7,
+      "colorA": "e9d9c3",
+      "colorB": "7f9bb5"
+    },
+    "cssCover": "0.891"
+  }
+}

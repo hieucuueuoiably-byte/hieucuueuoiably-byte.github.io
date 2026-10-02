@@ -1,0 +1,988 @@
+{
+  "build": "index-DRQEMGWo.js",
+  "production": [
+    {
+      "active": "1",
+      "bar": "02. 动画影像2 个视频 · 角色、空间与想象02 / 03",
+      "bg": "f87800",
+      "build": "/assets/index-Dxvoa0Mi.js",
+      "phase": "idle",
+      "position": "1.0000",
+      "route": "/works",
+      "scale": "1.0000",
+      "target": "1",
+      "trace": [
+        {
+          "active": -1,
+          "bg": "f87800",
+          "current": 0,
+          "phase": "idle",
+          "scale": 0,
+          "t": 452.7,
+          "target": -1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "current": 1,
+          "phase": "opening",
+          "scale": 0,
+          "t": 502.8,
+          "target": 1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "current": 1,
+          "phase": "idle",
+          "scale": 1,
+          "t": 1346.3,
+          "target": 1
+        }
+      ]
+    },
+    {
+      "active": "1",
+      "bar": "03. 带货预热11 个视频 · 产品与商业影像03 / 03",
+      "bg": "f87800",
+      "build": "/assets/index-Dxvoa0Mi.js",
+      "phase": "closing",
+      "position": "1.9737",
+      "route": "/works",
+      "scale": "0.0000",
+      "target": "2",
+      "trace": [
+        {
+          "active": -1,
+          "bg": "f87800",
+          "current": 0,
+          "phase": "idle",
+          "scale": 0,
+          "t": 452.7,
+          "target": -1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "current": 1,
+          "phase": "opening",
+          "scale": 0,
+          "t": 502.8,
+          "target": 1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "current": 1,
+          "phase": "idle",
+          "scale": 1,
+          "t": 1346.3,
+          "target": 1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "current": 1.0588,
+          "phase": "closing",
+          "scale": 1,
+          "t": 18864.2,
+          "target": 1
+        }
+      ]
+    },
+    {
+      "active": "2",
+      "bar": "03. 带货预热11 个视频 · 产品与商业影像03 / 03",
+      "bg": "f87800",
+      "build": "/assets/index-Dxvoa0Mi.js",
+      "phase": "idle",
+      "position": "2.0000",
+      "route": "/works",
+      "scale": "1.0000",
+      "target": "2",
+      "trace": [
+        {
+          "active": -1,
+          "bg": "f87800",
+          "current": 0,
+          "phase": "idle",
+          "scale": 0,
+          "t": 452.7,
+          "target": -1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "current": 1,
+          "phase": "opening",
+          "scale": 0,
+          "t": 502.8,
+          "target": 1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "current": 1,
+          "phase": "idle",
+          "scale": 1,
+          "t": 1346.3,
+          "target": 1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "current": 1.0588,
+          "phase": "closing",
+          "scale": 1,
+          "t": 18864.2,
+          "target": 1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "current": 1.9775,
+          "phase": "waiting",
+          "scale": 0,
+          "t": 19145.1,
+          "target": 2
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "current": 2,
+          "phase": "coloring",
+          "scale": 0,
+          "t": 19252.9,
+          "target": 2
+        },
+        {
+          "active": 2,
+          "bg": "f87800",
+          "current": 2,
+          "phase": "opening",
+          "scale": 0,
+          "t": 19449.5,
+          "target": 2
+        },
+        {
+          "active": 2,
+          "bg": "f87800",
+          "current": 2,
+          "phase": "idle",
+          "scale": 1,
+          "t": 20310.5,
+          "target": 2
+        }
+      ]
+    },
+    {
+      "active": "1",
+      "bar": "02. 动画影像2 个视频 · 角色、空间与想象02 / 03",
+      "bg": "f87800",
+      "build": "/assets/index-Dxvoa0Mi.js",
+      "phase": "opening",
+      "position": "1.0000",
+      "route": "/works",
+      "scale": "0.2399",
+      "target": "1",
+      "trace": [
+        {
+          "active": -1,
+          "bg": "f87800",
+          "current": 0,
+          "phase": "idle",
+          "scale": 0,
+          "t": 452.7,
+          "target": -1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "current": 1,
+          "phase": "opening",
+          "scale": 0,
+          "t": 502.8,
+          "target": 1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "current": 1,
+          "phase": "idle",
+          "scale": 1,
+          "t": 1346.3,
+          "target": 1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "current": 1.0588,
+          "phase": "closing",
+          "scale": 1,
+          "t": 18864.2,
+          "target": 1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "current": 1.9775,
+          "phase": "waiting",
+          "scale": 0,
+          "t": 19145.1,
+          "target": 2
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "current": 2,
+          "phase": "coloring",
+          "scale": 0,
+          "t": 19252.9,
+          "target": 2
+        },
+        {
+          "active": 2,
+          "bg": "f87800",
+          "current": 2,
+          "phase": "opening",
+          "scale": 0,
+          "t": 19449.5,
+          "target": 2
+        },
+        {
+          "active": 2,
+          "bg": "f87800",
+          "current": 2,
+          "phase": "idle",
+          "scale": 1,
+          "t": 20310.5,
+          "target": 2
+        },
+        {
+          "active": 2,
+          "bg": "f87800",
+          "current": 1.9557,
+          "phase": "closing",
+          "scale": 1,
+          "t": 30528.9,
+          "target": 2
+        },
+        {
+          "active": 2,
+          "bg": "f87800",
+          "current": 1.0263,
+          "phase": "waiting",
+          "scale": 0,
+          "t": 30807.7,
+          "target": 1
+        },
+        {
+          "active": 2,
+          "bg": "f87800",
+          "current": 1,
+          "phase": "coloring",
+          "scale": 0,
+          "t": 30914.6,
+          "target": 1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "current": 1,
+          "phase": "opening",
+          "scale": 0,
+          "t": 31114.6,
+          "target": 1
+        }
+      ]
+    },
+    {
+      "active": "1",
+      "bar": "01. AI 短片5 个视频 · 人物、情绪与故事01 / 03",
+      "bg": "f87800",
+      "bgB": "eb8db7",
+      "build": "/assets/index-DRQEMGWo.js",
+      "phase": "waiting",
+      "position": "0.0553",
+      "route": "/works",
+      "scale": "0.0000",
+      "target": "0",
+      "trace": [
+        {
+          "active": -1,
+          "bg": "f87800",
+          "bgB": "7e7eff",
+          "current": 0,
+          "phase": "idle",
+          "scale": 0,
+          "t": 554.9,
+          "target": -1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "bgB": "eb8db7",
+          "current": 1,
+          "phase": "opening",
+          "scale": 0,
+          "t": 600.2,
+          "target": 1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "bgB": "eb8db7",
+          "current": 1,
+          "phase": "idle",
+          "scale": 1,
+          "t": 1432,
+          "target": 1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "bgB": "eb8db7",
+          "current": 1.066,
+          "phase": "closing",
+          "scale": 1,
+          "t": 2111.6,
+          "target": 1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "bgB": "eb8db7",
+          "current": 0.1311,
+          "phase": "waiting",
+          "scale": 0,
+          "t": 2390.6,
+          "target": 0
+        }
+      ]
+    },
+    {
+      "active": "0",
+      "bar": "01. AI 短片5 个视频 · 人物、情绪与故事01 / 03",
+      "bg": "f87800",
+      "bgB": "7e7eff",
+      "build": "/assets/index-DRQEMGWo.js",
+      "phase": "idle",
+      "position": "0.0000",
+      "route": "/works",
+      "scale": "1.0000",
+      "target": "0",
+      "trace": [
+        {
+          "active": -1,
+          "bg": "f87800",
+          "bgB": "7e7eff",
+          "current": 0,
+          "phase": "idle",
+          "scale": 0,
+          "t": 554.9,
+          "target": -1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "bgB": "eb8db7",
+          "current": 1,
+          "phase": "opening",
+          "scale": 0,
+          "t": 600.2,
+          "target": 1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "bgB": "eb8db7",
+          "current": 1,
+          "phase": "idle",
+          "scale": 1,
+          "t": 1432,
+          "target": 1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "bgB": "eb8db7",
+          "current": 1.066,
+          "phase": "closing",
+          "scale": 1,
+          "t": 2111.6,
+          "target": 1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "bgB": "eb8db7",
+          "current": 0.1311,
+          "phase": "waiting",
+          "scale": 0,
+          "t": 2390.6,
+          "target": 0
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "bgB": "eb8db7",
+          "current": 0,
+          "phase": "coloring",
+          "scale": 0,
+          "t": 2570.6,
+          "target": 0
+        },
+        {
+          "active": 0,
+          "bg": "f87800",
+          "bgB": "7e7eff",
+          "current": 0,
+          "phase": "opening",
+          "scale": 0,
+          "t": 2771.2,
+          "target": 0
+        },
+        {
+          "active": 0,
+          "bg": "f87800",
+          "bgB": "7e7eff",
+          "current": 0,
+          "phase": "idle",
+          "scale": 1,
+          "t": 3631.9,
+          "target": 0
+        }
+      ]
+    },
+    {
+      "active": "0",
+      "bar": "01. AI 短片5 个视频 · 人物、情绪与故事01 / 03",
+      "bg": "f87800",
+      "bgB": "7e7eff",
+      "build": "/assets/index-DRQEMGWo.js",
+      "phase": "closing",
+      "position": "0.2169",
+      "route": "/works",
+      "scale": "0.0560",
+      "target": "0",
+      "trace": [
+        {
+          "active": -1,
+          "bg": "f87800",
+          "bgB": "7e7eff",
+          "current": 0,
+          "phase": "idle",
+          "scale": 0,
+          "t": 554.9,
+          "target": -1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "bgB": "eb8db7",
+          "current": 1,
+          "phase": "opening",
+          "scale": 0,
+          "t": 600.2,
+          "target": 1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "bgB": "eb8db7",
+          "current": 1,
+          "phase": "idle",
+          "scale": 1,
+          "t": 1432,
+          "target": 1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "bgB": "eb8db7",
+          "current": 1.066,
+          "phase": "closing",
+          "scale": 1,
+          "t": 2111.6,
+          "target": 1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "bgB": "eb8db7",
+          "current": 0.1311,
+          "phase": "waiting",
+          "scale": 0,
+          "t": 2390.6,
+          "target": 0
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "bgB": "eb8db7",
+          "current": 0,
+          "phase": "coloring",
+          "scale": 0,
+          "t": 2570.6,
+          "target": 0
+        },
+        {
+          "active": 0,
+          "bg": "f87800",
+          "bgB": "7e7eff",
+          "current": 0,
+          "phase": "opening",
+          "scale": 0,
+          "t": 2771.2,
+          "target": 0
+        },
+        {
+          "active": 0,
+          "bg": "f87800",
+          "bgB": "7e7eff",
+          "current": 0,
+          "phase": "idle",
+          "scale": 1,
+          "t": 3631.9,
+          "target": 0
+        },
+        {
+          "active": 0,
+          "bg": "f87800",
+          "bgB": "7e7eff",
+          "current": 0.0013,
+          "phase": "closing",
+          "scale": 1,
+          "t": 13275.4,
+          "target": 0
+        }
+      ]
+    },
+    {
+      "active": "0",
+      "bar": "01. AI 短片5 个视频 · 人物、情绪与故事01 / 03",
+      "bg": "f87800",
+      "bgB": "7e7eff",
+      "build": "/assets/index-DRQEMGWo.js",
+      "phase": "idle",
+      "position": "0.0000",
+      "route": "/works",
+      "scale": "1.0000",
+      "target": "0",
+      "trace": [
+        {
+          "active": -1,
+          "bg": "f87800",
+          "bgB": "7e7eff",
+          "current": 0,
+          "phase": "idle",
+          "scale": 0,
+          "t": 554.9,
+          "target": -1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "bgB": "eb8db7",
+          "current": 1,
+          "phase": "opening",
+          "scale": 0,
+          "t": 600.2,
+          "target": 1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "bgB": "eb8db7",
+          "current": 1,
+          "phase": "idle",
+          "scale": 1,
+          "t": 1432,
+          "target": 1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "bgB": "eb8db7",
+          "current": 1.066,
+          "phase": "closing",
+          "scale": 1,
+          "t": 2111.6,
+          "target": 1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "bgB": "eb8db7",
+          "current": 0.1311,
+          "phase": "waiting",
+          "scale": 0,
+          "t": 2390.6,
+          "target": 0
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "bgB": "eb8db7",
+          "current": 0,
+          "phase": "coloring",
+          "scale": 0,
+          "t": 2570.6,
+          "target": 0
+        },
+        {
+          "active": 0,
+          "bg": "f87800",
+          "bgB": "7e7eff",
+          "current": 0,
+          "phase": "opening",
+          "scale": 0,
+          "t": 2771.2,
+          "target": 0
+        },
+        {
+          "active": 0,
+          "bg": "f87800",
+          "bgB": "7e7eff",
+          "current": 0,
+          "phase": "idle",
+          "scale": 1,
+          "t": 3631.9,
+          "target": 0
+        },
+        {
+          "active": 0,
+          "bg": "f87800",
+          "bgB": "7e7eff",
+          "current": 0.0013,
+          "phase": "closing",
+          "scale": 1,
+          "t": 13275.4,
+          "target": 0
+        },
+        {
+          "active": 0,
+          "bg": "f87800",
+          "bgB": "7e7eff",
+          "current": 0.2313,
+          "phase": "waiting",
+          "scale": 0,
+          "t": 13554,
+          "target": 0
+        },
+        {
+          "active": 0,
+          "bg": "f87800",
+          "bgB": "7e7eff",
+          "current": 0,
+          "phase": "coloring",
+          "scale": 0,
+          "t": 14136.7,
+          "target": 0
+        },
+        {
+          "active": 0,
+          "bg": "f87800",
+          "bgB": "7e7eff",
+          "current": 0,
+          "phase": "opening",
+          "scale": 0,
+          "t": 14323.7,
+          "target": 0
+        },
+        {
+          "active": 0,
+          "bg": "f87800",
+          "bgB": "7e7eff",
+          "current": 0,
+          "phase": "idle",
+          "scale": 1,
+          "t": 15187.4,
+          "target": 0
+        }
+      ]
+    },
+    {
+      "active": "1",
+      "bar": "02. 动画影像2 个视频 · 角色、空间与想象02 / 03",
+      "bg": "f87800",
+      "bgB": "eb8db7",
+      "build": "/assets/index-DRQEMGWo.js",
+      "phase": "idle",
+      "position": "1.0000",
+      "route": "/works",
+      "scale": "1.0000",
+      "target": "1",
+      "trace": [
+        {
+          "active": -1,
+          "bg": "f87800",
+          "bgB": "7e7eff",
+          "current": 0,
+          "phase": "idle",
+          "scale": 0,
+          "t": 554.9,
+          "target": -1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "bgB": "eb8db7",
+          "current": 1,
+          "phase": "opening",
+          "scale": 0,
+          "t": 600.2,
+          "target": 1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "bgB": "eb8db7",
+          "current": 1,
+          "phase": "idle",
+          "scale": 1,
+          "t": 1432,
+          "target": 1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "bgB": "eb8db7",
+          "current": 1.066,
+          "phase": "closing",
+          "scale": 1,
+          "t": 2111.6,
+          "target": 1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "bgB": "eb8db7",
+          "current": 0.1311,
+          "phase": "waiting",
+          "scale": 0,
+          "t": 2390.6,
+          "target": 0
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "bgB": "eb8db7",
+          "current": 0,
+          "phase": "coloring",
+          "scale": 0,
+          "t": 2570.6,
+          "target": 0
+        },
+        {
+          "active": 0,
+          "bg": "f87800",
+          "bgB": "7e7eff",
+          "current": 0,
+          "phase": "opening",
+          "scale": 0,
+          "t": 2771.2,
+          "target": 0
+        },
+        {
+          "active": 0,
+          "bg": "f87800",
+          "bgB": "7e7eff",
+          "current": 0,
+          "phase": "idle",
+          "scale": 1,
+          "t": 3631.9,
+          "target": 0
+        },
+        {
+          "active": 0,
+          "bg": "f87800",
+          "bgB": "7e7eff",
+          "current": 0.0013,
+          "phase": "closing",
+          "scale": 1,
+          "t": 13275.4,
+          "target": 0
+        },
+        {
+          "active": 0,
+          "bg": "f87800",
+          "bgB": "7e7eff",
+          "current": 0.2313,
+          "phase": "waiting",
+          "scale": 0,
+          "t": 13554,
+          "target": 0
+        },
+        {
+          "active": 0,
+          "bg": "f87800",
+          "bgB": "7e7eff",
+          "current": 0,
+          "phase": "coloring",
+          "scale": 0,
+          "t": 14136.7,
+          "target": 0
+        },
+        {
+          "active": 0,
+          "bg": "f87800",
+          "bgB": "7e7eff",
+          "current": 0,
+          "phase": "opening",
+          "scale": 0,
+          "t": 14323.7,
+          "target": 0
+        },
+        {
+          "active": 0,
+          "bg": "f87800",
+          "bgB": "7e7eff",
+          "current": 0,
+          "phase": "idle",
+          "scale": 1,
+          "t": 15187.4,
+          "target": 0
+        },
+        {
+          "active": 0,
+          "bg": "f87800",
+          "bgB": "7e7eff",
+          "current": 0.037,
+          "phase": "closing",
+          "scale": 1,
+          "t": 155346,
+          "target": 0
+        },
+        {
+          "active": 0,
+          "bg": "f87800",
+          "bgB": "7e7eff",
+          "current": 0.9709,
+          "phase": "waiting",
+          "scale": 0,
+          "t": 155625.1,
+          "target": 1
+        },
+        {
+          "active": 0,
+          "bg": "f87800",
+          "bgB": "7e7eff",
+          "current": 0.9999,
+          "phase": "coloring",
+          "scale": 0,
+          "t": 155726.6,
+          "target": 1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "bgB": "eb8db7",
+          "current": 1,
+          "phase": "opening",
+          "scale": 0,
+          "t": 155931.8,
+          "target": 1
+        },
+        {
+          "active": 1,
+          "bg": "f87800",
+          "bgB": "eb8db7",
+          "current": 1,
+          "phase": "idle",
+          "scale": 1,
+          "t": 156795.1,
+          "target": 1
+        }
+      ]
+    }
+  ],
+  "development": {
+    "phase": "idle",
+    "scale": "1.0000",
+    "trace": [
+      {
+        "active": -1,
+        "bg": "f87800",
+        "bgB": "7e7eff",
+        "current": 0,
+        "phase": "idle",
+        "scale": 0,
+        "t": 810.1,
+        "target": -1
+      },
+      {
+        "active": 2,
+        "bg": "f87800",
+        "bgB": "7e7eff",
+        "current": 2,
+        "phase": "opening",
+        "scale": 0,
+        "t": 872,
+        "target": 2
+      },
+      {
+        "active": 2,
+        "bg": "f87800",
+        "bgB": "7e7eff",
+        "current": 2,
+        "phase": "idle",
+        "scale": 1,
+        "t": 1699.3,
+        "target": 2
+      },
+      {
+        "active": 2,
+        "bg": "f87800",
+        "bgB": "7e7eff",
+        "current": 1.8824,
+        "phase": "closing",
+        "scale": 1,
+        "t": 17840.4,
+        "target": 2
+      },
+      {
+        "active": 2,
+        "bg": "f87800",
+        "bgB": "7e7eff",
+        "current": 0.2758,
+        "phase": "waiting",
+        "scale": 0,
+        "t": 18124.2,
+        "target": 0
+      },
+      {
+        "active": 2,
+        "bg": "f87800",
+        "bgB": "7e7eff",
+        "current": 0.0003,
+        "phase": "coloring",
+        "scale": 0,
+        "t": 18395.6,
+        "target": 0
+      },
+      {
+        "active": 0,
+        "bg": "f87800",
+        "bgB": "7e7eff",
+        "current": 0,
+        "phase": "opening",
+        "scale": 0,
+        "t": 18593.1,
+        "target": 0
+      },
+      {
+        "active": 0,
+        "bg": "f87800",
+        "bgB": "7e7eff",
+        "current": 0,
+        "phase": "idle",
+        "scale": 1,
+        "t": 19454,
+        "target": 0
+      }
+    ]
+  },
+  "productionErrors": [],
+  "developmentErrors": []
+}

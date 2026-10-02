@@ -1,0 +1,21 @@
+Use case: precise-object-edit / stylized-concept.
+Asset type: one revised wide 16:9 homepage illustration.
+Input image: hero-v2.png is the edit target. Preserve its distinctive three character designs, eccentric expressions, black hand-drawn contour quality, flat color style and light paper-grain texture.
+
+USER CORRECTION — the characters MUST be INSIDE a BLUE MASK. The previous version incorrectly made them burst outside the backdrop. The most important requirement is a clearly visible blue silhouette containing the entire character scene.
+
+CHANGE THE LAYOUT AND MASK:
+- Place one large, clearly defined, periwinkle BLUE organic silhouette in the center of the wide canvas. Blue approximately #7E7EFF, with some slightly deeper blue-purple patches for texture. It should occupy about 84% of the canvas width and 86% of the canvas height. Make its outline playful and asymmetric: a few large smooth rounded lobes, concave S-curve sides and subtle irregularity; no regular circle, square, arch, animal head or flower emblem.
+- This blue silhouette is the illustrated scene's clipping mask and actual visible BLUE background. It is not merely a blue border surrounding the previous orange sky.
+- Outside the blue silhouette, use a quiet warm cream / pale candy-pink background with restrained paper grain. Make the blue boundary easy to read against the outside background.
+- ALL three characters and ALL their equipment must lie wholly INSIDE this blue silhouette: every hand, foot, tentacle, beak, boom microphone, pole, clapper board, reel, scarf and film ribbon. No character or object crosses the blue contour. No figure is placed on the exterior pink/cream area.
+- Reposition and slightly scale down the crew so their complete expressive silhouettes fit naturally inside the blue mask, with a small breathing margin around the outermost limbs. Keep their dynamic asymmetry, humorous poses and interaction; do not straighten them into three bland standing mascots.
+- Curl the film ribbon through the lower portion INSIDE the blue silhouette. Keep the boom pole and its fuzzy microphone angled across the upper-right interior, not extending beyond the boundary.
+- A tiny amber-orange film platform and simplified muted-teal studio fragments can appear inside the blue mask behind the crew. The dominant interior color MUST visibly remain BLUE, not orange. Sparse cream stars and a little moon are inside the blue scene.
+- Foreground pink clouds can be retained as a small low band INSIDE the mask. Do not use clouds or foreground objects to cover the mask outline.
+
+PRESERVE THE IMPROVED PERSONALITIES:
+Central cream projector creature: huge camera-lens eye, uneven orange film-reel curls, crooked snaggletooth smile, tiny body, dark rubber-hose arms, one large gesturing cream hand, orange-red scarf and oversized mismatched shoes. Left lavender octopus: drooping large head, half-lidded skeptical eyes, crooked dark beret, long curling tentacles and unlettered striped clapper board. Right mint-green bird: long crooked neck and yellow beak, side-eye expression, oversized violet headphones and black boots, balancing the dark boom pole. Keep the lively flat inked indie-comic drawing, not a sweet children's-book redesign.
+
+FINAL CONSTRAINTS:
+Every character stays in the BLUE mask. Preserve original character identities from the edit target, but adapt pose and scale as necessary to fit inside. Maintain wide 16:9 landscape. One cohesive polished raster artwork. No text, logo, watermark, website navigation or UI. No copy of recognizable existing characters. No 3D, photorealism, heavy gradients or glossy effects.

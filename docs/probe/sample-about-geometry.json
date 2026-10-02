@@ -1,0 +1,288 @@
+{
+ "secs": [
+  {
+   "cls": "about-section about-intro",
+   "box": {
+    "x": 0,
+    "y": 0,
+    "w": 1440,
+    "h": 900,
+    "o": "1",
+    "tf": "none",
+    "pos": "relative",
+    "top": "0px"
+   }
+  },
+  {
+   "cls": "about-section about-what",
+   "box": {
+    "x": 0,
+    "y": 900,
+    "w": 1440,
+    "h": 1800,
+    "o": "1",
+    "tf": "none",
+    "pos": "relative",
+    "top": "0px"
+   }
+  },
+  {
+   "cls": "about-section about-team",
+   "box": {
+    "x": 0,
+    "y": 2700,
+    "w": 1440,
+    "h": 3150,
+    "o": "1",
+    "tf": "none",
+    "pos": "relative",
+    "top": "0px"
+   }
+  },
+  {
+   "cls": "about-section about-support",
+   "box": {
+    "x": 0,
+    "y": 5850,
+    "w": 1440,
+    "h": 900,
+    "o": "1",
+    "tf": "none",
+    "pos": "relative",
+    "top": "0px"
+   }
+  }
+ ],
+ "dots": [
+  {
+   "cls": "about-nav-bar",
+   "box": {
+    "x": 1400,
+    "y": 413.5,
+    "w": 15,
+    "h": 73,
+    "o": "0",
+    "tf": "matrix(1, 0, 0, 1, 0, -36.5)",
+    "pos": "fixed",
+    "top": "450px"
+   }
+  },
+  {
+   "cls": "about-nav-bar__list",
+   "box": {
+    "x": 1403,
+    "y": 418.5,
+    "w": 9,
+    "h": 63,
+    "o": "1",
+    "tf": "none",
+    "pos": "static",
+    "top": "auto"
+   }
+  },
+  {
+   "cls": "about-nav-bar__item",
+   "box": {
+    "x": 1403,
+    "y": 418.5,
+    "w": 9,
+    "h": 9,
+    "o": "1",
+    "tf": "none",
+    "pos": "static",
+    "top": "auto"
+   }
+  },
+  {
+   "cls": "about-nav-bar__item-inner",
+   "box": {
+    "x": 1404.8,
+    "y": 420.3,
+    "w": 5.4,
+    "h": 5.4,
+    "o": "1",
+    "tf": "matrix(0.6, 0, 0, 0.6, 0, 0)",
+    "pos": "static",
+    "top": "auto"
+   }
+  },
+  {
+   "cls": "about-nav-bar__title",
+   "box": {
+    "x": 0,
+    "y": 0,
+    "w": 0,
+    "h": 0,
+    "o": "0",
+    "tf": "none",
+    "pos": "absolute",
+    "top": "auto"
+   }
+  },
+  {
+   "cls": "about-nav-bar__item",
+   "box": {
+    "x": 1403,
+    "y": 436.5,
+    "w": 9,
+    "h": 9,
+    "o": "1",
+    "tf": "none",
+    "pos": "static",
+    "top": "auto"
+   }
+  },
+  {
+   "cls": "about-nav-bar__item-inner",
+   "box": {
+    "x": 1404.8,
+    "y": 438.3,
+    "w": 5.4,
+    "h": 5.4,
+    "o": "1",
+    "tf": "matrix(0.6, 0, 0, 0.6, 0, 0)",
+    "pos": "static",
+    "top": "auto"
+   }
+  },
+  {
+   "cls": "about-nav-bar__title",
+   "box": {
+    "x": 0,
+    "y": 0,
+    "w": 0,
+    "h": 0,
+    "o": "0",
+    "tf": "none",
+    "pos": "absolute",
+    "top": "auto"
+   }
+  },
+  {
+   "cls": "about-nav-bar__item",
+   "box": {
+    "x": 1403,
+    "y": 454.5,
+    "w": 9,
+    "h": 9,
+    "o": "1",
+    "tf": "none",
+    "pos": "static",
+    "top": "auto"
+   }
+  },
+  {
+   "cls": "about-nav-bar__item-inner",
+   "box": {
+    "x": 1404.8,
+    "y": 456.3,
+    "w": 5.4,
+    "h": 5.4,
+    "o": "1",
+    "tf": "matrix(0.6, 0, 0, 0.6, 0, 0)",
+    "pos": "static",
+    "top": "auto"
+   }
+  },
+  {
+   "cls": "about-nav-bar__title",
+   "box": {
+    "x": 0,
+    "y": 0,
+    "w": 0,
+    "h": 0,
+    "o": "0",
+    "tf": "none",
+    "pos": "absolute",
+    "top": "auto"
+   }
+  },
+  {
+   "cls": "about-nav-bar__item",
+   "box": {
+    "x": 1403,
+    "y": 472.5,
+    "w": 9,
+    "h": 9,
+    "o": "1",
+    "tf": "none",
+    "pos": "static",
+    "top": "auto"
+   }
+  },
+  {
+   "cls": "about-nav-bar__item-inner",
+   "box": {
+    "x": 1404.8,
+    "y": 474.3,
+    "w": 5.4,
+    "h": 5.4,
+    "o": "1",
+    "tf": "matrix(0.6, 0, 0, 0.6, 0, 0)",
+    "pos": "static",
+    "top": "auto"
+   }
+  },
+  {
+   "cls": "about-nav-bar__title",
+   "box": {
+    "x": 0,
+    "y": 0,
+    "w": 0,
+    "h": 0,
+    "o": "0",
+    "tf": "none",
+    "pos": "absolute",
+    "top": "auto"
+   }
+  },
+  {
+   "cls": {},
+   "box": {
+    "x": 0,
+    "y": 0,
+    "w": 0,
+    "h": 0,
+    "o": "1",
+    "tf": "none",
+    "pos": "absolute",
+    "top": "85%"
+   }
+  },
+  {
+   "cls": "progress-container",
+   "box": {
+    "x": 0,
+    "y": 897,
+    "w": 1440,
+    "h": 3,
+    "o": "1",
+    "tf": "none",
+    "pos": "fixed",
+    "top": "897px"
+   }
+  },
+  {
+   "cls": "progress-bar",
+   "box": {
+    "x": 0,
+    "y": 897,
+    "w": 0,
+    "h": 3,
+    "o": "1",
+    "tf": "matrix(0, 0, 0, 1, 0, 0)",
+    "pos": "absolute",
+    "top": "0px"
+   }
+  }
+ ],
+ "scrollH": 900,
+ "innerH": 900,
+ "bodyCls": "lang-en page-about",
+ "sections": [
+  "about-section about-intro",
+  "about-section about-what",
+  "about-section about-team",
+  "about-section about-support"
+ ]
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "salt-horizon",
+    "no": "01",
+    "title": "盐的尽头",
+    "placeholder": "01-salt-horizon.svg"
+  },
+  {
+    "slug": "nine-lives",
+    "no": "02",
+    "title": "九条命",
+    "placeholder": "02-nine-lives.svg"
+  },
+  {
+    "slug": "paper-city",
+    "no": "03",
+    "title": "纸的城市",
+    "placeholder": "03-paper-city.svg"
+  },
+  {
+    "slug": "static-bloom",
+    "no": "04",
+    "title": "噪点开花",
+    "placeholder": "04-static-bloom.svg"
+  },
+  {
+    "slug": "long-way-home",
+    "no": "05",
+    "title": "回家的长路",
+    "placeholder": "05-long-way-home.svg"
+  },
+  {
+    "slug": "warm-machine",
+    "no": "06",
+    "title": "温热的机器",
+    "placeholder": "06-warm-machine.svg"
+  }
+]

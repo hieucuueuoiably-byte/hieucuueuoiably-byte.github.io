@@ -1,0 +1,108 @@
+:root {
+  --site-title-top: clamp(24px, 3vh, 70px);
+  --site-title-size: clamp(40px, 7.2vh, 88px);
+  --site-title-row-height: calc(var(--site-title-size) * 1.36);
+  --site-header-content-top: calc(var(--site-title-top) + var(--site-title-row-height) + clamp(10px, 1.6vh, 17px) * 1.3 + 27px + env(safe-area-inset-top, 0px));
+  --site-nav-offset: max(clamp(168px, 16vw, 270px), calc(var(--site-title-size) * 3.1 + 35px));
+}
+.app-header.app-header--unified {
+  top: calc(var(--site-title-top) + env(safe-area-inset-top, 0px));
+  width: 100vw;
+  height: auto;
+  display: block;
+  pointer-events: none;
+}
+.app-header.app-header--unified .app-header__links {
+  position: relative;
+  inset: auto;
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1fr) 70px;
+  align-items: start;
+  width: min(calc(100% - 24px), calc(var(--site-nav-offset) * 2 + 70px));
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+}
+.app-header.app-header--unified .app-header__works-group {
+  position: static;
+  inset: auto;
+  display: block;
+  height: var(--site-title-row-height);
+  transform: none;
+}
+.app-header.app-header--unified .app-header__link {
+  position: relative;
+  inset: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  height: var(--site-title-row-height);
+  padding: 0 12px;
+  font-size: clamp(12px, 1.2vw, 18px);
+  transform: none;
+}
+.app-header.app-header--unified .app-header__title-wrapper {
+  position: static;
+  inset: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 1;
+  visibility: visible;
+  user-select: none;
+  perspective: 700px;
+}
+.site-wordmark__heading {
+  margin: 0;
+  font-family: 'Arial Black', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: var(--site-title-size);
+  font-weight: 950;
+  line-height: 1.16;
+  color: inherit;
+}
+.site-wordmark__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 1.2vw, 22px);
+  pointer-events: auto;
+}
+.site-wordmark__text { display: flex; gap: .025em; }
+.site-wordmark__glyph-clip { display: block; overflow: clip; perspective: 400px; padding: .10em 0; }
+.site-wordmark__glyph, .site-wordmark__glyph-motion { display: block; transform-origin: 50% 85%; }
+.site-wordmark__accent { display: block; flex: none; width: clamp(13px, 1.3vw, 23px); height: clamp(13px, 1.3vw, 23px); }
+.site-wordmark__spark { display: block; width: 100%; height: 100%; animation: site-title-spark 6s ease-in-out infinite; }
+.site-wordmark__accent--right .site-wordmark__spark { animation-delay: -3s; }
+.site-wordmark__tagline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  margin: 9px 0 0;
+  font-size: clamp(10px, 1.6vh, 17px);
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: .1em;
+  white-space: nowrap;
+}
+.site-wordmark__tagline-text { display: block; }
+.site-wordmark__rule { display: block; width: clamp(20px, 2.3vw, 40px); height: 1px; background: currentColor; opacity: .65; transform-origin: center; }
+@keyframes site-title-spark { 0%,100% { transform: rotate(0) scale(.9); opacity: .65; } 50% { transform: rotate(90deg) scale(1.08); opacity: 1; } }
+@media (max-aspect-ratio: 1/1) {
+  :root { --site-title-top: clamp(44px, 5.4vh, 76px); }
+}
+@media (max-width: 700px) {
+  :root { --site-title-size: clamp(28px, 8.7vw, 44px); }
+  .app-header.app-header--unified .app-header__links { grid-template-columns: 50px minmax(0, 1fr) 50px; width: calc(100% - 24px); }
+  .site-wordmark__link { gap: 12px; }
+  .site-wordmark__accent { width: 13px; height: 13px; }
+  .site-wordmark__tagline { gap: 10px; font-size: 10px; letter-spacing: .08em; }
+}
+@media (max-height: 500px) and (min-aspect-ratio: 1/1) {
+  :root { --site-title-top: 18px; --site-title-size: 32px; }
+  .site-wordmark__tagline { font-size: 9px; margin-top: 4px; }
+}
+@media (prefers-reduced-motion: reduce) { .site-wordmark__spark { animation: none; } }
+.site-wordmark--still .site-wordmark__spark { animation: none; }

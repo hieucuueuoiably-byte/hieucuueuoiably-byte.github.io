@@ -1,0 +1,196 @@
+[
+  {
+    "about": {
+      "cx": 844.7890625,
+      "cy": 59.25,
+      "height": 20,
+      "width": 30.765625,
+      "x": 829.40625,
+      "y": 49.25
+    },
+    "cta": {
+      "cx": 639.9921875,
+      "cy": 616,
+      "height": 64,
+      "width": 157.015625,
+      "x": 561.484375,
+      "y": 584
+    },
+    "ctaFont": "28px",
+    "ctaLabel": {
+      "cx": 639.9921875,
+      "cy": 615.9921875,
+      "height": 30.796875,
+      "width": 117.015625,
+      "x": 581.484375,
+      "y": 600.59375
+    },
+    "ctaWeight": "900",
+    "glyphGap": "1.68px",
+    "headerCount": 1,
+    "height": 720,
+    "route": "/",
+    "title": {
+      "cx": 640,
+      "cy": 59.234375,
+      "height": 70.46875,
+      "width": 328.3125,
+      "x": 475.84375,
+      "y": 24
+    },
+    "visible": "visible",
+    "width": 1280,
+    "works": {
+      "cx": 435.1953125,
+      "cy": 59.25,
+      "height": 20,
+      "width": 30.765625,
+      "x": 419.8125,
+      "y": 49.25
+    }
+  },
+  {
+    "about": {
+      "cx": 844.7890625,
+      "cy": 59.25,
+      "height": 20,
+      "width": 30.765625,
+      "x": 829.40625,
+      "y": 49.25
+    },
+    "cta": null,
+    "ctaFont": null,
+    "ctaLabel": null,
+    "ctaWeight": null,
+    "glyphGap": null,
+    "headerCount": 1,
+    "height": 720,
+    "route": "/works",
+    "title": {
+      "cx": 640,
+      "cy": 59.234375,
+      "height": 70.46875,
+      "width": 328.3125,
+      "x": 475.84375,
+      "y": 24
+    },
+    "visible": "visible",
+    "width": 1280,
+    "works": {
+      "cx": 435.1953125,
+      "cy": 59.25,
+      "height": 20,
+      "width": 30.765625,
+      "x": 419.8125,
+      "y": 49.25
+    }
+  },
+  {
+    "about": {
+      "cx": 844.7890625,
+      "cy": 59.25,
+      "height": 20,
+      "width": 30.765625,
+      "x": 829.40625,
+      "y": 49.25
+    },
+    "cta": null,
+    "ctaFont": null,
+    "ctaLabel": null,
+    "ctaWeight": null,
+    "glyphGap": null,
+    "headerCount": 1,
+    "height": 720,
+    "route": "/works/category/ai-shorts",
+    "title": {
+      "cx": 640,
+      "cy": 59.234375,
+      "height": 70.46875,
+      "width": 328.3125,
+      "x": 475.84375,
+      "y": 24
+    },
+    "visible": "visible",
+    "width": 1280,
+    "works": {
+      "cx": 435.1953125,
+      "cy": 59.25,
+      "height": 20,
+      "width": 30.765625,
+      "x": 419.8125,
+      "y": 49.25
+    }
+  },
+  {
+    "about": {
+      "cx": 844.7890625,
+      "cy": 59.25,
+      "height": 20,
+      "width": 30.765625,
+      "x": 829.40625,
+      "y": 49.25
+    },
+    "cta": null,
+    "ctaFont": null,
+    "ctaLabel": null,
+    "ctaWeight": null,
+    "glyphGap": null,
+    "headerCount": 1,
+    "height": 720,
+    "route": "/works/film-0821",
+    "title": {
+      "cx": 640,
+      "cy": 59.234375,
+      "height": 70.46875,
+      "width": 328.3125,
+      "x": 475.84375,
+      "y": 24
+    },
+    "visible": "visible",
+    "width": 1280,
+    "works": {
+      "cx": 435.1953125,
+      "cy": 59.25,
+      "height": 20,
+      "width": 30.765625,
+      "x": 419.8125,
+      "y": 49.25
+    }
+  },
+  {
+    "about": {
+      "cx": 844.7890625,
+      "cy": 59.25,
+      "height": 20,
+      "width": 30.765625,
+      "x": 829.40625,
+      "y": 49.25
+    },
+    "cta": null,
+    "ctaFont": null,
+    "ctaLabel": null,
+    "ctaWeight": null,
+    "glyphGap": null,
+    "headerCount": 1,
+    "height": 720,
+    "route": "/about",
+    "title": {
+      "cx": 640,
+      "cy": 59.234375,
+      "height": 70.46875,
+      "width": 328.3125,
+      "x": 475.84375,
+      "y": 24
+    },
+    "visible": "visible",
+    "width": 1280,
+    "works": {
+      "cx": 435.1953125,
+      "cy": 59.25,
+      "height": 20,
+      "width": 30.765625,
+      "x": 419.8125,
+      "y": 49.25
+    }
+  }
+]

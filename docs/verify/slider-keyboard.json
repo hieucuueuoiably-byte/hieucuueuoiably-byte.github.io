@@ -1,0 +1,108 @@
+{
+ "dev": {
+  "焦点检查": {
+   "tag": "DIV",
+   "cls": "bar__scrub",
+   "role": "slider",
+   "tabIndex": "0",
+   "是进度条": true
+  },
+  "按键": [
+   {
+    "key": "ArrowRight",
+    "prevented": true
+   },
+   {
+    "key": "ArrowRight",
+    "prevented": true
+   },
+   {
+    "key": "ArrowRight",
+    "prevented": true
+   },
+   {
+    "key": "ArrowLeft",
+    "prevented": true
+   }
+  ],
+  "进度条聚焦": {
+   "前": {
+    "url": "/works/salt-horizon",
+    "t": 1.379
+   },
+   "后": {
+    "url": "/works/salt-horizon",
+    "t": 1.699
+   },
+   "路由未变": true,
+   "时间变了": true,
+   "时间差": 0.32,
+   "全部被拦下": true
+  },
+  "焦点在body时": {
+   "前": {
+    "url": "/works/salt-horizon",
+    "t": 1.699
+   },
+   "后": {
+    "url": "/works/nine-lives",
+    "t": 0
+   },
+   "切了作品": true
+  },
+  "控制台错误": []
+ },
+ "prod": {
+  "焦点检查": {
+   "tag": "DIV",
+   "cls": "bar__scrub",
+   "role": "slider",
+   "tabIndex": "0",
+   "是进度条": true
+  },
+  "按键": [
+   {
+    "key": "ArrowRight",
+    "prevented": true
+   },
+   {
+    "key": "ArrowRight",
+    "prevented": true
+   },
+   {
+    "key": "ArrowRight",
+    "prevented": true
+   },
+   {
+    "key": "ArrowLeft",
+    "prevented": true
+   }
+  ],
+  "进度条聚焦": {
+   "前": {
+    "url": "/works/salt-horizon",
+    "t": 1.372
+   },
+   "后": {
+    "url": "/works/salt-horizon",
+    "t": 1.692
+   },
+   "路由未变": true,
+   "时间变了": true,
+   "时间差": 0.32,
+   "全部被拦下": true
+  },
+  "焦点在body时": {
+   "前": {
+    "url": "/works/salt-horizon",
+    "t": 1.692
+   },
+   "后": {
+    "url": "/works/nine-lives",
+    "t": 0
+   },
+   "切了作品": true
+  },
+  "控制台错误": []
+ }
+}

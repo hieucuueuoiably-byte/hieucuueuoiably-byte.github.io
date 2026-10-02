@@ -1,0 +1,40 @@
+[
+ {
+  "name": "A 直接开 /chapters，无手势 → 5×120",
+  "idx": 0,
+  "n": 5,
+  "body": "lang-en page-chapters",
+  "html": "is-gpu-1 os-win browser-chrome is-desktop"
+ },
+ {
+  "name": "B 直接开 + 点一下空白 → 5×120",
+  "idx": -1,
+  "n": 0
+ },
+ {
+  "name": "C 首页 → 点 CTA → 5×120（复刻 v1）",
+  "idx": 0,
+  "n": 5
+ },
+ {
+  "name": "D 直接开 + 先小滚一次 → 5×120",
+  "idx": 0,
+  "n": 5
+ },
+ {
+  "name": "E 直接开 + 点 about 再 back → 5×120",
+  "idx": -1,
+  "n": 0
+ },
+ {
+  "name": "F 直接开 + 点中央海报 → 5×120",
+  "idx": -1,
+  "n": 0
+ },
+ {
+  "name": "G 直接开 + 键盘 ArrowRight → 5×120",
+  "键盘后": 0,
+  "滚轮后": 0,
+  "n": 5
+ }
+]

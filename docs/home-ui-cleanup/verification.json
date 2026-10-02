@@ -1,0 +1,43 @@
+{
+  "about": {
+    "cx": 844.796875,
+    "cy": 36,
+    "height": 20,
+    "width": 30.03125,
+    "x": 829.78125,
+    "y": 26
+  },
+  "build": "/assets/index-CSuwkIeI.js",
+  "cta": {
+    "cx": 640,
+    "cy": 615,
+    "height": 66,
+    "width": 168,
+    "x": 556,
+    "y": 582
+  },
+  "ctaArrows": 0,
+  "ctaTextOffset": 0,
+  "dropdownButtons": 0,
+  "dropdownPanel": false,
+  "label": {
+    "cx": 640,
+    "cy": 615,
+    "height": 30,
+    "width": 91.09375,
+    "x": 594.453125,
+    "y": 600
+  },
+  "navCenter": 639.9921875,
+  "navVerticalDifference": 0,
+  "titleTop": 52,
+  "width": 1280,
+  "works": {
+    "cx": 435.1875,
+    "cy": 36,
+    "height": 20,
+    "width": 30.03125,
+    "x": 420.171875,
+    "y": 26
+  }
+}

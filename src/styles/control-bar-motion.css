@@ -1,0 +1,18 @@
+/* Source: ponpon-mania.com/_nuxt/Bg17DEuf.js, ChaptersButton H/j/S/Q. */
+.control-bar[data-motion] { transform-origin: 50% 50%; transform-style: preserve-3d; transition: opacity .22s ease, scale .3s cubic-bezier(.215,.61,.355,1); }
+.control-bar .bar__title, .control-bar .bar__sub, .control-bar .bar__index { overflow: hidden; }
+.control-bar .bar__text-inner { display: block; overflow: hidden; text-overflow: ellipsis; }
+.control-bar .bar__play-icon { display: flex; align-items: center; justify-content: center; transition: scale .3s cubic-bezier(.215,.61,.355,1); }
+.control-bar .bar-btn--play { overflow: hidden; }
+body.is-transitioning .control-bar { opacity: 0 !important; pointer-events: none; }
+@media (hover: hover) and (pointer: fine) {
+  /* GSAP normalizes individual transforms to inline `scale: none`. */
+  .control-bar[data-motion='full']:hover { scale: 1.1 !important; }
+  .control-bar[data-motion='full'] .bar-btn--play:hover:not(:disabled) .bar__play-icon,
+  .control-bar[data-motion='full'] .bar-btn--play:focus-visible .bar__play-icon { scale: 1.15 !important; }
+  .control-bar .bar__nav .bar-btn:hover:not(:disabled) { transform: scale(1.1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .control-bar[data-motion] { transition: none; scale: 1 !important; }
+  .control-bar .bar__play-icon { transition: none; scale: 1 !important; }
+}

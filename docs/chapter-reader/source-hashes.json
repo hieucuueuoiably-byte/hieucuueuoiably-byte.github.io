@@ -1,0 +1,18 @@
+{
+  "src/gl/ReaderSourceShaders.ts": "8457f9d2636d39b7151c3ce828ca0d6b00d1f0cabf65648110968203c7cba4d5",
+  "src/gl/ReaderSolidGeometry.ts": "571476b780f325dfa6f632fe69fa274f562a12c264a24e97b80614ca174dea93",
+  "src/gl/CardProjection.ts": "78a8eba711f446efd05a1a369d1a328f028ad6ea6fcc1acbf2dc849a9bd50cc9",
+  "src/gl/CoverMaterial.ts": "5e7e65f613382ceb59ea70a3ea282ff594199667796a2c1a15471a35e6307f41",
+  "src/gl/ChapterReaderScene.ts": "be337dd5caf91ce73613295e3ca0594bddb2f70862d8f2875ae12939e504e946",
+  "src/gl/WorksScene.ts": "8326eb4143080b40411f3a9d615a9e836f6ffa9e8530120e1aeab9f3101a1a9d",
+  "src/App.tsx": "8e6517c4e947d579113a241de7526fe29a0c386ee04f2932913a4bf6b1221def",
+  "src/state/navController.ts": "f6215d785590af524b1e0883aef2c36163613f827c7169c6ff219b0114b2eb28",
+  "src/state/videoController.ts": "c81e2c36d6fa0ea60e0ba704af55d71cf587c314a2560e76b2c8b2df8f7cc09e",
+  "src/pages/WorksPage.tsx": "2f6d8ae160058f13c460eb8111f921357d2b8fde2ac8558788918ce3116ad9d4",
+  "src/components/CardTargets.tsx": "62dbc9202420c1ee230fdfb08896b8de87064f70431094191c7b584d98d81a8e",
+  "src/components/StaticWorks.tsx": "dce46c46b82f65de63d87e6cf13a986b945917a96c79c7265d6d6eaef2d7027b",
+  "src/components/InlineWorkVideo.tsx": "bb7b26e86e32a76e11e12d2fd70e697c64ef5d25246ff762d08135f56d5fe80f",
+  "src/components/ControlBar.tsx": "b1ff537fdc73ea79a2427a27e2be75fb7e96e54594b58aa66de12255e3ed8a51",
+  "src/styles/chapter-reader.css": "c2f569d4dae75a882161a4d3a558c8740a2f786bf5cb28e55856b44c679faed5",
+  "public/textures/paper-normals.jpg": "3cc008356c2bd48fcddf1e11bba5f58225394e7f05f08066a8105568744d7417"
+}

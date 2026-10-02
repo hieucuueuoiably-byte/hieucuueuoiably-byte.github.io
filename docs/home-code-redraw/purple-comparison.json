@@ -1,0 +1,17 @@
+{
+  "before": {
+    "size": [
+      1223,
+      884
+    ],
+    "purple_upper_35_percent_area": 0.23221
+  },
+  "after": {
+    "size": [
+      1223,
+      884
+    ],
+    "purple_upper_35_percent_area": 0.15804
+  },
+  "purple_relative_reduction": 0.3194
+}

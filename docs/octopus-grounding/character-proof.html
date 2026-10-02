@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><title>完整章鱼 · 睁眼与闭眼检查</title>
+<style>body{margin:0;background:#feece3;color:#25212d;font:16px system-ui}main{display:flex}section{width:50%;text-align:center}canvas{display:block;width:100%;height:auto}h2{font-size:18px;margin:16px}</style>
+<main><section><h2>完整轮廓 · 睁眼</h2><canvas id="open"></canvas></section><section><h2>完整轮廓 · 闭眼</h2><canvas id="closed"></canvas></section></main>
+<script type="module">
+import * as THREE from 'three';
+import {HomeCodeCharacter} from '../../src/gl/HomeCodeCharacters.ts';
+for(const [id,time] of [['open',0],['closed',4.7]]){
+ const renderer=new THREE.WebGLRenderer({canvas:document.getElementById(id),alpha:true,antialias:true});renderer.setSize(900,620,false);
+ const scene=new THREE.Scene(),camera=new THREE.OrthographicCamera(-450,450,310,-310,.1,2000);camera.position.z=1000;
+ const actor=new HomeCodeCharacter('octopus',360,665,2,4);actor.group.position.set(-70,0,0);scene.add(actor.group);actor.update(time,1);renderer.render(scene,camera);
+ document.getElementById(id).dataset.ready='true';
+}
+</script></html>

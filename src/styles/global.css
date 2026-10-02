@@ -1,0 +1,2524 @@
+/* =========================================================================
+   作品集网站 — 全局样式
+   设计令牌与布局数值大量照搬参考站实测值（见 src/config/motion.ts 的 layout 段），
+   每个关键规则旁边标了证据编号，对应 docs/motion-spec.md。
+   ========================================================================= */
+
+:root {
+  /* ---- 色板（E01/E20–E23 实测） ---- */
+  --ink: #171717;
+  --cream: #feece3;
+  --paper: #fff6f0;
+  --pink: #f1abbd;
+  --amber: #ffcc8e;
+  --yellow: #f7c704;
+
+  /* ---- 版式 ---- */
+  --font: 'Libre Franklin', 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', Arial, sans-serif;
+  --nav-size: 15px; /* E08 */
+  --credit-size: 6.6px; /* E05 */
+
+  /* ---- 布局（E05/E06/E11） ---- */
+  --header-top: 10px;
+  --header-link-offset: 130px;
+  --wordmark-w: 140px;
+  --bar-h: 80px;
+  --bar-scale: 0.95;
+  --edge-blocker: 30px;
+
+  /* ---- 动效时长（与 src/config/motion.ts 保持同步） ---- */
+  --t-header-color: 400ms; /* E02 */
+  --t-pill: 150ms; /* E04 */
+  --t-ui: 180ms;
+
+  --ease-ui: cubic-bezier(0.4, 0, 0.2, 1);
+  /**
+   * 层级。首页的云层必须夹在「插画」和「顶栏」之间：
+   *   1 gl-stage(WebGL) → 2 首页插画 → 3 首页云层(静止) → 4 标题/按钮
+   *   → 6 控制条 → 8 首页云层(转场覆盖态) → 10 顶栏 → 40 遮挡层 → 60 首屏加载
+   * 云层在静止态要盖住插画、又不能压住标题和按钮；在覆盖态要盖住作品页和控制条、
+   * 但**不能盖住顶栏**（参考站转场全程顶栏都可见，只换颜色）。
+   */
+  --z-stage: 1;
+  --z-home-art: 2;
+  --z-cloud: 3;
+  --z-home-ui: 4;
+  --z-bar: 6;
+  --z-cloud-cover: 8;
+  --z-ui: 10;
+  --z-wipe: 40;
+  --z-modal: 60;
+
+  /* ---- 首页素材（Pillow 从 PNG 采样，见 src/config/motion.ts 的 colors 段） ---- */
+  --home-frame: #7268fc;
+  --home-cloud: #fc749f;
+
+  /**
+   * 封面视觉高度 / 封面边长 = cos(绕 X 后仰角)。
+   * 与 src/config/motion.ts 的 cover.tiltXDeg(27°) 一致：cos27° = 0.8910。
+   * 控制胶囊要贴的是**视觉下沿**，不是未倾斜的边长下沿，所以这个系数必须参与计算。
+   */
+  --cover-squash: 0.891;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--ink);
+  color: var(--ink);
+  font-family: var(--font);
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  overscroll-behavior-y: none;
+}
+
+/* 作品浏览页接管滚动，所以整页不滚动；关于页与详情页由各自的滚动容器负责 */
+body.is-locked {
+  overflow: hidden;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.noscript {
+  padding: 40px;
+  color: var(--cream);
+}
+
+/* =========================================================================
+   顶栏 —— 参考站里它是「持续存在的图层」，转场时只换颜色，不参与进出
+   ========================================================================= */
+
+.app-header {
+  position: fixed;
+  top: var(--header-top);
+  left: 0;
+  width: 100%;
+  z-index: var(--z-ui);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--ink);
+  transition: color var(--t-header-color) var(--ease-ui); /* E02 */
+}
+
+/* 首页 / 作品页是深底，顶栏用奶油色；关于页是浅底，回到墨色 */
+.app-header[data-nav-color='ink'] {
+  color: var(--ink);
+}
+.app-header[data-nav-color='cream'] {
+  color: var(--cream);
+}
+/* E03：首页上颜色变化延后 600ms，等遮挡层把画面盖住之后再翻色 */
+.app-header[data-delay='true'] {
+  transition-delay: 600ms;
+}
+
+.app-header__title-wrapper {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.app-header__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: auto;
+}
+
+.app-header__title-h1 {
+  margin: 0;
+  font: inherit;
+  font-weight: inherit;
+  line-height: 1;
+}
+
+.app-header__wordmark {
+  width: var(--wordmark-w);
+  height: auto;
+  display: block;
+  fill: currentColor;
+  margin-top: 1px;
+}
+
+.app-header__title-link {
+  display: block;
+  cursor: pointer;
+}
+
+/* 站点名文字（比 SVG 字标更省事、也需要可访问的文本） */
+.app-header__title-text {
+  display: block;
+  width: var(--wordmark-w);
+  text-align: center;
+  font-size: 21px;
+  line-height: 0.92;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: currentColor;
+  white-space: nowrap;
+}
+
+.app-header__credit {
+  display: block;
+  margin-top: 3px;
+  font-size: var(--credit-size);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+  color: currentColor;
+  opacity: 0.86;
+  white-space: nowrap;
+}
+
+.app-header__links {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/* E06：两侧链接各距中线 130px */
+.app-header__link {
+  position: absolute;
+  padding: 5px 20px;
+  border-radius: 25px;
+  font-size: var(--nav-size);
+  font-weight: 700;
+  letter-spacing: 0.001em;
+  white-space: nowrap;
+  z-index: 11;
+  min-height: 28px;
+}
+.app-header__link--works {
+  right: calc(50% + var(--header-link-offset));
+}
+.app-header__link--about {
+  left: calc(50% + var(--header-link-offset));
+}
+
+.app-header__link-text {
+  position: relative;
+  display: inline-block;
+  color: currentColor;
+}
+
+/* E04：胶囊轮廓，默认 opacity 0 + scale(.9) */
+.app-header__link-text::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  padding: 5px 20px;
+  border: 1.5px solid currentColor; /* E04：border:1.5px solid */
+  border-radius: 25px;
+  opacity: 0;
+  transform: translateY(-50%) translateX(-50%) scale(0.9);
+  transition: opacity var(--t-pill), transform var(--t-pill) ease-in-out;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.app-header__link-text:hover::after,
+.app-header__link.is-active .app-header__link-text::after {
+  opacity: 1;
+  transform: translateY(-50%) translateX(-50%) scale(1);
+}
+
+/* E04：选中态字重更重 */
+.app-header__link.is-active {
+  font-weight: 800;
+}
+
+/* =========================================================================
+   舞台 / 画布
+   ========================================================================= */
+
+.gl-stage {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-stage);
+  overflow: hidden;
+}
+
+.gl-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+/* 页面根：每个路由最外层，转场时它和它的子层参与进出 */
+.page {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+/**
+ * 需要正常滚动的内容页（关于页、作品详情页）用这一版：
+ * 不接管滚动，页面按正常文档流变高，由浏览器/系统滚动条负责 ——
+ * 滚轮不会被作品浏览区截走，移动端惯性滚动也是原生的。
+ */
+.page--scroll {
+  position: relative;
+  inset: auto;
+  min-height: 100vh;
+}
+
+/* 转场时被单独编排的图层 */
+[data-stage-layer] {
+  will-change: transform, opacity;
+}
+
+/* 底部边缘热区（E05：.edge-blocker 30px）—— 只挡浏览器边缘手势，不显示 */
+.edge-blocker {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: var(--edge-blocker);
+  z-index: 8;
+  pointer-events: auto;
+}
+.edge-blocker.left {
+  left: 0;
+}
+.edge-blocker.right {
+  right: 0;
+}
+
+/* =========================================================================
+   首页 —— 由素材包的 5 张图叠成的分层舞台
+   分层：background → character-left → character-center-v2 → character-right
+        → foreground-clouds（挂在 App 上的 .home-cloud）→ HTML 标题/按钮
+   ========================================================================= */
+
+/* 首页**刻意不建立层叠上下文**：标题/按钮要能压在云层（z-index 3）之上。
+   如果这里留着 .page 的 z-index:2，子元素最高只能到 2，按钮就会被云盖住。 */
+.page.home {
+  z-index: auto;
+  pointer-events: none;
+}
+
+/* --- 舞台：所有插画层共用同一个 1672:941 的盒子，统一缩放、统一裁切 --- */
+.home-stage {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-home-art);
+  overflow: hidden;
+  /* 裁切留白用画作自己的外框紫，比视口窄时看不出接缝 */
+  background: var(--home-frame);
+}
+
+/**
+ * 舞台盒子的尺寸（**纯 CSS，不需要 JS 量窗口**）。
+ *
+ * 目标是「cover 但不切掉必看的竖条」：
+ *   1) cover          W = max(100vw, 100vh × 1672/941)          → 177.68vh
+ *   2) 安全带约束      保证舞台高度 90% 一定可见 → W ≤ 100vh × 1672/941 / 0.90
+ *                                                             → 197.42vh
+ * 两条合起来就是下面这个 min(max(...))。
+ * 极端宽屏（>2.1:1）会落到第 2 条，两侧露出 --home-frame 的紫，
+ * 因为颜色与画作外框一致，看起来只是边框变厚。
+ *
+ * `--u` = 舞台宽度的 1%。所有字号、间距都用它表达，
+ * 于是标题和按钮会跟着舞台一起缩放（桌面/手机都不用另写一套尺寸）。
+ */
+.home-stage__inner {
+  --u: min(max(1vw, 1.7768vh), 1.9742vh);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(max(100vw, 177.68vh), 197.42vh);
+  aspect-ratio: 1672 / 941;
+  transform: translate(-50%, -50%);
+}
+
+/* 动画层：转场的"推近/收回"只改这一层，绝不去动上面的定位 transform */
+.home-push {
+  position: absolute;
+  inset: 0;
+  will-change: transform;
+}
+
+/* --- 图层：`.hl` 管**初始定位**（静态），`.hl__anim` 管**动画位移** --- */
+.hl {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hl__anim {
+  position: absolute;
+  inset: 0;
+  will-change: transform, opacity;
+}
+
+.hl__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/**
+ * 中间角色的初始定位。
+ *
+ * 素材包 README 给的起点是 `translate(5.4%,10%) scale(.85)`（origin 0 0）。
+ * 这个值不是照抄的：docs/probe/asset-stack-check.py 把「五层按这个 transform 叠加」
+ * 与 hero-preview.png 做像素比对，并在 k∈[0.78,0.92] × tx∈[4.0,6.8] × ty∈[8,12]
+ * 的邻域里搜过最优 —— 就是这个点（MAE 8.75，差图只剩 1–2px 的描边，
+ * 属于生成工具拆层的轮廓误差，不是定位误差）。
+ */
+.hl--center {
+  transform-origin: 0 0;
+  transform: translate(5.4%, 10%) scale(0.85);
+}
+
+/* --- HTML 层：标题在**上方中央的留白区**，按钮在中下方 --- */
+.home-copy {
+  position: absolute;
+  z-index: var(--z-home-ui);
+  left: 50%;
+  top: 10%;
+  width: 74%;
+  margin: 0;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(0.9 * var(--u));
+  text-align: center;
+  pointer-events: none;
+  /* 落在橙色天空上，用深墨色而不是奶油色才读得清 */
+  color: #2a1c10;
+}
+
+/* 舞台盒子之外也要能取到 --u（.home-copy 与 .home-stage__inner 是兄弟） */
+.home-copy,
+.home-cta-wrap,
+.home-hint,
+.home-about-link {
+  --u: min(max(1vw, 1.7768vh), 1.9742vh);
+}
+
+.home-copy__mark {
+  display: block;
+  /*
+   * 6.2% 的舞台宽：1440×900 下 ≈99px。再大就会顶到顶栏的导航胶囊（50–78px）。
+   * 后面那个 min(…, 13.5vw) 是给竖屏兜底的：竖屏下舞台被放大到 1.5 倍视口宽，
+   * 只用舞台单位算出来的字会达到 ~93px，五个字在 390px 的屏上会折成两行。
+   */
+  font-size: min(calc(6.2 * var(--u)), 13.5vw);
+  line-height: 0.9;
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  /* 天空是实色平涂，加一点点同色系描边让字从橙色里立起来 */
+  text-shadow: 0 calc(0.28 * var(--u)) calc(0.1 * var(--u)) rgba(255, 214, 150, 0.55);
+}
+
+/*
+ * 副标题做成奶油色小胶囊。
+ * 为什么不是纯文字：竖屏下标题区块会横跨橙色天空与紫色外框两种底色，
+ * 深色文字落在紫框上读不清、浅色文字落在橙天上又不够。一个浅底胶囊两边都稳，
+ * 而且与站内其它胶囊（导航、CTA、控制条）语言一致。
+ */
+.home-copy__tagline {
+  display: inline-block;
+  padding: 0.42em 1.15em;
+  border-radius: 999px;
+  background: rgba(255, 246, 240, 0.86);
+  font-size: min(calc(1.15 * var(--u)), 3.1vw);
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-indent: 0.3em;
+  text-transform: uppercase;
+  color: #2a1c10;
+  white-space: nowrap;
+}
+
+/**
+ * 进入作品按钮。位置取"中下方"：居中、落在前景云层的凹陷处（云层上沿在中央约 95%），
+ * 正好在兔子台座（变换后下沿 88.7%）以下，不压住主体。
+ */
+.home-cta-wrap {
+  position: absolute;
+  z-index: var(--z-home-ui);
+  left: 50%;
+  top: 89.5%;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+}
+
+.home-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: calc(0.75 * var(--u));
+  min-height: calc(4.6 * var(--u));
+  padding: 0 calc(2.4 * var(--u));
+  border: 0;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--cream);
+  font-size: calc(1.8 * var(--u));
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  box-shadow: 0 calc(1.1 * var(--u)) calc(2.6 * var(--u)) rgba(60, 20, 40, 0.28);
+  transition: transform var(--t-ui) var(--ease-ui), background var(--t-ui) var(--ease-ui),
+    color var(--t-ui) var(--ease-ui);
+}
+
+.home-cta:hover {
+  background: var(--cream);
+  color: var(--ink);
+  transform: translateY(calc(-0.3 * var(--u))) scale(1.02);
+}
+.home-cta:active {
+  transform: translateY(0) scale(0.985);
+}
+
+.home-cta__arrow {
+  width: 0.72em;
+  height: 0.72em;
+  flex: none;
+}
+
+.home-hint {
+  position: absolute;
+  z-index: var(--z-home-ui);
+  left: 50%;
+  bottom: calc(1.6 * var(--u));
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: calc(0.78 * var(--u));
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(74, 30, 24, 0.6);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.home-about-link {
+  position: absolute;
+  z-index: var(--z-home-ui);
+  right: calc(1.6 * var(--u));
+  bottom: calc(1.6 * var(--u));
+  min-height: 44px;
+  padding: 0 calc(1.2 * var(--u));
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.28);
+  color: #3a1f16;
+  font-size: calc(0.78 * var(--u));
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: color var(--t-ui) var(--ease-ui), background var(--t-ui) var(--ease-ui);
+}
+
+.home-about-link:hover {
+  color: var(--cream);
+  background: var(--ink);
+}
+
+/* =========================================================================
+   首页前景云层 —— 常驻在 App 上（**不能放进 HomePage**：转场是在云盖满屏幕的
+   那一帧才切路由的，云要是属于首页，路由一换就被卸载，画面当场露底）
+   ========================================================================= */
+
+.home-cloud {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-cloud);
+  overflow: hidden;
+  pointer-events: none;
+  visibility: hidden;
+  contain: strict;
+}
+
+.home-cloud.is-visible {
+  visibility: visible;
+}
+
+/* 覆盖态：抬到作品页(2)和控制条(6)之上，但仍在顶栏(10)之下 */
+.home-cloud.is-covering {
+  z-index: var(--z-cloud-cover);
+}
+
+/* 舞台盒子与 .home-stage__inner 用同一个公式，所以云层静止时与插画严格对齐 */
+.home-cloud__stage {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(max(100vw, 177.68vh), 197.42vh);
+  aspect-ratio: 1672 / 941;
+  transform: translate(-50%, -50%);
+}
+
+/* 整条 rig：转场只动它的 yPercent */
+.home-cloud__anim {
+  position: absolute;
+  inset: 0;
+  will-change: transform;
+}
+
+.home-cloud__img {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* 云层本体：就放在舞台原位（云图下半部才是实心，上沿在 70.35%） */
+.home-cloud__img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/**
+ * 同色填充：顶边接在云图下沿（100%），高度正好一个舞台高，下沿到 200%。
+ *
+ * 云图上涌时画面下方靠它补住 —— 云图本身只有舞台的 30% 高，
+ * 只靠它走不出画面上缘。
+ */
+.home-cloud__fill {
+  position: absolute;
+  left: -1%;
+  right: -1%;
+  top: 100%;
+  height: 100%;
+  background: var(--home-cloud);
+}
+
+/**
+ * 填充下沿的扇贝：一排半圆，纯 CSS 径向渐变画出来。
+ *
+ * 为什么要它：揭开的界线就是这个下沿。用一条直边扫过屏幕会很假；
+ * 换成扇贝之后，界线读起来还是云。
+ *
+ * 参数：`mask-size` 是扇贝的节距（宽 8% ≈ 128px）与高度（3.4% ≈ 30px），
+ * 半径取 30px（= 高度），圆心落在半圆矩形的上边中点，
+ * 于是每个 tile 里露出的是"向下的半圆"，横向重复成一排。
+ */
+.home-cloud__fill::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 3.4%;
+  background: var(--home-cloud);
+  -webkit-mask-image: radial-gradient(circle 30px at 50% 0%, #000 0 29px, transparent 30px);
+  -webkit-mask-size: 8% 100%;
+  -webkit-mask-repeat: repeat-x;
+  mask-image: radial-gradient(circle 30px at 50% 0%, #000 0 29px, transparent 30px);
+  mask-size: 8% 100%;
+  mask-repeat: repeat-x;
+}
+
+/* 顶栏：首页上把字标让给巨幅标题，只留导航 */
+body[data-route='home'] .app-header__title-wrapper {
+  opacity: 0;
+  pointer-events: none;
+}
+.app-header__title-wrapper {
+  transition: opacity 0.3s var(--ease-ui);
+}
+
+/* =========================================================================
+   作品浏览页 —— 中央大海报由 WebGL 画，DOM 只放可访问的文字与按钮
+   ========================================================================= */
+
+.works-page {
+  position: absolute;
+  inset: 0;
+}
+
+/* 可访问的说明层：屏幕阅读器能读到全部作品，视觉上隐藏 */
+.works__a11y-list {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* 当前作品标题区块：贴在海报下方、胶囊条之上（参考站是海报内嵌的黑色胶囊） */
+.works__caption {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(88vw, 640px);
+  aspect-ratio: 1;
+  pointer-events: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* 海报左右的空白热区：点击 = 跳到相邻作品（与滚轮共用控制器） */
+.works__hit {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  z-index: 3;
+}
+.works__hit--prev {
+  left: 0;
+}
+.works__hit--next {
+  right: 0;
+}
+.works__hit:disabled {
+  cursor: default;
+}
+
+/* 顶部进度提示（第几件 / 共几件） */
+.works__counter {
+  position: absolute;
+  left: 50%;
+  bottom: calc(var(--bar-h) * var(--bar-scale) + 34px);
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: rgba(23, 23, 23, 0.62);
+  text-transform: uppercase;
+}
+
+/* =========================================================================
+   底部胶囊控制条（参考站 .chapters__container-buttons 的对应物，E11）
+   ========================================================================= */
+
+/**
+ * 底部黑色胶囊控制条。
+ *
+ * 位置是**贴着封面下沿**算的，不是一个"离底多少 px"的固定值 ——
+ * 参考站实测（R3/R5，1440×900）：封面下沿 y≈663，胶囊条 y 640..713，
+ * 也就是「上沿压在封面下沿之上约 23px、中心落在下沿之下约 13px」，宽度约为封面的 0.66 倍。
+ * 这里把同一套关系写成公式：
+ *
+ *   bottom = 50vh（视口中心到视口底）− side/2（封面半高）− 13px − barH/2
+ *   side   = 与 WorksScene.centralSide() 完全一致的封面边长
+ *
+ * side 的两套取值必须和 `WorksScene.centralSide()` 保持一致（横屏 / 竖屏各一套），
+ * 否则胶囊条会和封面错位。
+ */
+.control-bar {
+  position: absolute;
+  /*
+   * 居中**不能**用 `left:50% + translateX(-50%)`。
+   *
+   * 踩过的坑：播放态的进度轨是从 width:0 展开到 150px 的（见 ControlBar.tsx），
+   * 于是胶囊条的宽度会在挂载之后变大。而 GSAP 在写 transform 时会把 CSS 里的
+   * translateX(-50%) 解析成**当时的宽度**对应的像素值（实测 16:9 详情页偏左 86px，
+   * 因为那一次读数发生在进度轨展开之前）。
+   * 改成 left/right:0 + margin auto + width:fit-content，居中完全由布局负责，
+   * transform 只留给缩放与位移动画，宽度怎么变都不会跑偏。
+   */
+  left: 0;
+  right: 0;
+  width: fit-content;
+  margin-inline: auto;
+  bottom: calc(50% - min(63vh, 40vw) * var(--cover-squash) / 2 - 13px - var(--bar-h) * var(--bar-scale) / 2);
+  transform: scale(var(--bar-scale));
+  z-index: var(--z-bar);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: var(--bar-h);
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--cream);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+  transition: background var(--t-ui) var(--ease-ui), color var(--t-ui) var(--ease-ui);
+}
+
+/* 胶囊条里的一格：图标按钮 */
+.bar-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: currentColor;
+  transition: transform var(--t-ui) var(--ease-ui), background var(--t-ui) var(--ease-ui),
+    opacity var(--t-ui) var(--ease-ui);
+}
+
+.bar-btn:hover:not(:disabled) {
+  background: rgba(254, 236, 227, 0.14);
+  transform: scale(1.06);
+}
+.bar-btn:active:not(:disabled) {
+  transform: scale(0.94);
+}
+.bar-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.bar-btn svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+.bar-btn--play {
+  width: 58px;
+  height: 58px;
+  min-width: 58px;
+  background: var(--cream);
+  color: var(--ink);
+}
+.bar-btn--play:hover:not(:disabled) {
+  background: var(--amber);
+}
+
+.bar__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  padding-right: 6px;
+}
+
+.bar__title {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.005em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 40vw;
+}
+
+.bar__sub {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: rgba(254, 236, 227, 0.72);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 40vw;
+}
+
+.bar__sep {
+  width: 1px;
+  height: 30px;
+  background: rgba(254, 236, 227, 0.18);
+  flex: none;
+}
+
+.bar__index {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: rgba(254, 236, 227, 0.66);
+  white-space: nowrap;
+}
+
+.bar__nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* =========================================================================
+   作品详情页
+   ========================================================================= */
+
+.detail {
+  position: relative;
+  width: 100%;
+  z-index: 4;
+  padding: 0 0 clamp(120px, 18vh, 200px);
+}
+
+.detail__inner {
+  width: min(1080px, 90vw);
+  margin: 0 auto;
+}
+
+/* 播放舞台：视频按真实比例 contain */
+.detail__stage {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 18px;
+  background: rgba(23, 23, 23, 0.72);
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.34);
+}
+
+.detail__stage-inner {
+  position: relative;
+  width: 100%;
+}
+
+.detail__video {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #000;
+}
+
+/* 「视频待添加」占位 */
+.detail__missing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  color: var(--cream);
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(254, 236, 227, 0.05) 0 12px,
+    rgba(254, 236, 227, 0.11) 12px 24px
+  );
+  text-align: center;
+  padding: 8vh 6vw;
+}
+
+.detail__missing strong {
+  font-size: clamp(18px, 2.4vw, 26px);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.detail__missing span {
+  font-size: 12.5px;
+  letter-spacing: 0.08em;
+  color: rgba(254, 236, 227, 0.66);
+  max-width: 44ch;
+  line-height: 1.7;
+}
+
+.detail__back {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+}
+
+.detail__play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.34));
+  color: var(--cream);
+  z-index: 3;
+}
+
+.detail__play-overlay svg {
+  width: 82px;
+  height: 82px;
+  fill: currentColor;
+  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.4));
+  transition: transform var(--t-ui) var(--ease-ui);
+}
+.detail__play-overlay:hover svg {
+  transform: scale(1.07);
+}
+
+/* 「测试片」横幅：只在上测试视频的作品上出现。
+   用 fixed 是为了不参与布局 —— 播放舞台的位置要和 WebGL 里封面接续的落点严格一致。 */
+.detail__testclip {
+  position: fixed;
+  left: 50%;
+  top: 52px;
+  transform: translateX(-50%);
+  z-index: 20;
+  max-width: min(720px, 88vw);
+  margin: 0;
+  padding: 9px 16px;
+  border-radius: 10px;
+  background: var(--amber);
+  color: var(--ink);
+  font-size: 11.5px;
+  line-height: 1.62;
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+}
+
+.detail__testclip strong {
+  display: inline-block;
+  margin-right: 7px;
+  padding: 1px 7px;
+  border-radius: 5px;
+  background: var(--ink);
+  color: var(--amber);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+}
+
+.detail__testclip code {
+  padding: 1px 4px;
+  border-radius: 4px;
+  background: rgba(23, 23, 23, 0.12);
+  font-size: 0.95em;
+}
+
+@media (max-width: 700px) {
+  .detail__testclip {
+    top: 46px;
+    font-size: 10.5px;
+    padding: 7px 12px;
+  }
+}
+
+.detail__body {
+  color: var(--cream);
+}
+
+.detail__no {
+  display: block;
+  margin-top: clamp(40px, 7vh, 72px);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(254, 236, 227, 0.6);
+}
+
+.detail__title {
+  margin: 10px 0 0;
+  font-size: clamp(34px, 5.6vw, 72px);
+  line-height: 0.98;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.detail__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.detail__fact {
+  padding: 6px 14px;
+  border: 1.5px solid rgba(254, 236, 227, 0.28);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.detail__cols {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 64px);
+  margin-top: clamp(30px, 5vh, 54px);
+}
+
+@media (max-width: 860px) {
+  .detail__cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+.detail__h2 {
+  margin: 0 0 12px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(254, 236, 227, 0.62);
+}
+
+.detail__text {
+  margin: 0;
+  font-size: clamp(15px, 1.25vw, 18px);
+  line-height: 1.82;
+  color: rgba(254, 236, 227, 0.9);
+}
+
+.detail__roles {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.detail__roles li {
+  position: relative;
+  padding-left: 18px;
+  font-size: clamp(14px, 1.1vw, 16.5px);
+  line-height: 1.6;
+  color: rgba(254, 236, 227, 0.86);
+}
+
+.detail__roles li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--amber);
+}
+
+.detail__process {
+  margin: clamp(36px, 6vh, 64px) 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.detail__step {
+  padding: 22px;
+  border: 1px solid rgba(254, 236, 227, 0.16);
+  border-radius: 16px;
+  background: rgba(254, 236, 227, 0.04);
+}
+
+.detail__step-name {
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 10px;
+}
+
+.detail__step p {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: rgba(254, 236, 227, 0.84);
+}
+
+.detail__notice {
+  margin-top: 34px;
+  padding: 14px 18px;
+  border-left: 3px solid var(--amber);
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: rgba(254, 236, 227, 0.7);
+  background: rgba(255, 204, 142, 0.07);
+  border-radius: 0 10px 10px 0;
+}
+
+.detail__next {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 34px;
+}
+
+.detail__next a,
+.detail__next button {
+  min-height: 46px;
+  padding: 0 22px;
+  border: 1.5px solid rgba(254, 236, 227, 0.32);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--cream);
+  font-size: 14px;
+  font-weight: 700;
+  transition: background var(--t-ui) var(--ease-ui), color var(--t-ui) var(--ease-ui),
+    transform var(--t-ui) var(--ease-ui);
+}
+
+.detail__next a:hover,
+.detail__next button:hover {
+  background: var(--cream);
+  color: var(--ink);
+  transform: translateY(-2px);
+}
+
+/* =========================================================================
+   关于页 —— 分段滚动叙事
+   ========================================================================= */
+
+.about {
+  position: relative;
+  width: 100%;
+  z-index: 4;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.about__scroll {
+  position: relative;
+  width: 100%;
+}
+
+.about-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* 每个 section 的有机色块前景层（前后景不同速度的滚动靠它们） */
+.about__field {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.about__field svg {
+  position: absolute;
+  left: 0;
+  bottom: -2%;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about__inner {
+  position: relative;
+  z-index: 2;
+  width: min(1180px, 90vw);
+  margin: 0 auto;
+}
+
+.about-intro {
+  height: 100vh;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+}
+
+.about-intro__title {
+  margin: 0;
+  font-size: clamp(30px, 5.6vw, 82px);
+  line-height: 1.02;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  max-width: 20ch;
+}
+
+.about-intro__scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 34px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+
+.about-intro__scroll svg {
+  width: 14px;
+  height: 22px;
+  animation: scroll-nudge 1.8s ease-in-out infinite;
+}
+
+@keyframes scroll-nudge {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.about-what {
+  padding: clamp(60px, 14vh, 180px) 0;
+}
+
+.about-what__title {
+  margin: 0;
+  font-size: clamp(38px, 8.4vw, 128px);
+  line-height: 0.94;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.about-what__text {
+  margin: clamp(24px, 4vh, 44px) 0 0;
+  max-width: 62ch;
+  font-size: clamp(15px, 1.35vw, 19px);
+  line-height: 1.85;
+  color: rgba(23, 23, 23, 0.82);
+}
+
+.about-flow {
+  margin: clamp(40px, 7vh, 76px) 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+}
+
+.about-flow li {
+  padding: 20px;
+  border-radius: 14px;
+  border: 1.5px solid rgba(23, 23, 23, 0.16);
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.about-flow strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.about-flow p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(23, 23, 23, 0.76);
+}
+
+.about-contact {
+  /* 底部留足 46vh 的滚动余量，保证最下面那几张联系卡也能完整"出现"到 100% */
+  padding: clamp(60px, 12vh, 150px) 0 46vh;
+}
+
+.about-contact__title {
+  margin: 0 0 clamp(24px, 4vh, 40px);
+  font-size: clamp(30px, 5.4vw, 78px);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+.about-contact__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+  max-width: 860px;
+}
+
+.about-contact__list a,
+.about-contact__list .about-contact__static {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 76px;
+  padding: 18px 20px;
+  border-radius: 14px;
+  border: 1.5px solid rgba(23, 23, 23, 0.18);
+  background: rgba(255, 255, 255, 0.5);
+  transition: transform var(--t-ui) var(--ease-ui), border-color var(--t-ui) var(--ease-ui),
+    background var(--t-ui) var(--ease-ui);
+}
+
+.about-contact__list a:hover {
+  transform: translateY(-3px);
+  border-color: var(--ink);
+  background: #fff;
+}
+
+.about-contact__label {
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.about-contact__value {
+  font-size: clamp(15px, 1.3vw, 18px);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* 右侧章节定位点（E18 实测尺寸） */
+.about-nav {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  z-index: 12;
+  margin-top: -36.5px;
+  opacity: 0;
+  transform: translateY(-36.5px);
+  transition: opacity 0.5s var(--ease-ui), transform 0.5s var(--ease-ui);
+  pointer-events: auto;
+}
+
+.about-nav.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-nav__item {
+  position: relative;
+  width: 9px;
+  height: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-nav__dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  position: relative;
+}
+
+.about-nav__dot::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  margin: -4.5px 0 0 -4.5px;
+  border-radius: 50%;
+  background: var(--ink);
+  transform: scale(0.6); /* E18：未选中 scale(0.6) */
+  transition: transform 0.28s var(--ease-ui), background 0.28s var(--ease-ui);
+}
+
+.about-nav__dot:hover::before {
+  transform: scale(0.85);
+}
+
+.about-nav__dot.is-active::before {
+  transform: scale(1);
+  background: var(--ink);
+}
+
+.about-nav__label {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.22s var(--ease-ui);
+  pointer-events: none;
+}
+
+.about-nav__dot:hover .about-nav__label,
+.about-nav__dot.is-active .about-nav__label {
+  opacity: 1;
+}
+
+/* 关于页底部进度条（E19：height 3px） */
+.about-progress {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  z-index: 12;
+  background: rgba(23, 23, 23, 0.1);
+  pointer-events: none;
+}
+
+.about-progress__bar {
+  height: 100%;
+  width: 100%;
+  background: var(--ink);
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+/* 关于页分段文字：默认是"未出现"状态，由 GSAP 打开 */
+[data-reveal] {
+  opacity: 0;
+}
+
+/* =========================================================================
+   转场遮挡层 —— 首页进入 / 返回 / 路由切换共用
+   ========================================================================= */
+
+.wipe {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-wipe);
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.wipe.is-active {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.wipe__shape {
+  position: absolute;
+  left: 50%;
+  bottom: -6%;
+  width: 168vmax;
+  height: 168vmax;
+  margin-left: -84vmax;
+  transform: scale(0);
+  transform-origin: 50% 100%; /* 从底部"上涌" */
+  will-change: transform, opacity;
+}
+
+.wipe__shape svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.wipe__fill {
+  position: absolute;
+  inset: 0;
+  background: var(--ink);
+  opacity: 0;
+}
+
+/* =========================================================================
+   首屏加载层（preloader）
+   ========================================================================= */
+
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0;
+  background: var(--paper); /* E21 */
+  cursor: wait;
+  transition: opacity 0.5s var(--ease-ui), visibility 0.5s var(--ease-ui);
+}
+
+.preloader.is-done {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.preloader__mark {
+  width: clamp(90px, 13vh, 150px);
+  height: clamp(90px, 13vh, 150px);
+  transform: scale(0) rotate(-120deg); /* E21：.preloader__ponpon-container 实测 */
+  animation: pre-mark-in 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+}
+
+@keyframes pre-mark-in {
+  to {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.preloader__track {
+  position: relative;
+  width: 311px; /* E21：preloader__svg 311×6 */
+  max-width: 62vw;
+  height: 6px;
+  margin-top: clamp(34px, 8vh, 96px);
+  border-radius: 3px;
+  background: #f2f2f2;
+  overflow: hidden;
+}
+
+.preloader__bar {
+  position: absolute;
+  inset: 0;
+  background: var(--amber); /* E21：进度线 #ffcc8e */
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.preloader__label {
+  margin-top: 16px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(23, 23, 23, 0.52);
+}
+
+/* =========================================================================
+   降级：WebGL 不可用 / JS 关闭时的静态版本
+   ========================================================================= */
+
+.static-mode .gl-stage {
+  display: none;
+}
+
+/* WebGL 不可用时，标题直接压在插画上（插画是 DOM，本来就在） */
+.static-mode .home-copy__mark {
+  color: #2a1c10;
+}
+
+/* WebGL 不可用时的兜底背景：万一分层舞台没起来，至少还有一片同色的紫 */
+.static-mode .home::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--home-frame);
+  z-index: 0;
+}
+
+.static-works {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+}
+
+/**
+ * 卡片位置用「相对自身宽度的位移 + 缩放 + 旋转」表达，
+ * 这样和 WebGL 那边的风扇布局是同一套数值：
+ *   偏移 = ±0.84 × 中央边长、边长 = 0.54 × 中央、旋转 ±9°
+ * （translateX 的百分比是相对自身宽度，所以 --k 直接乘 84% 就对上了）
+ */
+.static-works__card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(52vw, 568px);
+  max-width: 568px;
+  aspect-ratio: 1;
+  padding: 0;
+  border: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #222;
+  cursor: pointer;
+  will-change: transform;
+  transform: translate(-50%, -50%) translate(calc(var(--k) * 84%), calc(var(--k) * 3%))
+    rotate(var(--rot)) scale(var(--sc));
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s var(--ease-ui);
+}
+
+.static-works__card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  /* 图片不能吃掉点击 —— 否则按钮收不到点击 */
+  pointer-events: none;
+}
+
+.static-works__card.is-active {
+  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.34);
+}
+
+.static-works__badge {
+  position: absolute;
+  left: 50%;
+  bottom: calc(var(--bar-h) * var(--bar-scale) + 40px);
+  transform: translateX(-50%);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cream);
+  opacity: 0.72;
+  white-space: nowrap;
+}
+
+.static-notice {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 30;
+  max-width: 320px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1.5px solid rgba(254, 236, 227, 0.3);
+  background: rgba(23, 23, 23, 0.86);
+  color: var(--cream);
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+/* =========================================================================
+   通用工具
+   ========================================================================= */
+
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* 关于页逐字标题里的单字 */
+.ch {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+/* =========================================================================
+   作品浏览页 —— 热区 / 进度点
+   ========================================================================= */
+
+.works__hit {
+  width: 20%;
+}
+.works__hit--prev {
+  left: 0;
+}
+.works__hit--next {
+  right: 0;
+}
+
+.works__dots {
+  position: absolute;
+  left: 50%;
+  bottom: calc(var(--bar-h) * var(--bar-scale) + 74px);
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 5;
+}
+
+.works__dot {
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.works__dot::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  margin: -3.5px 0 0 -3.5px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.34;
+  transition: transform var(--t-ui) var(--ease-ui), opacity var(--t-ui) var(--ease-ui);
+}
+
+.works__dot:hover::before {
+  opacity: 0.6;
+  transform: scale(1.25);
+}
+
+.works__dot.is-active::before {
+  opacity: 0.92;
+  transform: scale(1.7);
+}
+
+/* 进度点跟随顶栏配色：深底上用奶油色 */
+body[data-route='works'] .works__dots {
+  color: var(--ink);
+}
+
+@media (max-width: 700px) {
+  .works__dots {
+    gap: 4px;
+    bottom: calc(var(--bar-h) + 62px);
+  }
+  .works__dot {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* =========================================================================
+   控制条的播放态扩展（进度轨 + 时间）
+   ========================================================================= */
+
+.bar__scrub {
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  flex: none;
+  padding: 12px 0;
+  cursor: pointer;
+  touch-action: none;
+}
+
+.bar__scrub-track {
+  width: 150px;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(254, 236, 227, 0.24);
+  overflow: hidden;
+}
+
+.bar__scrub-fill {
+  height: 100%;
+  width: 100%;
+  background: var(--amber);
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.bar__time {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: rgba(254, 236, 227, 0.7);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.control-bar--player {
+  /* 播放态用与浏览态**同一个** bottom 公式（见 .control-bar 的注释）——
+     因为详情页的播放舞台下沿已经被对齐到封面下沿（见 .detail__hero），
+     所以胶囊条从浏览态过渡到播放态时不会跳位。 */
+  transition: background var(--t-ui) var(--ease-ui), color var(--t-ui) var(--ease-ui);
+}
+
+@media (max-width: 700px) {
+  .bar__scrub-track {
+    width: 90px;
+  }
+  .bar__time {
+    display: none;
+  }
+}
+
+/* =========================================================================
+   详情页：播放舞台容器
+   这里的高度/居中方式要和 src/gl/WorksScene.ts 里的 stageRect() 对齐 ——
+   WebGL 把封面接续过来的落点，就是下面这个矩形。
+   ========================================================================= */
+
+/**
+ * 播放舞台**底边对齐封面下沿**。
+ *
+ * 为什么不是"在 100vh 里垂直居中"：胶囊条的位置是贴着封面下沿算的（见 .control-bar）。
+ * 如果舞台在中间而胶囊条贴在封面下沿，那么从浏览态进播放态时胶囊条会"浮"在舞台下方一段距离，
+ * 与参考站（胶囊条始终压在封面/视频下沿上）不符。
+ * 这里改成 `flex-end` + `padding-bottom = 50vh − 封面半高`，让舞台下沿和封面下沿重合，
+ * 于是同一条 bottom 公式在两种状态下都成立。
+ */
+.detail__hero {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100vh;
+  padding-bottom: calc(50vh - min(63vh, 40vw) * var(--cover-squash) / 2);
+}
+
+/* 播放舞台：宽高都要受约束，但不能让 max-height 把比例压坏。
+ *
+ * 竖屏视频（9:16，--ar = 0.5625）时必须得到「高而窄」的舞台（约 297×528）。
+ * 只写 `width:min(78vw,1600px); max-height:66vh; aspect-ratio:var(--ar)` 是不行的：
+ * width 是确定值 → aspect-ratio 推出的 height 被 max-height 截断 → 盒子变成 998×528（比例 1.89），
+ * 视频比例就废了。所以把高度上限**折进宽度公式**：width ≤ 66vh × --ar。
+ * --ar 由 JS 传一个纯数字进来（分数形式没法参与 calc）。 */
+.detail__stage {
+  width: min(78vw, 1600px, calc(66vh * var(--ar, 1.7778)));
+  aspect-ratio: var(--ar, 1.7778);
+  max-height: 66vh;
+}
+
+.detail__stage-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 700px) {
+  .detail__hero {
+    /* 竖屏：封面边长换成 WorksScene.centralSide() 的小屏分支 min(74vw, 44vh) */
+    height: 100vh;
+    padding-bottom: calc(50vh - min(74vw, 44vh) * var(--cover-squash) / 2);
+  }
+  .detail__stage {
+    /* 同样把高度上限折进宽度，别让 max-height 破坏比例 */
+    width: min(92vw, calc(58vh * var(--ar, 1.7778)));
+    max-height: 58vh;
+  }
+}
+
+/**
+ * 竖屏下封面边长换成 min(74vw, 44vh)，胶囊条要跟着换公式，
+ * 否则它会按横屏的封面尺寸去贴下沿，和实际封面错开一截。
+ */
+@media (max-aspect-ratio: 17 / 20) {
+  .control-bar {
+    bottom: calc(50% - min(74vw, 44vh) * var(--cover-squash) / 2 - 13px - var(--bar-h) * var(--bar-scale) / 2);
+  }
+}
+
+/* =========================================================================
+   响应式
+   ========================================================================= */
+
+@media (max-width: 900px) {
+  :root {
+    --nav-size: 14px;
+    --header-link-offset: 118px;
+  }
+  .app-header__link {
+    padding: 4px 12px;
+  }
+}
+
+/* =========================================================================
+   首页：竖屏与窄屏
+   舞台是 1672:941 的横构图，竖屏下 cover 会把左右裁掉，只剩中间约 1/4 宽。
+   主体（中间的兔子）本来就在正中，所以不会丢；这里再把左右两个角色往中间拉一点，
+   让它们从画面两边探进来（素材包 README 明确允许"移动端单独调整左右角色的水平位置"）。
+   注意：改的是 `.hl--*` 这一层（**初始定位**），不是 `.hl__anim`（动画层），
+   所以不会和转场的位移打架。
+   ========================================================================= */
+
+@media (max-aspect-ratio: 1 / 1) {
+  .hl--left {
+    transform: translateX(15%) scale(0.94);
+    transform-origin: 50% 60%;
+  }
+  .hl--right {
+    transform: translateX(-15%) scale(0.94);
+    transform-origin: 50% 60%;
+  }
+  /* 竖屏底部留给按钮的空间很紧，操作提示与右下角"关于我"会贴在一起 —— 收掉提示 */
+  .home-hint {
+    display: none;
+  }
+  .home-about-link {
+    bottom: calc(1.2 * var(--u));
+  }
+}
+
+@media (max-width: 700px) {
+  :root {
+    --wordmark-w: 100px; /* E05 */
+    --credit-size: 7px;
+    --header-link-offset: 0px;
+    --bar-h: 66px;
+    --bar-scale: 1;
+  }
+
+  /* 字标与署名单行显示：中文站名在窄屏上换行会很难看 */
+  .app-header__title-text {
+    width: auto;
+    font-size: 17px;
+  }
+  .app-header__credit {
+    width: auto;
+  }
+
+  /* 窄屏时两侧链接不再绝对定位于中线，改为贴边分布 */
+  .app-header__links {
+    padding: 0 22px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    margin-top: 44px;
+  }
+  .app-header__link {
+    position: relative;
+    left: auto;
+    right: auto;
+  }
+  .app-header__links {
+    pointer-events: none;
+  }
+  .app-header__link {
+    pointer-events: auto;
+  }
+
+  .works__hit {
+    width: 22%;
+  }
+  .bar__title,
+  .bar__sub {
+    max-width: 34vw;
+  }
+  .bar__title {
+    font-size: 15px;
+  }
+  .bar__sep,
+  .bar__index {
+    display: none;
+  }
+  .control-bar {
+    gap: 8px;
+    padding: 8px 14px;
+  }
+  /* 触控目标按提示词要求 ≥44px */
+  .bar-btn {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+  }
+  .bar-btn--play {
+    width: 54px;
+    height: 54px;
+    min-width: 54px;
+  }
+
+  .about-nav {
+    right: 12px;
+  }
+}
+
+/* =========================================================================
+   减少动态效果
+   位移、转场、滚动联动全部保留，只是时长压到近乎瞬时、装饰性位移去掉
+   ========================================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --t-header-color: 1ms;
+    --t-pill: 1ms;
+    --t-ui: 1ms;
+  }
+  .about-intro__scroll svg {
+    animation: none;
+  }
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Film Folio: a continuous picture stage, with shared navigation across scenes. */
+:root {
+  --home-frame: #7268fc;
+  --home-pink: #fc749f;
+  --home-orange: #ffad00;
+  --bar-h: 76px;
+  --bar-scale: 1;
+  --z-ui: 50;
+}
+body { background: var(--home-frame); }
+body[data-route='about'], body[data-route='detail'] { background: var(--paper); }
+.app-header {
+  top: 18px;
+  height: 46px;
+  pointer-events: none;
+  z-index: 50;
+}
+.app-header__title-wrapper { top: 0; }
+.app-header__title { gap: 4px; }
+.app-header__title-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: auto;
+  font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 950;
+  line-height: 1;
+  letter-spacing: -1.5px;
+}
+.app-header__asterisk { font-size: 27px; line-height: .8; }
+.app-header__credit { margin: 0; font-size: 9px; letter-spacing: .27em; }
+body[data-route='home'] .app-header__title-wrapper { opacity: 1; }
+.app-header__links { top: 4px; height: 16px; margin-top: 0; pointer-events: none; }
+.app-header__link {
+  padding: 10px 20px;
+  min-height: 44px;
+  pointer-events: auto;
+  font-size: 15px;
+}
+.app-header__link--works { right: calc(50% + 136px); }
+.app-header__link--about { left: calc(50% + 136px); }
+.app-header__link-text::after { padding: 8px 22px; }
+.app-header__link:hover .app-header__link-text::after { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+
+.page.home.page--home {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  background: #7268fc;
+  pointer-events: auto;
+  isolation: isolate;
+}
+.home-portal { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.home-art {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(max(100vw, 177.68vh), 205vh);
+  aspect-ratio: 1672 / 941;
+  transform: translate(-50%, -50%);
+}
+.home-art__background, .home-art__layer, .home-art__motion,
+.home-art__layer [data-stage-layer] { position: absolute; inset: 0; }
+.home-art img { width: 100%; height: 100%; display: block; user-select: none; -webkit-user-drag: none; }
+.home-art__background { transform-origin: 50% 58%; }
+.home-art__center { transform: translate(5.4%, 10%) scale(.85); transform-origin: 0 0; }
+.home-art__left [data-stage-layer] { transform-origin: 27% 81%; }
+.home-art__right [data-stage-layer] { transform-origin: 75% 84%; }
+.home-art__center [data-stage-layer] { transform-origin: 50% 70%; }
+.home-art__foreground { z-index: 4; }
+.home-copy {
+  position: absolute;
+  left: 0;
+  top: clamp(84px, 13.5vh, 142px);
+  width: 100%;
+  margin: 0;
+  transform: none;
+  z-index: 5;
+  text-align: center;
+  pointer-events: none;
+}
+.home-copy__eyebrow {
+  margin: 0 0 10px;
+  color: #3e2224;
+  font-size: clamp(8px, .72vw, 11px);
+  font-weight: 800;
+  letter-spacing: .22em;
+}
+.home-copy__mark {
+  display: block;
+  margin: 0;
+  font-family: 'Arial Black', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: clamp(42px, 5.7vw, 94px);
+  line-height: 1.1;
+  font-weight: 950;
+  letter-spacing: -.07em;
+  color: var(--cream);
+  -webkit-text-stroke: 2px #231f20;
+  paint-order: stroke fill;
+  text-shadow: 0 5px 0 #231f20;
+  white-space: nowrap;
+}
+.home-copy__tagline {
+  margin: 16px 0 0;
+  color: #231f20;
+  font-size: clamp(10px, 1vw, 15px);
+  font-weight: 800;
+  letter-spacing: .25em;
+  line-height: 1.3;
+  text-shadow: none;
+}
+.home-cta-wrap {
+  position: absolute;
+  z-index: 8;
+  left: 0;
+  top: auto;
+  bottom: 9.5vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transform: none;
+  transform-origin: center center;
+  pointer-events: none;
+}
+.home-cta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 206px;
+  min-height: 66px;
+  padding: 17px 27px;
+  border: 0;
+  border-radius: 99px;
+  background: var(--ink);
+  color: var(--cream);
+  font-size: 17px;
+  font-weight: 850;
+  letter-spacing: .06em;
+  box-shadow: 0 5px 0 rgba(35, 31, 32, .18);
+  pointer-events: auto;
+  transition: transform .3s cubic-bezier(.2,1.5,.4,1), background .2s;
+}
+.home-cta:hover { transform: scale(1.075) rotate(-2deg); background: #312425; }
+.home-cta:active { transform: scale(.97); }
+.home-cta__play { font-size: 20px; }
+.home-cta__arrow { width: 22px; height: 22px; margin-left: 4px; }
+.home-corner {
+  position: absolute;
+  z-index: 8;
+  bottom: 23px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #231f20;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  line-height: 1.5;
+}
+.home-corner--left { left: 30px; }
+.home-corner--right { right: 30px; padding: 12px 0; border: 0; background: none; }
+.home-corner--right svg { width: 17px; height: 17px; }
+.home-corner__dot { display: block; width: 11px; height: 11px; border-radius: 50%; background: #231f20; box-shadow: 0 0 0 4px rgba(255,246,240,.3); }
+.home-hint {
+  left: 50%;
+  bottom: 27px;
+  margin: 0;
+  transform: translateX(-50%);
+  width: auto;
+  text-shadow: none;
+  font-size: 10px;
+  letter-spacing: .12em;
+}
+.home-cloud { display: none !important; }
+
+.works-page { z-index: 3; background: transparent; pointer-events: none; }
+.works__edition {
+  position: absolute;
+  left: 32px;
+  top: 112px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: .09em;
+}
+.works__edition span:last-child { font-size: 8px; letter-spacing: .2em; opacity: .55; }
+.works__counter {
+  position: absolute;
+  left: 32px;
+  bottom: 28px;
+  top: auto;
+  transform: none;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: .1em;
+  color: var(--ink);
+}
+.works__counter-line { width: 33px; height: 1px; background: currentColor; opacity: .5; }
+.works__cover-hit {
+  position: absolute;
+  left: var(--cover-left, calc(50vw - min(63vh, 40vw) / 2));
+  top: var(--cover-top, calc(50vh - min(56vh, 36vw) / 2));
+  transform: none;
+  width: var(--cover-width, min(63vh, 40vw));
+  aspect-ratio: 1;
+  height: var(--cover-height, min(56vh, 36vw));
+  pointer-events: auto;
+  cursor: pointer;
+  touch-action: none;
+}
+.works__hit { pointer-events: auto; z-index: 1; }
+.works__cover-hit { z-index: 2; }
+.works__dots {
+  position: absolute;
+  left: auto;
+  right: 28px;
+  bottom: 21px;
+  top: auto;
+  transform: none;
+  max-width: min(48vw, 430px);
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  pointer-events: auto;
+}
+.works__dots::-webkit-scrollbar { display: none; }
+.works__dot { flex: 0 0 24px; width: 24px; height: 32px; }
+.works__dot::before { width: 5px; height: 5px; margin: -2.5px 0 0 -2.5px; }
+.works__gesture {
+  position: absolute;
+  bottom: 29px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  opacity: .6;
+}
+.works__gesture span { padding: 0 8px; }
+.control-bar { border: 1px solid rgba(254,236,227,.1); box-shadow: none; max-width: calc(100vw - 48px); }
+.control-bar:not(.control-bar--player) {
+  top: min(calc(var(--cover-bottom, 74vh) + 24px), calc(100dvh - 133px));
+  bottom: auto;
+}
+.bar-btn--play { color: var(--cream); background: transparent; }
+.bar-btn--play:hover:not(:disabled) { color: var(--ink); background: var(--cream); }
+.bar__title { max-width: 360px; font-size: 15px; }
+.bar__sub { max-width: 360px; font-size: 10px; letter-spacing: .015em; }
+.bar__index { font-size: 9px; letter-spacing: .12em; }
+.bar__nav { gap: 3px; }
+.bar-btn { width: 42px; height: 42px; min-width: 42px; }
+.bar-btn--play { width: 48px; height: 48px; min-width: 48px; }
+
+.detail__body { border-radius: 0; background: var(--paper); padding-bottom: 70px; }
+.detail__title { font-weight: 900; letter-spacing: -.055em; }
+.detail__facts { border-top: 1px solid rgba(23,23,23,.18); border-bottom: 1px solid rgba(23,23,23,.18); }
+.detail__fact { border: 0; border-radius: 0; background: none; }
+.detail__next a, .detail__next button { border-radius: 99px; }
+.detail__video-error { position: absolute; inset: 0; display: grid; place-items: center; padding: 28px; text-align: center; background: #171717; color: var(--cream); font-size: 13px; line-height: 1.7; }
+
+.about { background: var(--cream); }
+.about__inner { width: min(1120px, 84vw); }
+.about-intro { min-height: 680px; height: 100dvh; background: #f8ab3b; }
+.about-intro .about__field { opacity: .45; }
+.about-eyebrow { margin: 0 0 24px; font-size: 10px; font-weight: 800; letter-spacing: .2em; }
+.about-intro__title { position: relative; max-width: 5.3em; font-size: clamp(64px, 9.1vw, 142px); line-height: 1.02; letter-spacing: -.07em; font-weight: 900; }
+.about-intro__film { position: absolute; right: -4vw; top: 18vh; width: 51vw; aspect-ratio: 1; border-radius: 50%; overflow: hidden; transform: rotate(10deg); }
+.about-intro__film img { width: 100%; height: 100%; object-fit: cover; opacity: .86; mix-blend-mode: multiply; }
+.about-intro__film-play { position: absolute; inset: 0; display: grid; place-items: center; color: var(--cream); font-size: 80px; }
+.about-intro__scroll { opacity: .85; }
+.about-what { padding: 150px 0 130px; background: var(--cream); }
+.about-what__title { max-width: 8.5em; font-size: clamp(48px, 6.8vw, 106px); line-height: 1.07; letter-spacing: -.06em; }
+.about-what__text { max-width: 43em; margin: 42px 0 0 auto; font-size: clamp(16px, 1.4vw, 20px); line-height: 1.9; }
+#about-flow { background: var(--home-frame); color: var(--cream); }
+#about-flow .about__field { opacity: .18; }
+.about-flow { display: block; margin-top: 70px; }
+.about-flow li { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; padding: 30px 0; border: 0; border-top: 1px solid rgba(254,236,227,.45); border-radius: 0; background: none; }
+.about-flow strong { margin: 0; font-size: clamp(28px, 3.6vw, 56px); letter-spacing: -.04em; }
+.about-flow p { align-self: center; color: inherit; font-size: 15px; }
+.about-contact { padding: 150px 0 90px; min-height: 90vh; background: #f398b6; }
+.about-contact__title { max-width: 8em; font-size: clamp(50px, 8.6vw, 130px); line-height: 1.06; }
+.about-watch { display: inline-flex; align-items: center; gap: 40px; margin-top: 35px; padding: 21px 30px; border: 0; border-radius: 99px; background: var(--ink); color: var(--cream); font-size: 17px; font-weight: 750; transition: transform .2s; }
+.about-watch:hover { transform: rotate(-3deg) scale(1.04); }
+.about-watch span { font-size: 26px; }
+.about-contact__footer { margin: 130px 0 0; font-size: 10px; font-weight: 700; letter-spacing: .12em; }
+.about-nav { mix-blend-mode: multiply; }
+.about-progress { z-index: 52; }
+.preloader { background: var(--cream); }
+.preloader__mark { width: 110px; height: 110px; }
+.preloader__track { margin-top: 48px; width: 200px; height: 3px; background: rgba(23,23,23,.08); }
+.preloader__bar { background: var(--home-frame); }
+.preloader__label { margin-top: 18px; font-size: 8px; letter-spacing: .18em; }
+
+@media (min-aspect-ratio: 2.1 / 1) {
+  .home-copy { top: 14vh; }
+  .home-cta-wrap { bottom: 8.5vh; }
+}
+@media (max-width: 900px) {
+  .home-copy__mark { font-size: clamp(42px, 7vw, 64px); }
+  .bar__title, .bar__sub { max-width: 34vw; }
+  .works__edition { top: 90px; }
+  .about-intro__film { width: 68vw; right: -21vw; top: 30vh; }
+}
+@media (max-width: 700px) {
+  :root { --bar-h: 66px; }
+  .app-header { top: 17px; }
+  .app-header__title-text { font-size: 20px; }
+  .app-header__credit { font-size: 7px; }
+  .app-header__asterisk { font-size: 23px; }
+  .app-header__links { margin-top: 0; top: 0; height: 24px; padding: 0; }
+  .app-header__link { position: absolute; padding: 10px 12px; font-size: 12px; }
+  .app-header__link--works { left: 17px; right: auto; }
+  .app-header__link--about { left: auto; right: 17px; }
+  .app-header__link-text::after { padding: 7px 14px; }
+  .home-art { width: 177.68vh; }
+  .home-art__left { transform: translateX(16%) scale(.59); transform-origin: 27% 81%; }
+  .home-art__right { transform: translateX(-16%) scale(.59); transform-origin: 75% 84%; }
+  .home-art__center { transform: translate(18.5%, 27%) scale(.60); }
+  .home-copy { top: 15vh; }
+  .home-copy__eyebrow { font-size: 7px; margin-bottom: 12px; letter-spacing: .14em; }
+  .home-copy__mark { font-size: clamp(43px, 11.8vw, 64px); -webkit-text-stroke-width: 1.5px; text-shadow: 0 3px 0 #231f20; }
+  .home-copy__tagline { margin-top: 14px; font-size: 10px; letter-spacing: .14em; }
+  .home-cta-wrap { bottom: 13vh; }
+  .home-cta { min-width: 192px; min-height: 60px; font-size: 15px; gap: 14px; padding: 16px 23px; }
+  .home-corner { bottom: calc(17px + env(safe-area-inset-bottom)); font-size: 8px; }
+  .home-corner--left { left: 20px; }
+  .home-corner--right { right: 20px; letter-spacing: .02em; }
+  .home-corner__dot { width: 8px; height: 8px; }
+  .home-hint { display: none; }
+  .works__edition { left: 20px; top: 91px; font-size: 11px; }
+  .works__counter { left: 20px; bottom: calc(112px + env(safe-area-inset-bottom)); font-size: 9px; }
+  .works__counter-line { width: 20px; }
+  .works__cover-hit {
+    left: var(--cover-left, 12vw);
+    top: var(--cover-top, calc(50vh - min(66vw, 44vh) / 2));
+    width: var(--cover-width, 76vw);
+    height: var(--cover-height, min(66vw, 44vh));
+  }
+  .works__dots { right: 17px; bottom: calc(100px + env(safe-area-inset-bottom)); max-width: 58vw; }
+  .works__dot { flex-basis: 19px; width: 19px; }
+  .works__gesture { bottom: calc(177px + env(safe-area-inset-bottom)); font-size: 9px; white-space: nowrap; }
+  .control-bar, .control-bar:not(.control-bar--player), .control-bar--player {
+    position: fixed;
+    top: auto;
+    bottom: calc(17px + env(safe-area-inset-bottom));
+    max-width: calc(100vw - 28px);
+    gap: 8px;
+    padding: 9px 13px;
+  }
+  .bar-btn { width: 40px; height: 44px; min-width: 40px; }
+  .bar-btn--play { width: 44px; height: 44px; min-width: 44px; }
+  .bar__title { max-width: 32vw; font-size: 13px; }
+  .bar__sub { max-width: 32vw; font-size: 8px; }
+  .bar__index, .bar__sep { display: none; }
+  .control-bar--player .bar__meta { display: none; }
+  .control-bar--player {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr);
+    column-gap: 12px;
+    row-gap: 0;
+    width: min(320px, calc(100vw - 28px));
+    padding: 10px 16px;
+    border-radius: 30px;
+  }
+  .control-bar--player .bar-btn--play { grid-column: 1; grid-row: 1; }
+  .control-bar--player .bar__nav { grid-column: 2; grid-row: 1; justify-content: space-between; }
+  .control-bar--player .bar-btn { width: 36px; min-width: 36px; }
+  .control-bar--player .bar-btn--play { width: 44px; min-width: 44px; }
+  .control-bar--player .bar__scrub { grid-column: 1 / -1; grid-row: 2; width: 100% !important; margin-right: 0 !important; padding: 10px 0 3px; }
+  .bar__scrub-track { width: 88px; }
+  .control-bar--player .bar__scrub-track { width: 100%; }
+  .about__inner { width: 83vw; }
+  .about-intro { min-height: 640px; }
+  .about-eyebrow { font-size: 8px; letter-spacing: .14em; }
+  .about-intro__title { font-size: 15vw; max-width: 5em; }
+  .about-intro__film { width: 94vw; top: 30vh; right: -40vw; }
+  .about-intro__film-play { font-size: 56px; }
+  .about-what { padding: 95px 0; }
+  .about-what__title { font-size: 10.3vw; }
+  .about-what__text { font-size: 15px; margin-top: 28px; }
+  .about-flow { margin-top: 45px; }
+  .about-flow li { grid-template-columns: 1fr; gap: 10px; padding: 26px 0; }
+  .about-flow strong { font-size: 32px; }
+  .about-contact { padding: 110px 0 65px; }
+  .about-contact__title { font-size: 12vw; }
+  .about-contact__footer { margin-top: 90px; font-size: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-art__motion, .home-art [data-stage-layer] { will-change: auto; }
+  .home-cta, .about-watch { transition: none; }
+}
+
+/* The video stage reserves space for fixed navigation and playback controls. */
+.detail__hero {
+  height: 100svh;
+  min-height: 340px;
+  padding: var(--site-header-content-top) 0 128px;
+  box-sizing: border-box;
+  align-items: center;
+}
+.detail__stage {
+  width: min(84vw, 1600px, calc((100svh - var(--site-header-content-top) - 150px) * var(--ar, 1.7778)));
+  max-height: none;
+  border-radius: 6px;
+}
+.control-bar--player {
+  position: fixed;
+  top: auto;
+  bottom: calc(24px + env(safe-area-inset-bottom));
+}
+.detail__body {
+  padding: 38px clamp(24px, 4vw, 60px) 70px;
+  color: var(--ink);
+}
+.detail__no, .detail__h2, .detail__text, .detail__notice { color: rgba(23,23,23,.7); }
+.detail__no { margin-top: 0; }
+.detail__next a, .detail__next button { color: var(--ink); border-color: rgba(23,23,23,.25); }
+.detail__cols { grid-template-columns: 1fr; }
+.detail__video-error button { padding: 12px 20px; border: 1px solid currentColor; border-radius: 24px; color: inherit; background: transparent; }
+.control-bar { transition: opacity .22s ease; }
+.is-transitioning .control-bar { opacity: 0; pointer-events: none; }
+.is-transitioning .page { pointer-events: none; }
+@media (max-width: 700px) {
+  .detail__hero { padding: var(--site-header-content-top) 0 150px; height: 100svh; }
+  .detail__stage { width: min(92vw, calc((100svh - var(--site-header-content-top) - 188px) * var(--ar, 1.7778))); max-height: none; }
+  .control-bar--player { bottom: calc(17px + env(safe-area-inset-bottom)); }
+  .bar-btn, .control-bar--player .bar-btn { min-width: 44px; width: 44px; min-height: 44px; }
+  .control-bar--player .bar__nav { gap: 0; }
+}

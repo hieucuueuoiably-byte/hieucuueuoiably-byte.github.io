@@ -1,0 +1,31 @@
+{
+  "name": "portfolio-site",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "个人作品集网站 — AI 影像 / 动画 / 短片。交互动效复现自 ponpon-mania.com 的交互逻辑与运动质感。",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "build:pages": "npm run build && node scripts/build-github-pages.mjs",
+    "preview": "vite preview",
+    "typecheck": "tsc -b --noEmit false --emitDeclarationOnly false || tsc -p tsconfig.app.json --noEmit",
+    "gen:placeholders": "node scripts/gen-placeholders.mjs"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5",
+    "html-to-image": "^1.11.13",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2",
+    "three": "^0.169.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "@types/three": "^0.169.0",
+    "@vitejs/plugin-react": "^4.3.2",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.9"
+  }
+}

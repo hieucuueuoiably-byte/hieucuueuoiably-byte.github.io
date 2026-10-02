@@ -1,0 +1,141 @@
+{
+  "date": "2026-09-30T13:11:57.182Z",
+  "dev": {
+    "bg": "rgba(0, 0, 0, 0)",
+    "buttonSelect": "none",
+    "canvas": {
+      "engine": "three.js r169",
+      "homeArm": "-0.0986",
+      "homeFluid": "gpu",
+      "homeFrame": "19596",
+      "homeHover": "0.000",
+      "homePointerMoves": "0",
+      "sceneMode": "home"
+    },
+    "ready": "ready"
+  },
+  "devErrors": [],
+  "productionErrors": [],
+  "initial": {
+    "bg": "rgba(0, 0, 0, 0)",
+    "data": {
+      "engine": "three.js r169",
+      "homeArm": "0.2343",
+      "homeFluid": "gpu",
+      "homeFrame": "6120",
+      "homeHover": "0.000",
+      "homePointerMoves": "0",
+      "sceneMode": "home"
+    },
+    "ready": "ready"
+  },
+  "pointer": {
+    "engine": "three.js r169",
+    "homeArm": "-0.0939",
+    "homeFluid": "gpu",
+    "homeFrame": "12984",
+    "homeHover": "0.027",
+    "homePointerMoves": "10",
+    "sceneMode": "home"
+  },
+  "hover": {
+    "engine": "three.js r169",
+    "homeArm": "0.0236",
+    "homeFluid": "gpu",
+    "homeFrame": "18000",
+    "homeHover": "1.000",
+    "homePointerMoves": "10",
+    "sceneMode": "home"
+  },
+  "mobile": {
+    "button": {
+      "bottom": 706.4479370117188,
+      "height": 60,
+      "left": 98.66667175292967,
+      "right": 276.6666717529297,
+      "top": 646.4479370117188,
+      "width": 178,
+      "x": 98.66667175292967,
+      "y": 646.4479370117188
+    },
+    "canvas": {
+      "engine": "three.js r169",
+      "homeArm": "-0.0951",
+      "homeFluid": "gpu",
+      "homeFrame": "26376",
+      "homeHover": "0.000",
+      "homePointerMoves": "10",
+      "sceneMode": "home"
+    },
+    "ready": "ready",
+    "rootWidth": 375,
+    "scrollWidth": 375
+  },
+  "landscape": {
+    "aspect": 1.7778098979132744,
+    "height": 1080,
+    "paused": false,
+    "rect": {
+      "bottom": 474.78126525878906,
+      "height": 251.98959350585935,
+      "left": 416,
+      "right": 863.9895935058594,
+      "top": 222.7916717529297,
+      "width": 447.9895935058594,
+      "x": 416,
+      "y": 222.7916717529297
+    },
+    "src": "/videos/film-0901-01.mp4",
+    "time": 0.06219,
+    "videos": 1,
+    "width": 1920
+  },
+  "portrait": {
+    "aspect": 0.5624898371719956,
+    "height": 1056,
+    "paused": false,
+    "rect": {
+      "bottom": 572.7812652587891,
+      "height": 447.9895935058594,
+      "left": 514,
+      "right": 765.9895935058594,
+      "top": 124.79167175292967,
+      "width": 251.98959350585935,
+      "x": 514,
+      "y": 124.79167175292967
+    },
+    "src": "/videos/preview-0928-164227.mp4",
+    "time": 0.12632,
+    "videos": 1,
+    "width": 594
+  },
+  "final": {
+    "date": "2026-09-30T13:34:55.060Z",
+    "build": "index-B03m_DEt.js",
+    "dev": {
+      "canvas": {
+        "engine": "three.js r169",
+        "homeArm": "0.1918",
+        "homeFluid": "gpu",
+        "homeFrame": "77712",
+        "homeHover": "0.000",
+        "homePointerMoves": "10",
+        "sceneMode": "home"
+      },
+      "hostOpacity": "1",
+      "ready": "ready",
+      "route": "home"
+    },
+    "devErrors": [],
+    "productionErrors": [],
+    "hover": {
+      "engine": "three.js r169",
+      "homeArm": "0.1178",
+      "homeFluid": "gpu",
+      "homeFrame": "60840",
+      "homeHover": "1.000",
+      "homePointerMoves": "10",
+      "sceneMode": "home"
+    }
+  }
+}

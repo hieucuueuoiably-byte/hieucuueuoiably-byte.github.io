@@ -1,0 +1,50 @@
+{
+  "rest": {
+    "engine": "three.js r169",
+    "homeArm": "-0.0525",
+    "homeArtwork": "ai-hero-v5",
+    "homeFluid": "gpu",
+    "homeFrame": "7836",
+    "homeHover": "0.000",
+    "homeLayers": "7",
+    "homePointerMoves": "0",
+    "homeReduced": "false",
+    "homeTime": "43.644",
+    "sceneMode": "home"
+  },
+  "flow": {
+    "engine": "three.js r169",
+    "homeArm": "0.0181",
+    "homeArtwork": "ai-hero-v5",
+    "homeFluid": "gpu",
+    "homeFrame": "16152",
+    "homeHover": "0.000",
+    "homeLayers": "7",
+    "homePointerMoves": "8",
+    "homeReduced": "false",
+    "homeTime": "89.850",
+    "sceneMode": "home"
+  },
+  "devErrors": [],
+  "prod": {
+    "canvas": {
+      "engine": "three.js r169",
+      "homeArm": "-0.0647",
+      "homeArtwork": "ai-hero-v5",
+      "homeFluid": "gpu",
+      "homeFrame": "11424",
+      "homeHover": "0.000",
+      "homeLayers": "7",
+      "homePointerMoves": "0",
+      "homeReduced": "false",
+      "homeTime": "63.633",
+      "sceneMode": "home"
+    },
+    "canvasCount": 1,
+    "viewport": [
+      1280,
+      720
+    ]
+  },
+  "prodErrors": []
+}

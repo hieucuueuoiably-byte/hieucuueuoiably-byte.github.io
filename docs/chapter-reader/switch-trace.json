@@ -1,0 +1,110 @@
+[
+  {
+    "time": 1790911056827,
+    "state": {
+      "path": "/works/film-0823-02",
+      "reader": "{\"background\":\"chapter-3-UJ\",\"geometry\":\"25x25-paper-Pw\",\"velocity\":-5.57929139648256,\"position\":0.906835,\"video\":\"film-0823-02\",\"rect\":{\"x\":552.742572625,\"y\":149.20000000000002,\"w\":242.32500000000005,\"h\":430.8},\"live\":false}",
+      "src": "/videos/film-0823-02.mp4",
+      "wipe": false
+    }
+  },
+  {
+    "time": 1790911056947,
+    "state": {
+      "path": "/works/film-0823-02",
+      "reader": "{\"background\":\"chapter-3-UJ\",\"geometry\":\"25x25-paper-Pw\",\"velocity\":-3.063452733386472,\"position\":0.988609,\"video\":\"film-0823-02\",\"rect\":{\"x\":522.9829696749999,\"y\":149.20000000000002,\"w\":242.32500000000005,\"h\":430.8},\"live\":false}",
+      "src": "/videos/film-0823-02.mp4",
+      "wipe": false
+    }
+  },
+  {
+    "time": 1790911057082,
+    "state": {
+      "path": "/works/film-0823-02",
+      "reader": "{\"background\":\"chapter-3-UJ\",\"geometry\":\"25x25-paper-Pw\",\"velocity\":-1.0751711432402216,\"position\":1,\"video\":\"film-0823-02\",\"rect\":{\"x\":518.8375,\"y\":149.20000000000002,\"w\":242.32500000000005,\"h\":430.8},\"live\":false}",
+      "src": "/videos/film-0823-02.mp4",
+      "wipe": false
+    }
+  },
+  {
+    "time": 1790911057225,
+    "state": {
+      "path": "/works/film-0823-02",
+      "reader": "{\"background\":\"chapter-3-UJ\",\"geometry\":\"25x25-paper-Pw\",\"velocity\":-0.2543036546522738,\"position\":1,\"video\":\"film-0823-02\",\"rect\":{\"x\":518.8375,\"y\":149.20000000000002,\"w\":242.32500000000005,\"h\":430.8},\"live\":false}",
+      "src": "/videos/film-0823-02.mp4",
+      "wipe": false
+    }
+  },
+  {
+    "time": 1790911057344,
+    "state": {
+      "path": "/works/film-0823-02",
+      "reader": "{\"background\":\"chapter-3-UJ\",\"geometry\":\"25x25-paper-Pw\",\"velocity\":-0.04462979553549927,\"position\":1,\"video\":\"film-0823-02\",\"rect\":{\"x\":518.8375,\"y\":149.20000000000002,\"w\":242.32500000000005,\"h\":430.8},\"live\":false}",
+      "src": "/videos/film-0823-02.mp4",
+      "wipe": false
+    }
+  },
+  {
+    "time": 1790911057442,
+    "state": {
+      "path": "/works/film-0823-02",
+      "reader": "{\"background\":\"chapter-3-UJ\",\"geometry\":\"25x25-paper-Pw\",\"velocity\":-0.00010225930917722877,\"position\":1,\"video\":\"film-0823-02\",\"rect\":{\"x\":518.8375,\"y\":149.20000000000002,\"w\":242.32500000000005,\"h\":430.8},\"live\":false}",
+      "src": "/videos/film-0823-02.mp4",
+      "wipe": false
+    }
+  },
+  {
+    "time": 1790911057554,
+    "state": {
+      "path": "/works/film-0823-02",
+      "reader": "{\"background\":\"chapter-3-UJ\",\"geometry\":\"25x25-paper-Pw\",\"velocity\":0,\"position\":1,\"video\":\"film-0823-02\",\"rect\":{\"x\":518.8375,\"y\":149.20000000000002,\"w\":242.32500000000005,\"h\":430.8},\"live\":false}",
+      "src": "/videos/film-0823-02.mp4",
+      "wipe": false
+    }
+  },
+  {
+    "time": 1790911057654,
+    "state": {
+      "path": "/works/film-0823-02",
+      "reader": "{\"background\":\"chapter-3-UJ\",\"geometry\":\"25x25-paper-Pw\",\"velocity\":0,\"position\":1,\"video\":\"film-0823-02\",\"rect\":{\"x\":518.8375,\"y\":149.20000000000002,\"w\":242.32500000000005,\"h\":430.8},\"live\":false}",
+      "src": "/videos/film-0823-02.mp4",
+      "wipe": false
+    }
+  },
+  {
+    "time": 1790911057758,
+    "state": {
+      "path": "/works/film-0823-02",
+      "reader": "{\"background\":\"chapter-3-UJ\",\"geometry\":\"25x25-paper-Pw\",\"velocity\":0,\"position\":1,\"video\":\"film-0823-02\",\"rect\":{\"x\":518.8375,\"y\":149.20000000000002,\"w\":242.32500000000005,\"h\":430.8},\"live\":false}",
+      "src": "/videos/film-0823-02.mp4",
+      "wipe": false
+    }
+  },
+  {
+    "time": 1790911057868,
+    "state": {
+      "path": "/works/film-0823-02",
+      "reader": "{\"background\":\"chapter-3-UJ\",\"geometry\":\"25x25-paper-Pw\",\"velocity\":0,\"position\":1,\"video\":\"film-0823-02\",\"rect\":{\"x\":518.8375,\"y\":149.20000000000002,\"w\":242.32500000000005,\"h\":430.8},\"live\":false}",
+      "src": "/videos/film-0823-02.mp4",
+      "wipe": false
+    }
+  },
+  {
+    "time": 1790911057984,
+    "state": {
+      "path": "/works/film-0823-02",
+      "reader": "{\"background\":\"chapter-3-UJ\",\"geometry\":\"25x25-paper-Pw\",\"velocity\":0,\"position\":1,\"video\":\"film-0823-02\",\"rect\":{\"x\":518.8375,\"y\":149.20000000000002,\"w\":242.32500000000005,\"h\":430.8},\"live\":false}",
+      "src": "/videos/film-0823-02.mp4",
+      "wipe": false
+    }
+  },
+  {
+    "time": 1790911058086,
+    "state": {
+      "path": "/works/film-0823-02",
+      "reader": "{\"background\":\"chapter-3-UJ\",\"geometry\":\"25x25-paper-Pw\",\"velocity\":0,\"position\":1,\"video\":\"film-0823-02\",\"rect\":{\"x\":518.8375,\"y\":149.20000000000002,\"w\":242.32500000000005,\"h\":430.8},\"live\":false}",
+      "src": "/videos/film-0823-02.mp4",
+      "wipe": false
+    }
+  }
+]

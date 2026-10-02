@@ -1,0 +1,21 @@
+{
+  "builtAt": "2026-09-30T19:07:01.4509643+08:00",
+  "checked": [
+    "tsc + vite build",
+    "18 media assets verified",
+    "desktop 1440x900 browser",
+    "mobile 375x812 browser"
+  ],
+  "assets": [
+    {
+      "name": "index-B3ytciDq.js",
+      "bytes": 866101,
+      "sha256": "60ff49963b95743d9a9909dc107e5acd39795a18ae1da4ade409181d9495d4b3"
+    },
+    {
+      "name": "index-CUBlD9Ee.css",
+      "bytes": 40305,
+      "sha256": "e32039596ed8003e57025282eae9a3d07fdee9dd04a9554be19be398ad3207b0"
+    }
+  ]
+}

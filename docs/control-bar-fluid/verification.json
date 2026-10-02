@@ -1,0 +1,161 @@
+{
+  "build": "index-BU4iAHOK.js",
+  "checks": [
+    {
+      "bar": {
+        "h": 76,
+        "hoverScale": "none",
+        "mode": "full",
+        "opacity": "1",
+        "text": "01. AI 短片5 个视频 · 人物、情绪与故事01 / 03",
+        "texts": [
+          "matrix(1, 0, 0, 1, 0, 0)",
+          "matrix(1, 0, 0, 1, 0, 0)",
+          "matrix(1, 0, 0, 1, 0, 0)"
+        ],
+        "transform": "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.00166667, 0, 0, 0, 1)",
+        "visible": "visible",
+        "w": 409.59375,
+        "x": 435.203125,
+        "y": 587
+      },
+      "build": "/assets/index-DupnQ9OR.js",
+      "flow": {
+        "backend": "gpu",
+        "moves": null,
+        "px": "0.0"
+      },
+      "route": "/works"
+    },
+    {
+      "bar": {
+        "h": 76,
+        "hoverScale": "none",
+        "mode": "full",
+        "opacity": "1",
+        "text": "01. AI 短片5 个视频 · 人物、情绪与故事01 / 03",
+        "texts": [
+          "matrix(1, 0, 0, 1, 0, 0)",
+          "matrix(1, 0, 0, 1, 0, 0)",
+          "matrix(1, 0, 0, 1, 0, 0)"
+        ],
+        "transform": "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.00166667, 0, 0, 0, 1)",
+        "visible": "visible",
+        "w": 409.59375,
+        "x": 435.203125,
+        "y": 587
+      },
+      "build": "/assets/index-DupnQ9OR.js",
+      "flow": {
+        "backend": "gpu",
+        "moves": "2",
+        "px": "63.2"
+      },
+      "route": "/works"
+    },
+    {
+      "bar": {
+        "h": 20.9766845703125,
+        "hoverScale": "none",
+        "mode": "full",
+        "opacity": "0.21297",
+        "text": "02. 动画影像2 个视频 · 角色、空间与想象02 / 03",
+        "texts": [
+          "matrix(1, 0, 0, 1, 0, 20)",
+          "matrix(1, 0, 0, 1, 0, 14)",
+          "matrix(1, 0, 0, 1, 0, 11)"
+        ],
+        "transform": "matrix3d(0.4375, 0, 0, 0, 0, 0.300587, -0.317889, 0.000529815, 0, 0.726603, 0.687057, -0.0011451, 0, 46.6024, 0, 1)",
+        "visible": "visible",
+        "w": 183.2349853515625,
+        "x": 548.3746948242188,
+        "y": 660.9028930664062
+      },
+      "build": "/assets/index-DupnQ9OR.js",
+      "flow": {
+        "backend": "gpu",
+        "moves": "3",
+        "px": "128.0"
+      },
+      "route": "/works"
+    },
+    {
+      "bar": {
+        "h": 76,
+        "hoverScale": "none",
+        "mode": "full",
+        "opacity": "1",
+        "text": "02. 动画影像2 个视频 · 角色、空间与想象02 / 03",
+        "texts": [
+          "matrix(1, 0, 0, 1, 0, 0)",
+          "matrix(1, 0, 0, 1, 0, 0)",
+          "matrix(1, 0, 0, 1, 0, 0)"
+        ],
+        "transform": "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.00166667, 0, 0, 0, 1)",
+        "visible": "visible",
+        "w": 410.390625,
+        "x": 434.796875,
+        "y": 587
+      },
+      "build": "/assets/index-DupnQ9OR.js",
+      "flow": {
+        "backend": "gpu",
+        "moves": "3",
+        "px": "0.0"
+      },
+      "route": "/works"
+    },
+    {
+      "bar": {
+        "h": 76,
+        "hoverScale": "none",
+        "mode": "full",
+        "opacity": "1",
+        "text": "02. 动画影像2 个视频 · 角色、空间与想象02 / 03",
+        "texts": [
+          "matrix(1, 0, 0, 1, 0, 0)",
+          "matrix(1, 0, 0, 1, 0, 0)",
+          "matrix(1, 0, 0, 1, 0, 0)"
+        ],
+        "transform": "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.00166667, 0, 0, 0, 1)",
+        "visible": "visible",
+        "w": 410.390625,
+        "x": 434.796875,
+        "y": 587
+      },
+      "build": "/assets/index-DupnQ9OR.js",
+      "flow": {
+        "backend": "gpu",
+        "moves": "4",
+        "px": "83.8"
+      },
+      "route": "/works"
+    }
+  ],
+  "productionVideo": {
+    "duration": 90.209002,
+    "focused": "slider",
+    "hoverScale": "1.1",
+    "paused": true,
+    "route": "/works/category/animation",
+    "slider": "15",
+    "time": 13.261871
+  },
+  "developmentVideo": {
+    "barOpacity": "1",
+    "barScale": "1.1",
+    "fluid": "gpu",
+    "paused": false,
+    "readyState": 4,
+    "route": "/works/category/animation",
+    "src": "/videos/film-0903-02.mp4",
+    "time": 0.034711
+  },
+  "productionErrors": [],
+  "developmentErrors": [],
+  "fixedDuringVerification": [
+    "Fluid vector initialization accessed constructor settings too early; moved initialization into constructor.",
+    "GSAP inline scale:none covered CSS hover scale; individual hover scale now overrides it."
+  ],
+  "earlierSamplesBuild": "index-DupnQ9OR.js; final build only changes hover CSS"
+}

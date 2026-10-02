@@ -1,0 +1,50 @@
+{
+  "passed": false,
+  "results": [
+    {
+      "layer": "director",
+      "region": "reel rim",
+      "solidCoverage": 0.0
+    },
+    {
+      "layer": "director",
+      "region": "right shoulder",
+      "solidCoverage": 0.0
+    },
+    {
+      "layer": "director",
+      "region": "right arm",
+      "solidCoverage": 0.0
+    },
+    {
+      "layer": "director",
+      "region": "left shoe",
+      "solidCoverage": 0.0
+    },
+    {
+      "layer": "director",
+      "region": "scarf knot",
+      "solidCoverage": 0.0
+    },
+    {
+      "layer": "octopus",
+      "region": "upper edge of right tentacle",
+      "solidCoverage": 0.0
+    },
+    {
+      "layer": "bird",
+      "region": "headphone shadow",
+      "solidCoverage": 0.0
+    }
+  ],
+  "failures": [
+    "director: reel rim: solid coverage 0%",
+    "director: right shoulder: solid coverage 0%",
+    "director: right arm: solid coverage 0%",
+    "director: left shoe: solid coverage 0%",
+    "director: scarf knot: solid coverage 0%",
+    "octopus: upper edge of right tentacle: solid coverage 0%",
+    "bird: headphone shadow: solid coverage 0%",
+    "bird: background (1350,620) unexpectedly opaque"
+  ]
+}

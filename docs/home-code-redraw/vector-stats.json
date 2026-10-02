@@ -1,0 +1,66 @@
+{
+  "director": {
+    "palette": [
+      "#25212d",
+      "#fff0cf",
+      "#fa7d0a",
+      "#f12736",
+      "#ffad79",
+      "#ffd075",
+      "#45324f"
+    ],
+    "color_paths": 7,
+    "curve_segments": 5003,
+    "bounds": [
+      567,
+      239,
+      477,
+      437
+    ]
+  },
+  "octopus": {
+    "palette": [
+      "#25212d",
+      "#b67fea",
+      "#955ac6",
+      "#fff0cf",
+      "#ffcf45",
+      "#f497bc",
+      "#006073",
+      "#03404b"
+    ],
+    "color_paths": 7,
+    "curve_segments": 7944,
+    "bounds": [
+      158,
+      427,
+      686,
+      440
+    ]
+  },
+  "bird": {
+    "palette": [
+      "#25212d",
+      "#9bd78a",
+      "#71b77b",
+      "#ffc844",
+      "#fff0cf",
+      "#b880e4",
+      "#8151ab",
+      "#294a56",
+      "#4c6f77",
+      "#b09b86",
+      "#827469",
+      "#f12736"
+    ],
+    "color_paths": 9,
+    "curve_segments": 5461,
+    "bounds": [
+      1073,
+      294,
+      544,
+      546
+    ]
+  },
+  "bytes": 345886
+}

@@ -1,0 +1,118 @@
+{
+  "development": {
+    "data": {
+      "engine": "three.js r169",
+      "homeArm": "-0.0229",
+      "homeArtwork": "own-flat-atlas-v4",
+      "homeCharacterParts": "15",
+      "homeClippedParts": "[]",
+      "homeCodeCharacters": "3",
+      "homeEyeFrames": "6",
+      "homeFluid": "gpu",
+      "homeFrame": "16572",
+      "homeHover": "0.000",
+      "homeLayers": "7",
+      "homePointerMoves": "0",
+      "homePortalScale": "1.13,1.06",
+      "homeReduced": "false",
+      "homeTime": "92.616",
+      "sceneMode": "home"
+    },
+    "size": [
+      1223,
+      884
+    ]
+  },
+  "production": {
+    "data": {
+      "engine": "three.js r169",
+      "homeArm": "0.0274",
+      "homeArtwork": "own-flat-atlas-v4",
+      "homeCharacterParts": "15",
+      "homeClippedParts": "[]",
+      "homeCodeCharacters": "3",
+      "homeEyeFrames": "6",
+      "homeFluid": "gpu",
+      "homeFrame": "2004",
+      "homeHover": "0.000",
+      "homeLayers": "7",
+      "homePointerMoves": "0",
+      "homePortalScale": "1.13,1.06",
+      "homeReduced": "false",
+      "homeTime": "11.256",
+      "sceneMode": "home"
+    },
+    "size": [
+      1280,
+      720
+    ]
+  },
+  "flow": {
+    "engine": "three.js r169",
+    "homeArm": "0.0062",
+    "homeArtwork": "own-flat-atlas-v4",
+    "homeCharacterParts": "15",
+    "homeClippedParts": "[]",
+    "homeCodeCharacters": "3",
+    "homeEyeFrames": "6",
+    "homeFluid": "gpu",
+    "homeFrame": "16632",
+    "homeHover": "0.000",
+    "homeLayers": "7",
+    "homePointerMoves": "8",
+    "homePortalScale": "1.13,1.06",
+    "homeReduced": "false",
+    "homeTime": "92.950",
+    "sceneMode": "home"
+  },
+  "mobile": {
+    "data": {
+      "engine": "three.js r169",
+      "homeArm": "-0.0388",
+      "homeArtwork": "own-flat-atlas-v4",
+      "homeCharacterParts": "15",
+      "homeClippedParts": "[]",
+      "homeCodeCharacters": "3",
+      "homeEyeFrames": "6",
+      "homeFluid": "gpu",
+      "homeFrame": "19956",
+      "homeHover": "0.000",
+      "homeLayers": "7",
+      "homePointerMoves": "8",
+      "homePortalScale": "1.13,1.06",
+      "homeReduced": "false",
+      "homeTime": "111.427",
+      "sceneMode": "home"
+    },
+    "scrollWidth": 375,
+    "size": [
+      375,
+      812
+    ]
+  },
+  "returnHome": {
+    "data": {
+      "engine": "three.js r169",
+      "homeArm": "-0.0027",
+      "homeArtwork": "own-flat-atlas-v4",
+      "homeCharacterParts": "15",
+      "homeClippedParts": "[]",
+      "homeCodeCharacters": "3",
+      "homeEyeFrames": "6",
+      "homeFluid": "gpu",
+      "homeFrame": "20292",
+      "homeHover": "0.000",
+      "homeLayers": "7",
+      "homePointerMoves": "8",
+      "homePortalScale": "1.13,1.06",
+      "homeReduced": "false",
+      "homeTime": "113.400",
+      "sceneMode": "home",
+      "transition": "works:home"
+    },
+    "rendererCount": 1,
+    "route": "/"
+  },
+  "developmentErrors": [],
+  "productionErrors": []
+}

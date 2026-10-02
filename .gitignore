@@ -1,0 +1,49 @@
+# 依赖与构建产物
+node_modules/
+dist/
+dist-ssr/
+
+# 日志
+*.log
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# 编辑器 / 系统
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# 本地环境
+.env
+.env.local
+.env.*.local
+
+# 缓存
+.vite/
+*.tsbuildinfo
+
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 本地验收图片、录屏和历史素材；文档与网站实际素材仍保留
+docs/**/*.png
+docs/**/*.jpg
+docs/**/*.jpeg
+docs/**/*.webp
+docs/**/*.gif
+docs/**/*.mp4
+docs/**/*.webm
+docs/**/*.zip
+docs/**/*.pdf
+docs/**/*.woff
+docs/**/*.woff2
+docs/**/*.ttf
+portfolio/
+
+# 环境文件只在本地使用
+.env.*
+!.env.example

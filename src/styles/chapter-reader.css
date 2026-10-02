@@ -1,0 +1,57 @@
+/* Playback reader: chapter-3 palette and paper stage, with native video controls. */
+.works__card-targets { position: fixed; inset: 0; pointer-events: none; }
+.works__card-target { position: absolute; z-index: 1; visibility: hidden; padding: 0; border: 0; background: transparent; pointer-events: auto; cursor: pointer; touch-action: none; user-select: none; }
+.works__card-target:focus-visible { background: rgba(255,246,240,.16); }
+body.is-transitioning .works__card-target { pointer-events: none; }
+.static-works__card { box-shadow: 5px 6px 0 #51443e, 7px 8px 0 rgba(23,23,23,.25); }
+.works__inline-stage { touch-action: none; user-select: none; }
+body[data-reader-webgl='ready'] .works__inline-stage { background: transparent; }
+body[data-reader-webgl='ready'] .works__inline-stage video { opacity: 0; }
+body[data-reader-webgl='ready'] .works__inline-stage video:fullscreen { opacity: 1; background: #171717; }
+body[data-route='collection'] .works__edition,
+body[data-route='player'] .works__edition,
+body[data-route='collection'] .works__gesture,
+body[data-route='player'] .works__gesture { display: none; }
+body[data-route='collection'] .works__breadcrumb,
+body[data-route='player'] .works__breadcrumb { top: calc(var(--site-header-content-top) + 2px); left: 22px; font-size: 11px; }
+body[data-route='collection'] .control-bar,
+body[data-route='player'] .control-bar { top: auto !important; bottom: calc(24px + env(safe-area-inset-bottom)); min-height: 64px; padding: 8px 16px; gap: 10px; width: max-content; max-width: calc(100vw - 48px); }
+body[data-route='collection'] .bar__title,
+body[data-route='player'] .bar__title { max-width: 195px; font-size: 13px; }
+body[data-route='collection'] .bar__sub,
+body[data-route='player'] .bar__sub { max-width: 195px; font-size: 9px; }
+body[data-route='collection'] .bar__time,
+body[data-route='player'] .bar__time { font-size: 9px; }
+body[data-route='collection'] .works__counter,
+body[data-route='player'] .works__counter,
+body[data-route='collection'] .works__dots,
+body[data-route='player'] .works__dots { bottom: 16px; }
+body.static-mode[data-route='collection'] .gl-stage,
+body.static-mode[data-route='player'] .gl-stage { background: #f87800; background-image: repeating-radial-gradient(ellipse at 65% 40%, transparent 0 150px, #7e7eff 151px 178px, transparent 179px 340px); }
+body.static-mode .works__inline-stage { border: 12px solid #ffece3; box-sizing: content-box; box-shadow: 6px 7px 0 #ba9a88, 8px 10px 0 rgba(23,23,23,.3); }
+@media(max-width:700px){
+  body[data-route='collection'] .works__breadcrumb,
+  body[data-route='player'] .works__breadcrumb { top: 103px; left: 12px; font-size: 10px; }
+  body[data-route='collection'] .control-bar,
+  body[data-route='player'] .control-bar { display: flex; flex-wrap: wrap; justify-content: center; width: calc(100vw - 24px); max-width: 410px; gap: 4px; min-height: 100px; border-radius: 27px; padding: 8px 10px; bottom: calc(17px + env(safe-area-inset-bottom)); }
+  body[data-route='collection'] .bar__meta,
+  body[data-route='player'] .bar__meta { display: flex; flex: 1 1 calc(100% - 54px); min-width: 0; }
+  body[data-route='collection'] .bar__title,
+  body[data-route='player'] .bar__title { max-width: 100%; font-size: 13px; }
+  body[data-route='collection'] .bar__sub,
+  body[data-route='player'] .bar__sub { max-width: 100%; }
+  body[data-route='collection'] .bar__scrub,
+  body[data-route='player'] .bar__scrub { flex: 1 1 55px; max-width: 105px; width: auto !important; margin-right: 4px !important; padding: 10px 0; }
+  body[data-route='collection'] .bar__scrub-track,
+  body[data-route='player'] .bar__scrub-track { width: 100%; }
+  body[data-route='collection'] .bar__time,
+  body[data-route='player'] .bar__time { display: inline; font-size: 8px; }
+  body[data-route='collection'] .bar__nav,
+  body[data-route='player'] .bar__nav { gap: 0; }
+  body[data-route='collection'] .bar-btn,
+  body[data-route='player'] .bar-btn { width: 44px; min-width: 44px; min-height: 44px; }
+  body[data-route='collection'] .bar__sep,
+  body[data-route='player'] .bar__sep,
+  body[data-route='collection'] .bar__index,
+  body[data-route='player'] .bar__index { display: none; }
+}

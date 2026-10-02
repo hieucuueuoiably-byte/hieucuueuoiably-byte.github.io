@@ -1,0 +1,16 @@
+{
+  "source": "public\\home-ai\\octopus-complete-v1.png",
+  "bounds": [
+    47,
+    417,
+    767,
+    429
+  ],
+  "scale": 0.5033112582781457,
+  "offset": [
+    1.1788079470198625,
+    394.33112582781456
+  ],
+  "shapes": 7,
+  "curve_segments": 4630
+}

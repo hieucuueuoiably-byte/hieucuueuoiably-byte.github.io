@@ -1,0 +1,180 @@
+<div id="__nuxt">
+  <main class="app-container">
+    <header class="app-header">
+      <div class="app-header__title-wrapper">
+        <div>
+          <h1 class="app-header__title">
+            <a href="/" class="">
+              <svg width="332" height="130" fill="none">
+            <span>
+              | by Justine Soulié and Patrick Heng
+      <div class="app-header__links">
+        <a href="/chapters" class="app-header__link app-header__link--chapters">
+          <span class="app-header__link-text">
+            | chapters
+        <a aria-current="page" href="/about" class="router-link-active router-link-exact-active app-header__link app-header__link--about">
+          <span class="app-header__link-text">
+            | about
+    <div class="page about" id="about-page">
+      <div class="about__container">
+        <div class="about-section about-intro">
+          <div class="about-intro__container">
+            <h1 class="about-intro__title">
+              | the interactive adventure of a megalomaniac sheep who wants to make the world dance.
+          <div class="about-intro__scroll-down">
+            <div class="about-intro__scroll-title">
+              | Scroll down
+            <svg>
+        <div class="about-section about-what">
+          <div class="about-what__container">
+            <h1 class="about-what__title">
+              | yes the legend,
+              <br>
+              | is ponpon!
+            <p class="about-what__text">
+              <span>
+                | Ponpon is a megalomaniac sheep, tender and dead set on becoming a DJ. With Jean-Loup, a wild barman, and Simon, a future cooking star on socials, he m
+        <div class="about-section about-team">
+          <div class="about-team__container">
+            <h1 class="about-team__title">
+              | behind
+              <br>
+              | the legend
+          <div class="about-team__cards">
+            <div class="about-team__card about-team__card--patrick">
+              <div class="about-team__card-inner">
+                <h2 class="about-team__card-title">
+                  | Pat
+                <svg width="269" height="106" fill="none" class="about-team__card-svg">
+                <p class="about-team__card-text">
+                  | Creative developer and animator, half-coder half-wizard. He animates images, makes pixels move, and transforms lines of code into cool and magical exp
+                <div class="about-team__socials">
+                  <a href="https://patrickheng.com" target="_blank">
+                    <svg>
+                  <a href="/cdn-cgi/l/email-protection#8de5e8e3eafdecf9ffe4eee6a3fdffe2d6a0ecf9a0d0eae0ece4e1a3eee2e0" target="_blank">
+                    <svg>
+                  <a href="https://x.com/pat_hg" target="_blank">
+                    <svg>
+                  <a href="https://www.linkedin.com/in/patrick-heng-67043184/" target="_blank">
+                    <svg>
+              <div class="about-team__card-back">
+            <div class="about-team__card about-team__card--justine">
+              <div class="about-team__card-inner">
+                <h2 class="about-team__card-title">
+                  | Ju
+                <svg width="241" height="107" fill="none" class="about-team__card-svg">
+                  <g opacity="0.07">
+                <p class="about-team__card-text">
+                  | Art director, illustrator and digital brush master. She draws faster than her shadow and gives life to each character with style, emotion…
+                <div class="about-team__socials">
+                  <a href="https://justinesoulie.fr" target="_blank">
+                    <svg>
+                  <a href="/cdn-cgi/l/email-protection#03697670776a6d66706c766f6a662d73716c582e62772e5e646e626a6f2d606c6e" target="_blank">
+                    <svg>
+                  <a href="https://www.instagram.com/jus.paris" target="_blank">
+                    <svg>
+                  <a href="https://www.linkedin.com/in/justine-souli%C3%A9-a65ab5114" target="_blank">
+                    <svg>
+              <div class="about-team__card-back">
+        <div class="about-section about-support">
+          <div class="about-support__container">
+            <h1 class="about-support__title">
+              | i love you too
+              <br>
+              | my friend!
+            <p class="about-support__text">
+              | Support Ponpon on his way to glory and help him become a legend. One day, maybe : a printed edition, sweet merch, and Ponpon stealing the spotlight!
+            <p class="about-support__text about-support__text--2">
+              | Be part of the adventure, or live with this question forever &quot;What if I had helped Ponpon become a legend?&quot;
+            <ul class="about-support__list">
+              <li>
+                <div class="about-support__clone-wrapper">
+                  <a href="https://ko-fi.com/ponponmania" target="_blank" rel="noopener noreferrer">
+                    <span>
+                      | ♥ give a tip ♥
+                    <span class="about-support__clone">
+                      | ♥ give a tip ♥
+              <li>
+                <div class="about-support__clone-wrapper">
+                  <a href="https://www.instagram.com/ponpon.mania/" target="_blank">
+                    <span>
+                      | instagram
+                    <span class="about-support__clone">
+                      | instagram
+              <li>
+                <div class="about-support__clone-wrapper">
+                  <a href="https://www.tiktok.com/@ponpon.mania" target="_blank">
+                    <span>
+                      | tiktok
+                    <span class="about-support__clone">
+                      | tiktok
+              <li>
+                <div class="about-support__clone-wrapper">
+                  <a href="/cdn-cgi/l/email-protection#0a7a6b7e63646f66657c6f516b7e576d676b636624696567">
+                    <span>
+                      | email us
+                    <span class="about-support__clone">
+                      | email us
+      <div class="about-nav-bar">
+        <ul class="about-nav-bar__list">
+          | !--[-->
+          <li class="active about-nav-bar__item">
+            <div class="about-nav-bar__item-inner">
+            <span class="about-nav-bar__title">
+              | intro
+          <li class="about-nav-bar__item">
+            <div class="about-nav-bar__item-inner">
+            <span class="about-nav-bar__title">
+              | the legend
+          <li class="about-nav-bar__item">
+            <div class="about-nav-bar__item-inner">
+            <span class="about-nav-bar__title">
+              | the team
+          <li class="about-nav-bar__item">
+            <div class="about-nav-bar__item-inner">
+            <span class="about-nav-bar__title">
+              | support us
+          | !--]-->
+    <div class="webgl-container">
+      <canvas class="webgl-canvas">
+    <div class="preloader">
+      <div class="preloader__container">
+        <div class="preloader__ponpon-container">
+          <svg class="preloader__ponpon" width="1947" height="1947" fill="none">
+            <g>
+        <svg class="preloader__svg" width="311" height="6" fill="none">
+        <svg class="preloader__svg preloader__svg-progress" width="311" height="6" fill="none">
+    <div class="in-loader">
+      <div class="progress-container">
+        <div class="progress-bar">
+    <button class="fullscreen">
+      <svg class="fullscreen__enter" width="100%" height="100%" version="1.1" xml:space="preserve" style="">
+        <g>
+        <g>
+        <g>
+        <g>
+      | !---->
+    <div class="lang-selector">
+      <div class="lang-selector__inner">
+        <button class="active lang-button">
+          | EN
+        <span class="lang-divider">
+          | |
+        <button class="lang-button">
+          | FR
+    | !---->
+    <div class="surprise">
+      <div class="surprise__overlay">
+      | !---->
+      <div class="surprise__content">
+        | !---->
+    <footer class="app-footer">
+      <div class="app-footer__container">
+        <a href="/legal" class="app-footer__link">
+          <span>
+            | legal notice &amp; terms of use
+      <div class="app-footer__gradient">
+    <div class="edge-blocker left">
+    <div class="edge-blocker right">
+    <div class="debug-tools">
+<div id="teleports">

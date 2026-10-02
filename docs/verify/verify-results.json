@@ -1,0 +1,454 @@
+[
+ {
+  "k": "uniform · rest",
+  "v": {
+   "bend": 0,
+   "bendMag": 0,
+   "depth": 0.0062,
+   "tiltY": 0,
+   "roll": 0,
+   "reduceBend": false,
+   "mode": "works"
+  }
+ },
+ {
+  "k": "uniform · forward(+3)",
+  "v": {
+   "bend": -0.0175,
+   "bendMag": 0.5,
+   "depth": 0.0141,
+   "tiltY": -0.0436,
+   "roll": -0.0196
+  }
+ },
+ {
+  "k": "uniform · reverse(−3)",
+  "v": {
+   "bend": 0.0175,
+   "bendMag": 0.5,
+   "depth": 0.0141,
+   "tiltY": 0.0436,
+   "roll": 0.0196
+  }
+ },
+ {
+  "k": "reduced-motion · rest",
+  "v": {
+   "reduceBend": true,
+   "bend": 0,
+   "bendMag": 0,
+   "depth": 0
+  }
+ },
+ {
+  "k": "reduced-motion · 请求 bend=3 之后",
+  "v": {
+   "reduceBend": true,
+   "bend": 0,
+   "bendMag": 0,
+   "depth": 0,
+   "tiltY": 0
+  }
+ },
+ {
+  "k": "normal-mode · 请求 bend=3 之后（对照）",
+  "v": {
+   "reduceBend": false,
+   "bend": -0.0175,
+   "bendMag": 0.5,
+   "depth": 0.0141
+  }
+ },
+ {
+  "k": "背景采样 · 正向 0→1",
+  "v": {
+   "samples": [
+    {
+     "t": 0,
+     "A": "d5d0b9",
+     "B": "aab3bb",
+     "blobR": 0.4467
+    },
+    {
+     "t": 0.15,
+     "A": "e7d2c0",
+     "B": "9ca8b2",
+     "blobR": 0.4297
+    },
+    {
+     "t": 0.3,
+     "A": "ebcdc0",
+     "B": "aeafac",
+     "blobR": 0.4334
+    },
+    {
+     "t": 0.45,
+     "A": "edc6bf",
+     "B": "c2b8a6",
+     "blobR": 0.44
+    },
+    {
+     "t": 0.49,
+     "A": "eec3be",
+     "B": "c9bca4",
+     "blobR": 0.4428
+    },
+    {
+     "t": 0.5,
+     "A": "eec2be",
+     "B": "ccbda3",
+     "blobR": 0.4438
+    },
+    {
+     "t": 0.51,
+     "A": "eec1be",
+     "B": "cdbea3",
+     "blobR": 0.4443
+    },
+    {
+     "t": 0.55,
+     "A": "eec0bd",
+     "B": "d1c0a1",
+     "blobR": 0.446
+    },
+    {
+     "t": 0.7,
+     "A": "f0b9bc",
+     "B": "dfc79c",
+     "blobR": 0.4521
+    },
+    {
+     "t": 0.85,
+     "A": "f1b1ba",
+     "B": "eecf96",
+     "blobR": 0.459
+    },
+    {
+     "t": 1,
+     "A": "f3a8b8",
+     "B": "fcd790",
+     "blobR": 0.4662
+    }
+   ]
+  }
+ },
+ {
+  "k": "背景相邻步色差 · 正向 0→1",
+  "v": [
+   {
+    "from": 0,
+    "to": 0.15,
+    "dTargetA": 11
+   },
+   {
+    "from": 0.15,
+    "to": 0.3,
+    "dTargetA": 9
+   },
+   {
+    "from": 0.3,
+    "to": 0.45,
+    "dTargetA": 11
+   },
+   {
+    "from": 0.45,
+    "to": 0.49,
+    "dTargetA": 2
+   },
+   {
+    "from": 0.49,
+    "to": 0.5,
+    "dTargetA": 0
+   },
+   {
+    "from": 0.5,
+    "to": 0.51,
+    "dTargetA": 2
+   },
+   {
+    "from": 0.51,
+    "to": 0.55,
+    "dTargetA": 3
+   },
+   {
+    "from": 0.55,
+    "to": 0.7,
+    "dTargetA": 11
+   },
+   {
+    "from": 0.7,
+    "to": 0.85,
+    "dTargetA": 11
+   },
+   {
+    "from": 0.85,
+    "to": 1,
+    "dTargetA": 12
+   }
+  ]
+ },
+ {
+  "k": "背景连续性判定 · 正向 0→1",
+  "v": {
+   "最大相邻步色差": 12,
+   "出现在": "0.85→1",
+   "平均相邻步色差": 7.2,
+   "跳变比": 1.67
+  }
+ },
+ {
+  "k": "背景采样 · 反向 1→0",
+  "v": {
+   "samples": [
+    {
+     "t": 0,
+     "A": "ebd0c1",
+     "B": "a3a9ae",
+     "blobR": 0.4293
+    },
+    {
+     "t": 0.15,
+     "A": "ebd2c1",
+     "B": "9da7b0",
+     "blobR": 0.4276
+    },
+    {
+     "t": 0.3,
+     "A": "eccdc0",
+     "B": "afafac",
+     "blobR": 0.433
+    },
+    {
+     "t": 0.45,
+     "A": "edc6bf",
+     "B": "c2b8a6",
+     "blobR": 0.4399
+    },
+    {
+     "t": 0.49,
+     "A": "eec3be",
+     "B": "c9bca4",
+     "blobR": 0.4428
+    },
+    {
+     "t": 0.5,
+     "A": "eec2be",
+     "B": "ccbda3",
+     "blobR": 0.4437
+    },
+    {
+     "t": 0.51,
+     "A": "eec1be",
+     "B": "cdbea3",
+     "blobR": 0.4443
+    },
+    {
+     "t": 0.55,
+     "A": "eec0bd",
+     "B": "d1c0a1",
+     "blobR": 0.446
+    },
+    {
+     "t": 0.7,
+     "A": "f0b9bc",
+     "B": "dfc79c",
+     "blobR": 0.4521
+    },
+    {
+     "t": 0.85,
+     "A": "f1b1ba",
+     "B": "eecf96",
+     "blobR": 0.459
+    },
+    {
+     "t": 1,
+     "A": "f3a8b8",
+     "B": "fcd790",
+     "blobR": 0.4662
+    }
+   ]
+  }
+ },
+ {
+  "k": "背景相邻步色差 · 反向 1→0",
+  "v": [
+   {
+    "from": 0,
+    "to": 0.15,
+    "dTargetA": 11
+   },
+   {
+    "from": 0.15,
+    "to": 0.3,
+    "dTargetA": 9
+   },
+   {
+    "from": 0.3,
+    "to": 0.45,
+    "dTargetA": 11
+   },
+   {
+    "from": 0.45,
+    "to": 0.49,
+    "dTargetA": 2
+   },
+   {
+    "from": 0.49,
+    "to": 0.5,
+    "dTargetA": 0
+   },
+   {
+    "from": 0.5,
+    "to": 0.51,
+    "dTargetA": 2
+   },
+   {
+    "from": 0.51,
+    "to": 0.55,
+    "dTargetA": 3
+   },
+   {
+    "from": 0.55,
+    "to": 0.7,
+    "dTargetA": 11
+   },
+   {
+    "from": 0.7,
+    "to": 0.85,
+    "dTargetA": 11
+   },
+   {
+    "from": 0.85,
+    "to": 1,
+    "dTargetA": 12
+   }
+  ]
+ },
+ {
+  "k": "背景连续性判定 · 反向 1→0",
+  "v": {
+   "最大相邻步色差": 12,
+   "出现在": "0.85→1",
+   "平均相邻步色差": 7.2,
+   "跳变比": 1.67
+  }
+ },
+ {
+  "k": "停在半格 t=0.5",
+  "v": {
+   "targetA": "eec2be",
+   "targetB": "ccbda3",
+   "blobR": 0.4485
+  }
+ },
+ {
+  "k": "视频 · 刚进详情页",
+  "v": {
+   "hasEl": true,
+   "src": "/videos/_test/test-16x9.mp4",
+   "paused": true,
+   "currentTime": 0,
+   "duration": 0,
+   "readyState": 0,
+   "navState": "loading",
+   "navIndex": 0
+  }
+ },
+ {
+  "k": "视频 · 点播放后",
+  "v": {
+   "hasEl": true,
+   "src": "/videos/_test/test-16x9.mp4",
+   "paused": false,
+   "currentTime": 0.26,
+   "duration": 8,
+   "readyState": 4,
+   "navState": "playing",
+   "navIndex": 0
+  }
+ },
+ {
+  "k": "视频 · 首次播放是否成功",
+  "v": {
+   "playing": true
+  }
+ },
+ {
+  "k": "视频 · 1.6s 后进度",
+  "v": {
+   "currentTime": 3.47,
+   "advanced": true
+  }
+ },
+ {
+  "k": "视频 · 点暂停后",
+  "v": {
+   "paused": true,
+   "navState": "paused"
+  }
+ },
+ {
+  "k": "视频 · 拖到 60% 后",
+  "v": {
+   "currentTime": 4.8,
+   "duration": 8,
+   "ratio": 0.6
+  }
+ },
+ {
+  "k": "视频 · 切到下一件（竖屏）",
+  "v": {
+   "url": "/works/nine-lives",
+   "src": "/videos/_test/test-9x16.mp4",
+   "paused": true,
+   "currentTime": 0,
+   "stageAspect": "0.5625 / 1",
+   "stageRect": {
+    "w": 297,
+    "h": 528
+   },
+   "navState": "paused"
+  }
+ },
+ {
+  "k": "视频 · 换作品后旧视频是否已停",
+  "v": {
+   "paused": true,
+   "srcChanged": true
+  }
+ },
+ {
+  "k": "视频 · 竖屏片播放",
+  "v": {
+   "paused": false,
+   "currentTime": 1.28,
+   "duration": 6
+  }
+ },
+ {
+  "k": "视频 · 切到无视频作品",
+  "v": {
+   "url": "/works/paper-city",
+   "hasVideoEl": false,
+   "missingNotice": true,
+   "navState": "missing",
+   "playDisabled": true
+  }
+ },
+ {
+  "k": "视频 · 离开详情页后",
+  "v": {
+   "url": "/works",
+   "hasVideoEl": false,
+   "navState": "idle",
+   "navIndex": -1
+  }
+ },
+ {
+  "k": "控制台错误",
+  "v": {
+   "gl场景": [],
+   "视频页": []
+  }
+ }
+]

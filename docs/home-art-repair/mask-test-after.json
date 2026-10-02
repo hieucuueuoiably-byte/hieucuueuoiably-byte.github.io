@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "layer": "director",
+      "region": "reel rim",
+      "solidCoverage": 1.0
+    },
+    {
+      "layer": "director",
+      "region": "right shoulder",
+      "solidCoverage": 1.0
+    },
+    {
+      "layer": "director",
+      "region": "right arm",
+      "solidCoverage": 1.0
+    },
+    {
+      "layer": "director",
+      "region": "left shoe",
+      "solidCoverage": 1.0
+    },
+    {
+      "layer": "director",
+      "region": "scarf knot",
+      "solidCoverage": 1.0
+    },
+    {
+      "layer": "octopus",
+      "region": "upper edge of right tentacle",
+      "solidCoverage": 1.0
+    },
+    {
+      "layer": "bird",
+      "region": "headphone shadow",
+      "solidCoverage": 1.0
+    },
+    {
+      "layer": "bird",
+      "region": "case face",
+      "solidCoverage": 1.0
+    },
+    {
+      "layer": "bird",
+      "region": "case lower face",
+      "solidCoverage": 1.0
+    },
+    {
+      "layer": "bird",
+      "region": "neck",
+      "solidCoverage": 1.0
+    },
+    {
+      "layer": "balloon-1",
+      "region": "red balloon body",
+      "solidCoverage": 1.0
+    },
+    {
+      "layer": "balloon-2",
+      "region": "orange balloon body",
+      "solidCoverage": 1.0
+    },
+    {
+      "layer": "balloon-3",
+      "region": "pink balloon body",
+      "solidCoverage": 1.0
+    }
+  ],
+  "failures": []
+}

@@ -1,0 +1,25 @@
+{
+ "渲染后端": "ANGLE (NVIDIA, NVIDIA GeForce RTX 3060 Laptop GPU (0x00002520) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+ "参数": {
+  "wheelDeltaPerStep": 400,
+  "snapQuietMs": 130,
+  "smoothTime": 100,
+  "overshoot": 0.35,
+  "velocityRef": 6,
+  "maxBend": 0.035,
+  "uvRipple": 0.012,
+  "bump": 0.62,
+  "maxTiltDeg": 5,
+  "fieldMix": 0.13,
+  "blobRadius": [
+   0.42,
+   0.66
+  ]
+ },
+ "帧率": 240.5,
+ "1_慢速四格_应仍为0": 1,
+ "2_一次手势三格_应为1": 2,
+ "3_快速滚动十二格_应连跨": 5,
+ "4_按钮与键盘之后": 4,
+ "5_反向滚回之后": 0
+}

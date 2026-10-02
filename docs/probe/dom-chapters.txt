@@ -1,0 +1,166 @@
+<div id="__nuxt">
+  <main class="app-container">
+    <header class="app-header">
+      <div class="app-header__title-wrapper">
+        <div>
+          <h1 class="app-header__title">
+            <a href="/" class="">
+              <svg width="332" height="130" fill="none">
+            <span>
+              | by Justine Soulié and Patrick Heng
+      <div class="app-header__links">
+        <a aria-current="page" href="/chapters" class="router-link-active router-link-exact-active app-header__link app-header__link--chapters">
+          <span class="app-header__link-text">
+            | chapters
+        <a href="/about" class="app-header__link app-header__link--about">
+          <span class="app-header__link-text">
+            | about
+    <div class="page chapters">
+      <div class="chapters__container">
+        <div class="chapters__container-buttons">
+          | !--[-->
+          <div class="chapters-button" data-index="0">
+            <div class="chapters-button__container">
+              <a href="/chapter/1" class="">
+                <svg class="chapters-button__icon" width="112" height="129" fill="none">
+              <a href="/chapter/1" class="">
+                <div class="chapters-button__texts">
+                  <div class="chapters-button__title-container">
+                    <span class="chapters-button__title">
+                      <span class="chapters-button__text-inner">
+                        | 01.welcome to Marny
+                  <span class="chapters-button__subtitle">
+                    <span class="chapters-button__text-inner">
+                      | PonponMania Vol. I
+                  <span class="chapters-button__timecode">
+                    <span class="chapters-button__text-inner">
+                      | 01:06
+              <div class="chapters-button__navigation">
+                <svg width="34" height="37" fill="none" class="chapters-button__navigation--disabled">
+                <svg width="34" height="37" fill="none" class="">
+          <div class="chapters-button" data-index="1">
+            <div class="chapters-button__container">
+              <a href="/chapter/2" class="">
+                <svg class="chapters-button__icon" width="112" height="129" fill="none">
+              <a href="/chapter/2" class="">
+                <div class="chapters-button__texts">
+                  <div class="chapters-button__title-container">
+                    <span class="chapters-button__title">
+                      <span class="chapters-button__text-inner">
+                        | 02.under pressure
+                  <span class="chapters-button__subtitle">
+                    <span class="chapters-button__text-inner">
+                      | PonponMania Vol. I
+                  <span class="chapters-button__timecode">
+                    <span class="chapters-button__text-inner">
+                      | 02:06
+              <div class="chapters-button__navigation">
+                <svg width="34" height="37" fill="none" class="">
+                <svg width="34" height="37" fill="none" class="">
+          <div class="chapters-button" data-index="2">
+            <div class="chapters-button__container">
+              <a href="/chapter/3" class="">
+                <svg class="chapters-button__icon" width="112" height="129" fill="none">
+              <a href="/chapter/3" class="">
+                <div class="chapters-button__texts">
+                  <div class="chapters-button__title-container">
+                    <span class="chapters-button__title">
+                      <span class="chapters-button__text-inner">
+                        | 03.sheep don&#39;t sleep
+                  <span class="chapters-button__subtitle">
+                    <span class="chapters-button__text-inner">
+                      | PonponMania Vol. I
+                  <span class="chapters-button__timecode">
+                    <span class="chapters-button__text-inner">
+                      | 03:06
+              <div class="chapters-button__navigation">
+                <svg width="34" height="37" fill="none" class="">
+                <svg width="34" height="37" fill="none" class="">
+          <div class="chapters-button chapters-button--locked" data-index="3">
+            <div class="chapters-button__container chapters-button__container--locked">
+              <svg width="71" height="100" fill="none" class="chapters-button__lock">
+              <div class="chapters-button__texts">
+                <div class="chapters-button__title-container">
+                  <span class="chapters-button__title">
+                    <span class="chapters-button__text-inner">
+                      | 04.scratch that !
+                <span class="chapters-button__subtitle">
+                  <span class="chapters-button__text-inner">
+                    | PonponMania Vol. I
+                <span class="chapters-button__timecode">
+                  <span class="chapters-button__text-inner">
+                    | 04:06
+              <div class="chapters-button__navigation">
+                <svg width="34" height="37" fill="none" class="">
+                <svg width="34" height="37" fill="none" class="">
+          <div class="chapters-button chapters-button--locked" data-index="4">
+            <div class="chapters-button__container chapters-button__container--locked">
+              <svg width="71" height="100" fill="none" class="chapters-button__lock">
+              <div class="chapters-button__texts">
+                <div class="chapters-button__title-container">
+                  <span class="chapters-button__title">
+                    <span class="chapters-button__text-inner">
+                      | 05.wow ...
+                <span class="chapters-button__subtitle">
+                  <span class="chapters-button__text-inner">
+                    | PonponMania Vol. I
+                <span class="chapters-button__timecode">
+                  <span class="chapters-button__text-inner">
+                    | 05:06
+              <div class="chapters-button__navigation">
+                <svg width="34" height="37" fill="none" class="">
+                <svg width="34" height="37" fill="none" class="chapters-button__navigation--disabled">
+          | !--]-->
+      <div class="chapters__tip">
+        <div class="chapter-tip">
+          <div class="chapter-tip__wrapper">
+            <div class="chapter-tip__container">
+              <div class="chapter-tip__clone-wrapper">
+                <a href="https://ko-fi.com/ponponmania" target="_blank" rel="noopener noreferrer">
+                  <span>
+                    | support us
+                  <span class="chapter-tip__clone">
+                    | support us
+    <div class="webgl-container">
+      <canvas class="webgl-canvas">
+    <div class="preloader">
+      <div class="preloader__container">
+        <div class="preloader__ponpon-container">
+          <svg class="preloader__ponpon" width="1947" height="1947" fill="none">
+            <g>
+        <svg class="preloader__svg" width="311" height="6" fill="none">
+        <svg class="preloader__svg preloader__svg-progress" width="311" height="6" fill="none">
+    <div class="in-loader">
+      <div class="progress-container">
+        <div class="progress-bar">
+    <button class="fullscreen">
+      <svg class="fullscreen__enter" width="100%" height="100%" version="1.1" xml:space="preserve" style="">
+        <g>
+        <g>
+        <g>
+        <g>
+      | !---->
+    <div class="lang-selector">
+      <div class="lang-selector__inner">
+        <button class="active lang-button">
+          | EN
+        <span class="lang-divider">
+          | |
+        <button class="lang-button">
+          | FR
+    | !---->
+    <div class="surprise">
+      <div class="surprise__overlay">
+      | !---->
+      <div class="surprise__content">
+        | !---->
+    <footer class="app-footer">
+      <div class="app-footer__container">
+        <a href="/legal" class="app-footer__link">
+          <span>
+            | legal notice &amp; terms of use
+      <div class="app-footer__gradient">
+    <div class="edge-blocker left">
+    <div class="edge-blocker right">
+    <div class="debug-tools">
+<div id="teleports">

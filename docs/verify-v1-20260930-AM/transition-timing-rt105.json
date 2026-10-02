@@ -1,0 +1,74 @@
+{
+ "label": "rt105",
+ "runs": [
+  {
+   "swap": 638.6000000014901,
+   "done": 2356.39999999851,
+   "schedule": {
+    "routeTransition": 1.05,
+    "scale": 1,
+    "stageOut": 0.336,
+    "wipeAt": 0.126,
+    "wipeIn": 0.4305,
+    "coverAt": 0.5670000000000001,
+    "wipeOut": 0.48300000000000004,
+    "enterAt": 0.07350000000000001,
+    "enterIn": 0.40950000000000003,
+    "durationAtSwap": 0.567
+   },
+   "durAfterEnter": 1.113,
+   "path": "/works"
+  },
+  {
+   "swap": 609,
+   "done": 1494.2000000029802,
+   "schedule": {
+    "routeTransition": 1.05,
+    "scale": 1,
+    "stageOut": 0.336,
+    "wipeAt": 0.126,
+    "wipeIn": 0.4305,
+    "coverAt": 0.5670000000000001,
+    "wipeOut": 0.48300000000000004,
+    "enterAt": 0.07350000000000001,
+    "enterIn": 0.40950000000000003,
+    "durationAtSwap": 0.567
+   },
+   "durAfterEnter": 1.113,
+   "path": "/works"
+  },
+  {
+   "swap": 700.1000000014901,
+   "done": 2505.2999999970198,
+   "schedule": {
+    "routeTransition": 1.05,
+    "scale": 1,
+    "stageOut": 0.336,
+    "wipeAt": 0.126,
+    "wipeIn": 0.4305,
+    "coverAt": 0.5670000000000001,
+    "wipeOut": 0.48300000000000004,
+    "enterAt": 0.07350000000000001,
+    "enterIn": 0.40950000000000003,
+    "durationAtSwap": 0.567
+   },
+   "durAfterEnter": 1.113,
+   "path": "/works"
+  }
+ ],
+ "avgSwapMs": 649,
+ "avgDoneMs": 2119,
+ "schedule": {
+  "routeTransition": 1.05,
+  "scale": 1,
+  "stageOut": 0.336,
+  "wipeAt": 0.126,
+  "wipeIn": 0.4305,
+  "coverAt": 0.5670000000000001,
+  "wipeOut": 0.48300000000000004,
+  "enterAt": 0.07350000000000001,
+  "enterIn": 0.40950000000000003,
+  "durationAtSwap": 0.567
+ },
+ "durAfterEnter": 1.113
+}

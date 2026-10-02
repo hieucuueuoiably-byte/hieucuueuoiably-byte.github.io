@@ -1,0 +1,72 @@
+{
+ "渲染后端": "ANGLE (NVIDIA, NVIDIA GeForce RTX 3060 Laptop GPU (0x00002520) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+ "url": "https://ponpon-mania.com/chapters",
+ "进入时下标": 0,
+ "帧率": 239.9,
+ "W1_单次120": {
+  "delta": 120,
+  "times": 1,
+  "gap": 60,
+  "before": 0,
+  "after": 0,
+  "moved": false
+ },
+ "W2_五次120": {
+  "delta": 120,
+  "times": 5,
+  "gap": 60,
+  "before": 0,
+  "after": 0,
+  "moved": false
+ },
+ "W3_三次负120": {
+  "delta": -120,
+  "times": 3,
+  "gap": 60,
+  "before": 0,
+  "after": 0,
+  "moved": false
+ },
+ "W4_单次600": {
+  "delta": 600,
+  "times": 1,
+  "gap": 60,
+  "before": 0,
+  "after": 0,
+  "moved": false
+ },
+ "W5_两次600": {
+  "delta": 600,
+  "times": 2,
+  "gap": 80,
+  "before": 0,
+  "after": 0,
+  "moved": false
+ },
+ "W6_单次1600": {
+  "delta": 1600,
+  "times": 1,
+  "gap": 60,
+  "before": 0,
+  "after": 0,
+  "moved": false
+ },
+ "W7_十二次300": {
+  "delta": 300,
+  "times": 12,
+  "gap": 60,
+  "before": 0,
+  "after": 0,
+  "moved": false
+ },
+ "W8_二十次负300": {
+  "delta": -300,
+  "times": 20,
+  "gap": 60,
+  "before": 0,
+  "after": 0,
+  "moved": false
+ },
+ "控制台错误": [],
+ "参考站录屏": "ok"
+}

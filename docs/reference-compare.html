@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>参考站 vs 成品 — 逐项并排对照</title>
+<style>
+  :root{
+    --ink:#171717; --cream:#feece3; --paper:#fff6f0; --pink:#f1abbd;
+    --amber:#ffcc8e; --line:rgba(254,236,227,.16); --ok:#7ddc9a; --warn:#ffd479; --bad:#ff8f8f;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;background:var(--ink);color:var(--cream);
+    font-family:'Libre Franklin','Helvetica Neue',Helvetica,'PingFang SC','Microsoft YaHei',Arial,sans-serif;
+    font-size:14px;line-height:1.7;
+  }
+  header{padding:40px 32px 24px;border-bottom:1px solid var(--line)}
+  h1{margin:0 0 8px;font-size:28px;letter-spacing:-.02em}
+  .sub{color:rgba(254,236,227,.62);font-size:13px}
+  .badge{display:inline-block;margin-right:8px;padding:2px 9px;border-radius:999px;background:var(--amber);color:var(--ink);font-size:11px;font-weight:800;letter-spacing:.06em}
+  main{padding:0 32px 80px;max-width:1680px;margin:0 auto}
+  .verdict-legend{display:flex;gap:20px;flex-wrap:wrap;padding:20px 0 6px;font-size:12px}
+  .verdict-legend b{font-weight:800}
+  .ok{color:var(--ok)} .warn{color:var(--warn)} .bad{color:var(--bad)}
+  section.case{margin:44px 0 0;padding-top:28px;border-top:1px solid var(--line)}
+  h2{margin:0 0 6px;font-size:20px;letter-spacing:-.01em}
+  .scale{color:rgba(254,236,227,.6);font-size:12px;margin-bottom:18px}
+  .pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+  @media (max-width:1100px){.pair{grid-template-columns:1fr}}
+  figure{margin:0;background:#0e0e0e;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  figure img{display:block;width:100%;height:auto;background:#000}
+  figcaption{padding:8px 12px;font-size:11.5px;color:rgba(254,236,227,.72);border-top:1px solid var(--line)}
+  figcaption .tag{display:inline-block;margin-right:6px;padding:1px 7px;border-radius:5px;font-weight:800;font-size:10.5px}
+  .tag.ref{background:rgba(255,204,142,.2);color:var(--amber)}
+  .tag.mine{background:rgba(125,220,154,.18);color:var(--ok)}
+  table{width:100%;border-collapse:collapse;margin-top:18px;font-size:13px}
+  th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:rgba(254,236,227,.6);font-weight:700;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase}
+  td:first-child{width:120px;color:rgba(254,236,227,.62)}
+  ul{margin:10px 0 0;padding-left:20px}
+  li{margin:4px 0}
+  code{padding:1px 5px;border-radius:4px;background:rgba(254,236,227,.1);font-size:.94em}
+  .note{margin-top:16px;padding:12px 16px;border-left:3px solid var(--amber);background:rgba(255,204,142,.08);border-radius:0 8px 8px 0;font-size:12.5px;color:rgba(254,236,227,.86)}
+  .note b{color:var(--amber)}
+  .legend-box{margin:20px 0 0;padding:14px 18px;border:1px solid var(--line);border-radius:10px;font-size:12.5px;color:rgba(254,236,227,.8)}
+</style>
+</head>
+<body>
+<header>
+  <h1>参考站 vs 成品 — 逐项并排对照</h1>
+  <p class="sub">
+    <span class="badge">v3 · 2026-09-30 12:35</span>
+    参考站 <code>https://ponpon-mania.com/</code>（截图取自公开站点，版权归原作者）
+    · 成品为 v3 构建（源码指纹 <code>85a5cdcae70fe2d2</code>）
+  </p>
+  <div class="verdict-legend">
+    <span><b class="ok">已复现</b> 行为与数值都对上</span>
+    <span><b class="warn">已适配</b> 功能形态不同，做了对应设计</span>
+    <span><b class="bad">待验证</b> 参考站那侧测不到，或本实现还没对齐</span>
+  </div>
+  <div class="legend-box">
+    <b>看对比图时请注意</b>：两边内容本来就不同（参考站是交互漫画，成品是 AI 影像作品集），
+    所以要比的是<b>结构、比例、运动形态</b>，不是画面内容。两边主题色也不同，所以底色不一样是预期的。
+    成品这一侧所有封面都是<b>占位封面</b>（角上有 PLACEHOLDER 标记）。
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ C1 首屏加载层 ============ -->
+  <section class="case">
+    <h2>C1 · 首屏加载层</h2>
+    <p class="scale">参考站 1440×900 · 成品 1440×900</p>
+    <div class="pair">
+      <figure>
+        <img src="reference-shots/R1-preloader.png" alt="参考站首屏加载层">
+        <figcaption><span class="tag ref">参考站</span>奶油底 + 中央云朵标记 + 一条细进度线（底 #f2f2f2 / 进度 #ffcc8e）</figcaption>
+      </figure>
+      <figure>
+        <img src="reference-shots/M1-preloader.png" alt="成品首屏加载层">
+        <figcaption><span class="tag mine">成品</span>纸白底 + 圆形标记（scale(0) rotate(-120deg) 转入）+ 311×6 进度线</figcaption>
+      </figure>
+    </div>
+    <table>
+      <tr><th>对比项</th><th>参考站（实测）</th><th>成品</th><th>判定</th></tr>
+      <tr><td>底色</td><td><code>#fff6f0</code></td><td><code>#fff6f0</code></td><td class="ok">已复现</td></tr>
+      <tr><td>标记进场</td><td><code>transform: scale(0) rotate(-120deg)</code></td><td>同左，加 1.1s <code>cubic-bezier(.16,1,.3,1)</code></td><td class="ok">已复现</td></tr>
+      <tr><td>进度线</td><td>311×6，底 <code>#f2f2f2</code>，进度 <code>#ffcc8e</code></td><td>同尺寸同色</td><td class="ok">已复现</td></tr>
+      <tr><td>标记图案</td><td>羊头形状的云朵</td><td>抽象圆 + 有机形体</td><td class="warn">已适配（不能照搬参考站的角色形象）</td></tr>
+    </table>
+  </section>
+
+  <!-- ============ C2 首页 ============ -->
+  <section class="case">
+    <h2>C2 · 首页</h2>
+    <p class="scale">参考站 1280×800 · 成品 1440×900（两边视口不同，看的是层级关系不是像素对齐）</p>
+    <div class="pair">
+      <figure>
+        <img src="reference-shots/R2-home.png" alt="参考站首页">
+        <figcaption><span class="tag ref">参考站</span>平涂颗粒底色 + 右侧唱片 + 中央字标 + 底部黑色胶囊 CTA</figcaption>
+      </figure>
+      <figure>
+        <img src="reference-shots/M2-home.png" alt="成品首页">
+        <figcaption><span class="tag mine">成品</span>同样的构成，另加前景云层与背景打光两层（提示词要求"全屏分层视觉舞台"）</figcaption>
+      </figure>
+    </div>
+    <table>
+      <tr><th>对比项</th><th>参考站</th><th>成品</th><th>判定</th></tr>
+      <tr><td>顶栏</td><td>字标居中 140px；两侧链接 <code>calc(50% ± 130px)</code>；奶油色字</td><td>同左</td><td class="ok">已复现</td></tr>
+      <tr><td>CTA</td><td>底部黑色胶囊，35px 字号，<code>color:#feece3</code></td><td>同左（<code>clamp(22px,3vw,35px)</code>）</td><td class="ok">已复现</td></tr>
+      <tr><td>圆盘</td><td>右侧，圆环文字；是静态镜像 SVG（未见明显自转）</td><td>右侧，圆环文字，26s 线性自转</td><td class="warn">已适配（自转是本实现加的）</td></tr>
+      <tr><td>背景</td><td>平涂 + 颗粒</td><td>平涂 + 颗粒，另有前景云层 / 背景打光两层</td><td class="warn">已适配（提示词要求分层舞台）</td></tr>
+      <tr><td>图层数</td><td>3（底 / 圆盘 / 字标+CTA）</td><td>5（打光 / 中景字标 / 圆盘 / 前景云层 / CTA）</td><td class="warn">已适配</td></tr>
+    </table>
+    <div class="note">
+      <b>差异说明</b>：参考站首页本身很克制（平涂底 + 圆盘 + 按钮）。提示词明确要求"全屏分层视觉舞台，
+      舞台素材分前景、中景、背景，便于独立动画"，所以成品多铺了两层，转场时这五层各自退场。
+    </div>
+  </section>
+
+  <!-- ============ C3 作品浏览 · 刚进入 ============ -->
+  <section class="case">
+    <h2>C3 · 作品浏览 · 刚进入（第 0 件）</h2>
+    <p class="scale">两边都是 1440×900</p>
+    <div class="pair">
+      <figure>
+        <img src="reference-shots/R3-chapters-enter.png" alt="参考站刚进入章节页">
+        <figcaption><span class="tag ref">参考站</span>中央海报 + 右侧邻封（顺时针倾斜）+ 左边缘一道细条；底部黑色胶囊</figcaption>
+      </figure>
+      <figure>
+        <img src="reference-shots/M3-works-enter.png" alt="成品刚进入作品页">
+        <figcaption><span class="tag mine">成品</span>同样的风扇关系：中央 1.0 / 邻封 0.54 / 偏移 0.84 / 旋转 ±9°</figcaption>
+      </figure>
+    </div>
+    <table>
+      <tr><th>对比项</th><th>参考站（截图量取）</th><th>成品</th><th>判定</th></tr>
+      <tr><td>中央海报边长</td><td>≈568px ≈ 0.63 视口高</td><td><code>min(0.63·H, 0.40·W)</code></td><td class="ok">已复现</td></tr>
+      <tr><td>邻封缩放</td><td>≈0.54 ×</td><td>0.54 ×</td><td class="ok">已复现</td></tr>
+      <tr><td>邻封偏移</td><td>≈0.84 × 中央边长</td><td>0.84 ×</td><td class="ok">已复现</td></tr>
+      <tr><td>邻封旋转</td><td>±9°（画面内，左右对称）</td><td>±9°</td><td class="ok">已复现</td></tr>
+      <tr><td>邻封亮度</td><td>明显比中央暗（约 0.8）</td><td>×0.84 + 轻微去饱和</td><td class="ok">已复现</td></tr>
+      <tr><td>再外侧</td><td>还能看到第 ±2 个的窄边</td><td>同样绘制 ±2</td><td class="ok">已复现</td></tr>
+      <tr><td>底部件</td><td>黑色胶囊：▶ + 标题 + 副标题 + 时长 + 前后箭头</td><td>黑色胶囊：▶ + 标题 + 类别·时长 + 序号 + 前后箭头</td><td class="warn">已适配（内容模型不同）</td></tr>
+    </table>
+  </section>
+
+  <!-- ============ C4 作品浏览 · 切换中 / 切换后 ============ -->
+  <section class="case">
+    <h2>C4 · 海报位移、倾斜与扭曲（核心对比）</h2>
+    <p class="scale">左：参考站切换后（第 3 件）。中：成品切换后静止。右：成品运动中（速度钉在满值，时间冻结，保证形态可复现）</p>
+    <div class="pair">
+      <figure>
+        <img src="reference-shots/R4-chapters-after-wheel.png" alt="参考站切换后">
+        <figcaption><span class="tag ref">参考站</span>切换后：<b>轮廓是直角矩形</b>，画面内部只有很淡的斜向波纹；背景是一个硬边大圆</figcaption>
+      </figure>
+      <figure>
+        <img src="reference-shots/M4-works-rest.png" alt="成品切换后静止">
+        <figcaption><span class="tag mine">成品 · 静止</span>同样是直角轮廓 + 硬边大圆；静止时封面完全无畸变（弯曲强度为 0）</figcaption>
+      </figure>
+    </div>
+    <div style="margin-top:16px" class="pair">
+      <figure>
+        <img src="reference-shots/R4-chapters-after-wheel.png" alt="参考站（再列一次便于对照）">
+        <figcaption><span class="tag ref">参考站 · 参考基准</span>看重点：外轮廓不弯，内部有波纹</figcaption>
+      </figure>
+      <figure>
+        <img src="reference-shots/M4b-works-moving.png" alt="成品运动中">
+        <figcaption><span class="tag mine">成品 · 运动中</span>轮廓仍是直角，画面内部出现斜向明暗波纹（法线高光通道）</figcaption>
+      </figure>
+    </div>
+    <table>
+      <tr><th>对比项</th><th>参考站</th><th>成品</th><th>判定</th></tr>
+      <tr><td>轮廓</td><td>直角矩形，几何弯曲几乎看不出</td><td>直角矩形（几何位移 ≤ 约 2% 海报宽）</td><td class="ok">已复现</td></tr>
+      <tr><td>画面内部的扭曲</td><td>斜向浅色波纹，来自 <b>normal map + 定向光</b>（GLSL 119）</td><td>程序化高度场求法线 + 定向光，混合系数取参考站原值 0.42</td><td class="warn">已适配（没有美术法线贴图，用程序化凹凸替代）</td></tr>
+      <tr><td>UV 位移</td><td>GLSL 93：旋转畸变 × 0.45，并乘 <code>vUv.y</code></td><td>保留同一结构（横向为主 + 乘 <code>vUv.y</code>），幅度取到约 1.2% 封面宽</td><td class="ok">已复现（结构一致，幅度按截图观感定）</td></tr>
+      <tr><td>几何顶点位移</td><td>看不出（提示词要求必须做，所以这里是"有但很小"）</td><td>64×64 分段平面，扭转 + 卷曲 + 出平面，幅度 ≤ 约 2%</td><td class="warn">已适配（形态对齐参考站，机制按提示词要求用顶点变形）</td></tr>
+      <tr><td>速度关联</td><td>用 <code>uVelocity</code> 调制（GLSL 155/157）</td><td>弯曲强度 ∝ |速度|，方向随切换方向翻转</td><td class="ok">已复现（量纲不同，见待验证）</td></tr>
+      <tr><td>停止后收敛</td><td>未测到具体曲线</td><td>速度归零 → 强度用一阶收敛回零，静止时形变严格为 0</td><td class="bad">待验证（参考站那侧是着色器内部量）</td></tr>
+      <tr><td>邻封旋转方向</td><td>左邻逆时针、右邻顺时针</td><td>同左（<code>rot = ±9° × sign(diff)</code>）</td><td class="ok">已复现</td></tr>
+    </table>
+    <div class="note">
+      <b>这一项上做过一次纠偏</b>：早期版本把几何弯曲当成主要表现手段，结果封面被搅成漩涡、轮廓都不方了 ——
+      而参考站其实是"轮廓不动、内部有波纹"。现在把权重改成
+      <b>几何位移很小（≤2%）+ UV 位移中等（约 1.2%）+ 法线高光为主要可见通道</b>。
+      另外发现 <code>maxBend</code> 这个参数当时根本没参与运算（<code>uBend</code> 直接吃了归一化的 ±1），
+      所以怎么调都没反应 —— 已修，现在改参数会真的生效。
+    </div>
+    <h3 style="margin:28px 0 6px;font-size:16px">滚轮输入机制（也是纠偏过的）</h3>
+    <table>
+      <tr><th>对比项</th><th>参考站（从产物源码读出）</th><th>成品</th><th>判定</th></tr>
+      <tr><td>输入公式</td><td><code>targetX -= (deltaY + deltaX) / 400</code></td><td><code>target += (deltaY + deltaX) / wheelDeltaPerStep</code>（坐标系正负相反）</td><td class="ok">已复现</td></tr>
+      <tr><td>阈值</td><td><b>没有</b>（每个事件都累加）</td><td><b>没有</b></td><td class="ok">已复现</td></tr>
+      <tr><td>冷却</td><td><b>没有</b>，只有 <code>scrollIn</code> 与 <code>isTweening</code> 两个门</td><td>同样只有转场门与吸附门</td><td class="ok">已复现</td></tr>
+      <tr><td>方向筛选</td><td>不筛选：<code>deltaY</code> 与 <code>deltaX</code> 相加</td><td>同左</td><td class="ok">已复现</td></tr>
+      <tr><td>渲染跟随</td><td>二阶临界阻尼 <code>SmoothDamp</code>，smoothTime <b>100</b>（拖动 200）</td><td>同左</td><td class="ok">已复现</td></tr>
+      <tr><td>越界处理</td><td>不是硬 clamp，用 smoothTime <b>40</b> 阻尼顶回</td><td>同左</td><td class="ok">已复现</td></tr>
+      <tr><td>停稳吸附</td><td>速度 &lt; 0.1 且离最近格 &gt; 0.01 → <b>0.3s power2.inOut</b></td><td>同左，另加 130ms 输入静默期（见备注）</td><td class="warn">已适配</td></tr>
+      <tr><td>按钮 / 键盘</td><td><b>0.4s cubic.out</b></td><td>同左</td><td class="ok">已复现</td></tr>
+      <tr><td>点海报直达</td><td><b>0.6s cubic.out</b></td><td>同左</td><td class="ok">已复现</td></tr>
+      <tr><td>键盘映射</td><td>ArrowDown/Left/a/q = 上一格；ArrowUp/Right/d = 下一格；Enter = 进入</td><td>同左（含方向）</td><td class="ok">已复现</td></tr>
+      <tr><td>上次位置记忆</td><td><code>localStorage['last-chapter']</code></td><td><code>localStorage['portfolio:last-work']</code></td><td class="ok">已复现</td></tr>
+    </table>
+    <div class="note">
+      <b>为什么加"输入静默期"</b>：参考站只用「渲染速度 &lt; 0.1」判断停稳，但这个条件在两次滚轮事件之间
+      就会被满足 —— 于是每次事件刚累加的位移立刻被吸附回去，无法累加。而「单次 120 不动、五次 120 走一格」
+      恰恰依赖"能累加"。所以成品改成"最后一次输入之后静默 130ms 才允许吸附"，
+      语义等价（手势停下来才吸到最近一格）且与帧率无关。
+      <br><br>
+      <b>顺带作废一个旧结论</b>：v2 报告里写的「滚轮累计阈值 = 140（observed）」是错的 ——
+      那是从"单次 120 不动、五次 120 走一格"这一个观测点推出来的，既不能证明阈值存在、也定不出大小。
+      实际参考站没有阈值；「120 不动」是因为位移不足半个格子。
+    </div>
+  </section>
+
+  <!-- ============ C5 边界 ============ -->
+  <section class="case">
+    <h2>C5 · 首尾边界（末格）</h2>
+    <p class="scale">两边都是 1440×900</p>
+    <div class="pair">
+      <figure>
+        <img src="reference-shots/R5-chapters-boundary.png" alt="参考站末格">
+        <figcaption><span class="tag ref">参考站</span>末格：继续往前不动，胶囊条的前进箭头为 disabled 样式</figcaption>
+      </figure>
+      <figure>
+        <img src="reference-shots/M5-works-boundary.png" alt="成品末格">
+        <figcaption><span class="tag mine">成品</span>末格：位置 clamp 在最后一格，前进箭头 <code>disabled</code></figcaption>
+      </figure>
+    </div>
+    <table>
+      <tr><th>对比项</th><th>参考站（实测）</th><th>成品（实测）</th><th>判定</th></tr>
+      <tr><td>末端行为</td><td>连发同方向滚轮停在 index 4（末格），不回绕</td><td>停在 index 5（末格），<code>cur = tgt = sel = 5</code></td><td class="ok">已复现</td></tr>
+      <tr><td>起始端行为</td><td>停在 index 0</td><td>停在 index 0</td><td class="ok">已复现</td></tr>
+      <tr><td>箭头禁用</td><td>第一格的前进箭头有 <code>--disabled</code> 类</td><td><code>disabled</code> 属性 + <code>opacity .3</code></td><td class="ok">已复现</td></tr>
+      <tr><td>作品数量</td><td>5 章（后 2 章锁定）</td><td>6 件</td><td class="warn">已适配</td></tr>
+    </table>
+  </section>
+
+  <!-- ============ C6 进入作品 ============ -->
+  <section class="case">
+    <h2>C6 · 进入作品 / 播放舞台</h2>
+    <p class="scale">两边都是 1440×900</p>
+    <div class="pair">
+      <figure>
+        <img src="reference-shots/R6-chapter-loading.png" alt="参考站进入章节">
+        <figcaption><span class="tag ref">参考站</span>进入章节后的等待态：暗底 + 巨大线稿幽灵 + 圆环 + "NEXT TRACK IS LOADING…" + 章节名</figcaption>
+      </figure>
+      <figure>
+        <img src="reference-shots/M6b-detail-playing.png" alt="成品进入作品">
+        <figcaption><span class="tag mine">成品</span>当前海报接续到播放舞台（DOM 实测矩形 —— 黄条是测试片横幅）</figcaption>
+      </figure>
+    </div>
+    <table>
+      <tr><th>对比项</th><th>参考站</th><th>成品</th><th>判定</th></tr>
+      <tr><td>形态</td><td>章节阅读器：横向漫画页 + 缩略图 + 进度轨</td><td>影像作品集：视频按真实比例 + 简介 / 职责 / 制作过程</td><td class="warn">已适配</td></tr>
+      <tr><td>接续感</td><td>有等待态（黑底 + 标题），再切到阅读页</td><td>当前海报从浏览带位置插值到播放舞台矩形 + 摊平 3D 倾斜，其他海报沿离中心方向退出</td><td class="warn">已适配（提示词 M05 的对应设计）</td></tr>
+      <tr><td>控制条</td><td>章节页的信息条</td><td>跨路由<b>同一个 DOM 元素</b>，进入后展开进度轨、播放键变播放/暂停、多出返回键</td><td class="warn">已适配（提示词 M05 要求"衔接为播放控件"）</td></tr>
+      <tr><td>视频比例</td><td>无视频</td><td>16:9 / 9:16 / 1:1 / 21:9 都按真实比例 contain（实测 9:16 → 297×528，比例 0.5625）</td><td class="warn">已适配</td></tr>
+      <tr><td>返回</td><td>未测到"恢复上次位置"的行为</td><td>返回恢复选中作品下标 + 位置，并瞬间对齐（无滑动）</td><td class="warn">已适配</td></tr>
+    </table>
+  </section>
+
+  <!-- ============ C7 关于页 ============ -->
+  <section class="case">
+    <h2>C7 · 关于页</h2>
+    <p class="scale">两边都是 1440×900</p>
+    <div class="pair">
+      <figure>
+        <img src="reference-shots/R7-about-top.png" alt="参考站关于页顶部">
+        <figcaption><span class="tag ref">参考站</span>纸白底 + 墨色顶栏 + 从底部升起的巨幅插画</figcaption>
+      </figure>
+      <figure>
+        <img src="reference-shots/M7-about-top.png" alt="成品关于页顶部">
+        <figcaption><span class="tag mine">成品</span>纸白底 + 墨色顶栏 + 分层视差波浪 + 逐字出现的大标题</figcaption>
+      </figure>
+    </div>
+    <div style="margin-top:16px" class="pair">
+      <figure>
+        <img src="reference-shots/R8-about-scrolled.png" alt="参考站关于页滚动">
+        <figcaption><span class="tag ref">参考站</span>粉色底 + 奶油云层（前后景不同速）+ 巨幅插画 + 巨字标题</figcaption>
+      </figure>
+      <figure>
+        <img src="reference-shots/M8-about-scrolled.png" alt="成品关于页滚动">
+        <figcaption><span class="tag mine">成品</span>同样的结构：前后景不同速的色块 + 巨字标题 + 卡片分段出现 + 右侧定位点 + 底部进度条</figcaption>
+      </figure>
+    </div>
+    <table>
+      <tr><th>对比项</th><th>参考站（实测）</th><th>成品</th><th>判定</th></tr>
+      <tr><td>底色</td><td><code>#fff6f0</code> 起，滚到中段是 <code>#f1abbd</code> 粉</td><td>同样纸白起、粉/墨云层压底</td><td class="ok">已复现</td></tr>
+      <tr><td>顶栏配色</td><td>浅底 → 墨色 <code>#171717</code></td><td>同左</td><td class="ok">已复现</td></tr>
+      <tr><td>前后景视差</td><td>存在（云层与底色位移不一致），具体倍率未量</td><td>每层 <code>data-parallax</code>，背景 −7/−9/−11、前景 +18/+22/+13</td><td class="bad">待验证（参考站倍率测不到）</td></tr>
+      <tr><td>右侧章节定位点</td><td>9px；未选中 <code>scale(.6)</code>；入场 <code>translateY(-36.5px)</code> + <code>opacity 0</code></td><td>同数值</td><td class="ok">已复现</td></tr>
+      <tr><td>底部进度条</td><td><code>height: 3px</code>，<code>scaleX()</code></td><td>同左</td><td class="ok">已复现</td></tr>
+      <tr><td>文字出现</td><td>用 SplitText 逐行</td><td>大标题按字拆开（中英都适用）、段落与卡片各绑一个 scrub 补间</td><td class="warn">已适配</td></tr>
+      <tr><td>向上滚可回退</td><td>未逐项验证</td><td>用 scrub + <code>toggleActions: play none none reverse</code>，实测回滚到顶时状态全部复位</td><td class="warn">已适配</td></tr>
+      <tr><td>巨幅插画</td><td>角色插画</td><td>没有美术资源，改用分层有机色块承担"前后景"职责</td><td class="warn">已适配</td></tr>
+    </table>
+  </section>
+
+  <section class="case">
+    <h2>结论汇总</h2>
+    <table>
+      <tr><th>类别</th><th>项</th></tr>
+      <tr><td class="ok">已复现</td><td>
+        顶栏胶囊选中态/hover 数值、顶栏换色（含首页 600ms 延迟）、两侧链接定位、首屏加载层、
+        滚轮输入公式（连续累加、无阈值、无冷却）、二阶阻尼 smoothTime 100/200、越界顶回 40、
+        四组吸附时长与缓动、速度时间窗、键盘映射、localStorage 记忆、首尾 clamp、
+        风扇布局四个数值（边长比 / 缩放 / 偏移 / 旋转）、邻封压暗、
+        背景双色 + 硬边大圆 + 颗粒采样保持、UV 位移的 <code>vUv.y</code> 加权结构、
+        关于页定位点与进度条数值、色板
+      </td></tr>
+      <tr><td class="warn">已适配</td><td>
+        内容模型（漫画 → 影像作品集）、进入作品的海报接续、跨路由共享控制条、视频比例与播放控制、
+        触屏/键盘输入、返回恢复位置、首页分层舞台、关于页文字分段的实现方式、
+        形变通道的权重分配（法线高光替代法线贴图）
+      </td></tr>
+      <tr><td class="bad">待验证</td><td>
+        转场的精确时长与缓动曲线（参考站在 WebGL 内完成，DOM 采样不到）、
+        阻尼系数与弯曲幅度的标定、关于页视差倍率、停止后的形变收敛曲线、
+        真机 GPU 帧率（本机只有软件渲染）
+      </td></tr>
+    </table>
+  </section>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,1504 @@
+{
+  "sourceDirectory": "I:\\xiaazai\\zpj\\0.001\\zucai",
+  "policy": "Original files are untouched. Covers/posters are real source-video frames.",
+  "works": [
+    {
+      "no": "01",
+      "slug": "film-0821",
+      "sourceFile": "8月21日.mp4",
+      "sourceMetadata": {
+        "width": 1440,
+        "height": 2560,
+        "aspect": "9 / 16",
+        "durationSeconds": 117.237,
+        "frameRate": "30/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 293608816
+      },
+      "frameCandidates": [
+        {
+          "number": 1,
+          "seconds": 11.724,
+          "file": "/media/candidate-frames/film-0821-1.jpg"
+        },
+        {
+          "number": 2,
+          "seconds": 32.826,
+          "file": "/media/candidate-frames/film-0821-2.jpg"
+        },
+        {
+          "number": 3,
+          "seconds": 55.101,
+          "file": "/media/candidate-frames/film-0821-3.jpg"
+        },
+        {
+          "number": 4,
+          "seconds": 78.549,
+          "file": "/media/candidate-frames/film-0821-4.jpg"
+        },
+        {
+          "number": 5,
+          "seconds": 99.651,
+          "file": "/media/candidate-frames/film-0821-5.jpg"
+        }
+      ],
+      "selectedFrame": 1,
+      "webMetadata": {
+        "width": 594,
+        "height": 1056,
+        "aspect": "9 / 16",
+        "durationSeconds": 117.237,
+        "frameRate": "30/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 13736144,
+        "encodeSeconds": 41.19,
+        "pixelFormat": "yuv420p"
+      },
+      "themeColors": [
+        "#EB8DB7",
+        "#F87800"
+      ],
+      "coverFit": "crop",
+      "coverFocus": [
+        0.5,
+        0.3
+      ],
+      "cover": "/covers/film-0821.jpg",
+      "poster": "/media/film-0821-poster.jpg",
+      "video": "/videos/film-0821.mp4",
+      "title": "08.21 · AI 短片",
+      "category": "AI 短片",
+      "validation": {
+        "h264": true,
+        "aac": true,
+        "faststart": true,
+        "originalAspect": true,
+        "durationMatches": true,
+        "coverSquare": true,
+        "posterAspect": true
+      }
+    },
+    {
+      "no": "02",
+      "slug": "film-0823-02",
+      "sourceFile": "8月23日(2).mp4",
+      "sourceMetadata": {
+        "width": 1440,
+        "height": 2560,
+        "aspect": "9 / 16",
+        "durationSeconds": 114.567,
+        "frameRate": "30/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 284916239
+      },
+      "frameCandidates": [
+        {
+          "number": 1,
+          "seconds": 11.457,
+          "file": "/media/candidate-frames/film-0823-02-1.jpg"
+        },
+        {
+          "number": 2,
+          "seconds": 32.079,
+          "file": "/media/candidate-frames/film-0823-02-2.jpg"
+        },
+        {
+          "number": 3,
+          "seconds": 53.846,
+          "file": "/media/candidate-frames/film-0823-02-3.jpg"
+        },
+        {
+          "number": 4,
+          "seconds": 76.76,
+          "file": "/media/candidate-frames/film-0823-02-4.jpg"
+        },
+        {
+          "number": 5,
+          "seconds": 97.382,
+          "file": "/media/candidate-frames/film-0823-02-5.jpg"
+        }
+      ],
+      "selectedFrame": 2,
+      "webMetadata": {
+        "width": 594,
+        "height": 1056,
+        "aspect": "9 / 16",
+        "durationSeconds": 114.567,
+        "frameRate": "30/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 14288642,
+        "encodeSeconds": 41.3,
+        "pixelFormat": "yuv420p"
+      },
+      "themeColors": [
+        "#EB8DB7",
+        "#7E7EFF"
+      ],
+      "coverFit": "crop",
+      "coverFocus": [
+        0.5,
+        0.3
+      ],
+      "cover": "/covers/film-0823-02.jpg",
+      "poster": "/media/film-0823-02-poster.jpg",
+      "video": "/videos/film-0823-02.mp4",
+      "title": "08.23 · AI 短片",
+      "category": "AI 短片",
+      "validation": {
+        "h264": true,
+        "aac": true,
+        "faststart": true,
+        "originalAspect": true,
+        "durationMatches": true,
+        "coverSquare": true,
+        "posterAspect": true
+      }
+    },
+    {
+      "no": "03",
+      "slug": "film-0824",
+      "sourceFile": "8月24日.mp4",
+      "sourceMetadata": {
+        "width": 1440,
+        "height": 2560,
+        "aspect": "9 / 16",
+        "durationSeconds": 86.308,
+        "frameRate": "30/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 213462747
+      },
+      "frameCandidates": [
+        {
+          "number": 1,
+          "seconds": 8.631,
+          "file": "/media/candidate-frames/film-0824-1.jpg"
+        },
+        {
+          "number": 2,
+          "seconds": 24.166,
+          "file": "/media/candidate-frames/film-0824-2.jpg"
+        },
+        {
+          "number": 3,
+          "seconds": 40.565,
+          "file": "/media/candidate-frames/film-0824-3.jpg"
+        },
+        {
+          "number": 4,
+          "seconds": 57.826,
+          "file": "/media/candidate-frames/film-0824-4.jpg"
+        },
+        {
+          "number": 5,
+          "seconds": 73.362,
+          "file": "/media/candidate-frames/film-0824-5.jpg"
+        }
+      ],
+      "selectedFrame": 3,
+      "webMetadata": {
+        "width": 594,
+        "height": 1056,
+        "aspect": "9 / 16",
+        "durationSeconds": 86.308,
+        "frameRate": "30/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 9172976,
+        "encodeSeconds": 24.95,
+        "pixelFormat": "yuv420p"
+      },
+      "themeColors": [
+        "#7E7EFF",
+        "#F87800"
+      ],
+      "coverFit": "crop",
+      "coverFocus": [
+        0.5,
+        0.35
+      ],
+      "cover": "/covers/film-0824.jpg",
+      "poster": "/media/film-0824-poster.jpg",
+      "video": "/videos/film-0824.mp4",
+      "title": "08.24 · AI 短片",
+      "category": "AI 短片",
+      "validation": {
+        "h264": true,
+        "aac": true,
+        "faststart": true,
+        "originalAspect": true,
+        "durationMatches": true,
+        "coverSquare": true,
+        "posterAspect": true
+      }
+    },
+    {
+      "no": "04",
+      "slug": "film-0824-01",
+      "sourceFile": "8月24日(1).mp4",
+      "sourceMetadata": {
+        "width": 1440,
+        "height": 2560,
+        "aspect": "9 / 16",
+        "durationSeconds": 91.022,
+        "frameRate": "30/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 224989589
+      },
+      "frameCandidates": [
+        {
+          "number": 1,
+          "seconds": 9.102,
+          "file": "/media/candidate-frames/film-0824-01-1.jpg"
+        },
+        {
+          "number": 2,
+          "seconds": 25.486,
+          "file": "/media/candidate-frames/film-0824-01-2.jpg"
+        },
+        {
+          "number": 3,
+          "seconds": 42.78,
+          "file": "/media/candidate-frames/film-0824-01-3.jpg"
+        },
+        {
+          "number": 4,
+          "seconds": 60.985,
+          "file": "/media/candidate-frames/film-0824-01-4.jpg"
+        },
+        {
+          "number": 5,
+          "seconds": 77.369,
+          "file": "/media/candidate-frames/film-0824-01-5.jpg"
+        }
+      ],
+      "selectedFrame": 1,
+      "webMetadata": {
+        "width": 594,
+        "height": 1056,
+        "aspect": "9 / 16",
+        "durationSeconds": 91.022,
+        "frameRate": "30/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 9708402,
+        "encodeSeconds": 25.53,
+        "pixelFormat": "yuv420p"
+      },
+      "themeColors": [
+        "#FFBC03",
+        "#ED1E24"
+      ],
+      "coverFit": "crop",
+      "coverFocus": [
+        0.5,
+        0.28
+      ],
+      "cover": "/covers/film-0824-01.jpg",
+      "poster": "/media/film-0824-01-poster.jpg",
+      "video": "/videos/film-0824-01.mp4",
+      "title": "08.24 · AI 短片 · 版本 02",
+      "category": "AI 短片",
+      "validation": {
+        "h264": true,
+        "aac": true,
+        "faststart": true,
+        "originalAspect": true,
+        "durationMatches": true,
+        "coverSquare": true,
+        "posterAspect": true
+      }
+    },
+    {
+      "no": "05",
+      "slug": "film-0901-01",
+      "sourceFile": "9月1日 (1).mp4",
+      "sourceMetadata": {
+        "width": 2560,
+        "height": 1440,
+        "aspect": "16 / 9",
+        "durationSeconds": 90.209,
+        "frameRate": "30/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 223828245
+      },
+      "frameCandidates": [
+        {
+          "number": 1,
+          "seconds": 9.021,
+          "file": "/media/candidate-frames/film-0901-01-1.jpg"
+        },
+        {
+          "number": 2,
+          "seconds": 25.259,
+          "file": "/media/candidate-frames/film-0901-01-2.jpg"
+        },
+        {
+          "number": 3,
+          "seconds": 42.398,
+          "file": "/media/candidate-frames/film-0901-01-3.jpg"
+        },
+        {
+          "number": 4,
+          "seconds": 60.44,
+          "file": "/media/candidate-frames/film-0901-01-4.jpg"
+        },
+        {
+          "number": 5,
+          "seconds": 76.678,
+          "file": "/media/candidate-frames/film-0901-01-5.jpg"
+        }
+      ],
+      "selectedFrame": 1,
+      "webMetadata": {
+        "width": 1920,
+        "height": 1080,
+        "aspect": "16 / 9",
+        "durationSeconds": 90.209,
+        "frameRate": "30/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 29807298,
+        "encodeSeconds": 68.09,
+        "pixelFormat": "yuv420p"
+      },
+      "themeColors": [
+        "#ED1E24",
+        "#7E7EFF"
+      ],
+      "coverFit": "crop",
+      "coverFocus": [
+        0.15,
+        0.5
+      ],
+      "cover": "/covers/film-0901-01.jpg",
+      "poster": "/media/film-0901-01-poster.jpg",
+      "video": "/videos/film-0901-01.mp4",
+      "title": "09.01 · 动画影像",
+      "category": "动画影像",
+      "validation": {
+        "h264": true,
+        "aac": true,
+        "faststart": true,
+        "originalAspect": true,
+        "durationMatches": true,
+        "coverSquare": true,
+        "posterAspect": true
+      }
+    },
+    {
+      "no": "06",
+      "slug": "film-0903-02",
+      "sourceFile": "9月3日 (2).mp4",
+      "sourceMetadata": {
+        "width": 2560,
+        "height": 1440,
+        "aspect": "16 / 9",
+        "durationSeconds": 59.722,
+        "frameRate": "30/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 143681189
+      },
+      "frameCandidates": [
+        {
+          "number": 1,
+          "seconds": 5.972,
+          "file": "/media/candidate-frames/film-0903-02-1.jpg"
+        },
+        {
+          "number": 2,
+          "seconds": 16.722,
+          "file": "/media/candidate-frames/film-0903-02-2.jpg"
+        },
+        {
+          "number": 3,
+          "seconds": 28.069,
+          "file": "/media/candidate-frames/film-0903-02-3.jpg"
+        },
+        {
+          "number": 4,
+          "seconds": 40.014,
+          "file": "/media/candidate-frames/film-0903-02-4.jpg"
+        },
+        {
+          "number": 5,
+          "seconds": 50.764,
+          "file": "/media/candidate-frames/film-0903-02-5.jpg"
+        }
+      ],
+      "selectedFrame": 4,
+      "webMetadata": {
+        "width": 1920,
+        "height": 1080,
+        "aspect": "16 / 9",
+        "durationSeconds": 59.722,
+        "frameRate": "30/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 17974333,
+        "encodeSeconds": 43.64,
+        "pixelFormat": "yuv420p"
+      },
+      "themeColors": [
+        "#EB8DB7",
+        "#F87800"
+      ],
+      "coverFit": "crop",
+      "coverFocus": [
+        0.65,
+        0.5
+      ],
+      "cover": "/covers/film-0903-02.jpg",
+      "poster": "/media/film-0903-02-poster.jpg",
+      "video": "/videos/film-0903-02.mp4",
+      "title": "09.03 · 动画影像",
+      "category": "动画影像",
+      "validation": {
+        "h264": true,
+        "aac": true,
+        "faststart": true,
+        "originalAspect": true,
+        "durationMatches": true,
+        "coverSquare": true,
+        "posterAspect": true
+      }
+    },
+    {
+      "no": "07",
+      "slug": "film-0920",
+      "sourceFile": "9月20日.mp4",
+      "sourceMetadata": {
+        "width": 1440,
+        "height": 2560,
+        "aspect": "9 / 16",
+        "durationSeconds": 49.087,
+        "frameRate": "30/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 120771598
+      },
+      "frameCandidates": [
+        {
+          "number": 1,
+          "seconds": 4.909,
+          "file": "/media/candidate-frames/film-0920-1.jpg"
+        },
+        {
+          "number": 2,
+          "seconds": 13.744,
+          "file": "/media/candidate-frames/film-0920-2.jpg"
+        },
+        {
+          "number": 3,
+          "seconds": 23.071,
+          "file": "/media/candidate-frames/film-0920-3.jpg"
+        },
+        {
+          "number": 4,
+          "seconds": 32.888,
+          "file": "/media/candidate-frames/film-0920-4.jpg"
+        },
+        {
+          "number": 5,
+          "seconds": 41.724,
+          "file": "/media/candidate-frames/film-0920-5.jpg"
+        }
+      ],
+      "selectedFrame": 5,
+      "webMetadata": {
+        "width": 594,
+        "height": 1056,
+        "aspect": "9 / 16",
+        "durationSeconds": 49.087,
+        "frameRate": "30/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 7949214,
+        "encodeSeconds": 15.95,
+        "pixelFormat": "yuv420p"
+      },
+      "themeColors": [
+        "#EB8DB7",
+        "#7E7EFF"
+      ],
+      "coverFit": "crop",
+      "coverFocus": [
+        0.5,
+        0.32
+      ],
+      "cover": "/covers/film-0920.jpg",
+      "poster": "/media/film-0920-poster.jpg",
+      "video": "/videos/film-0920.mp4",
+      "title": "09.20 · AI 短片",
+      "category": "AI 短片",
+      "validation": {
+        "h264": true,
+        "aac": true,
+        "faststart": true,
+        "originalAspect": true,
+        "durationMatches": true,
+        "coverSquare": true,
+        "posterAspect": true
+      }
+    },
+    {
+      "no": "08",
+      "slug": "preview-0928-164227",
+      "sourceFile": "带货预热视频/下载 - 2026-09-28T164227.002_剪辑版.mp4",
+      "sourceMetadata": {
+        "width": 720,
+        "height": 1280,
+        "aspect": "9 / 16",
+        "durationSeconds": 25.042,
+        "frameRate": "24/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 5444175
+      },
+      "frameCandidates": [
+        {
+          "number": 1,
+          "seconds": 2.504,
+          "file": "/media/candidate-frames/preview-0928-164227-1.jpg"
+        },
+        {
+          "number": 2,
+          "seconds": 7.012,
+          "file": "/media/candidate-frames/preview-0928-164227-2.jpg"
+        },
+        {
+          "number": 3,
+          "seconds": 11.77,
+          "file": "/media/candidate-frames/preview-0928-164227-3.jpg"
+        },
+        {
+          "number": 4,
+          "seconds": 16.778,
+          "file": "/media/candidate-frames/preview-0928-164227-4.jpg"
+        },
+        {
+          "number": 5,
+          "seconds": 21.286,
+          "file": "/media/candidate-frames/preview-0928-164227-5.jpg"
+        }
+      ],
+      "selectedFrame": 2,
+      "webMetadata": {
+        "width": 594,
+        "height": 1056,
+        "aspect": "9 / 16",
+        "durationSeconds": 25.042,
+        "frameRate": "24/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 3097821,
+        "encodeSeconds": 4.58,
+        "pixelFormat": "yuv420p"
+      },
+      "themeColors": [
+        "#7E7EFF",
+        "#F87800"
+      ],
+      "coverFit": "contain",
+      "cover": "/covers/preview-0928-164227.jpg",
+      "poster": "/media/preview-0928-164227-poster.jpg",
+      "video": "/videos/preview-0928-164227.mp4",
+      "title": "09.28 · 带货预热 01",
+      "category": "带货预热",
+      "validation": {
+        "h264": true,
+        "aac": true,
+        "faststart": true,
+        "originalAspect": true,
+        "durationMatches": true,
+        "coverSquare": true,
+        "posterAspect": true
+      }
+    },
+    {
+      "no": "09",
+      "slug": "preview-0928-164230",
+      "sourceFile": "带货预热视频/下载 - 2026-09-28T164230.231_剪辑版.mp4",
+      "sourceMetadata": {
+        "width": 720,
+        "height": 1280,
+        "aspect": "9 / 16",
+        "durationSeconds": 25.042,
+        "frameRate": "24/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 6557574
+      },
+      "frameCandidates": [
+        {
+          "number": 1,
+          "seconds": 2.504,
+          "file": "/media/candidate-frames/preview-0928-164230-1.jpg"
+        },
+        {
+          "number": 2,
+          "seconds": 7.012,
+          "file": "/media/candidate-frames/preview-0928-164230-2.jpg"
+        },
+        {
+          "number": 3,
+          "seconds": 11.77,
+          "file": "/media/candidate-frames/preview-0928-164230-3.jpg"
+        },
+        {
+          "number": 4,
+          "seconds": 16.778,
+          "file": "/media/candidate-frames/preview-0928-164230-4.jpg"
+        },
+        {
+          "number": 5,
+          "seconds": 21.286,
+          "file": "/media/candidate-frames/preview-0928-164230-5.jpg"
+        }
+      ],
+      "selectedFrame": 2,
+      "webMetadata": {
+        "width": 594,
+        "height": 1056,
+        "aspect": "9 / 16",
+        "durationSeconds": 25.042,
+        "frameRate": "24/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 3647091,
+        "encodeSeconds": 4.98,
+        "pixelFormat": "yuv420p"
+      },
+      "themeColors": [
+        "#FFBC03",
+        "#ED1E24"
+      ],
+      "coverFit": "contain",
+      "cover": "/covers/preview-0928-164230.jpg",
+      "poster": "/media/preview-0928-164230-poster.jpg",
+      "video": "/videos/preview-0928-164230.mp4",
+      "title": "09.28 · 带货预热 02",
+      "category": "带货预热",
+      "validation": {
+        "h264": true,
+        "aac": true,
+        "faststart": true,
+        "originalAspect": true,
+        "durationMatches": true,
+        "coverSquare": true,
+        "posterAspect": true
+      }
+    },
+    {
+      "no": "10",
+      "slug": "preview-0928-164234",
+      "sourceFile": "带货预热视频/下载 - 2026-09-28T164234.621_剪辑版.mp4",
+      "sourceMetadata": {
+        "width": 720,
+        "height": 1280,
+        "aspect": "9 / 16",
+        "durationSeconds": 25.042,
+        "frameRate": "24/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 5490057
+      },
+      "frameCandidates": [
+        {
+          "number": 1,
+          "seconds": 2.504,
+          "file": "/media/candidate-frames/preview-0928-164234-1.jpg"
+        },
+        {
+          "number": 2,
+          "seconds": 7.012,
+          "file": "/media/candidate-frames/preview-0928-164234-2.jpg"
+        },
+        {
+          "number": 3,
+          "seconds": 11.77,
+          "file": "/media/candidate-frames/preview-0928-164234-3.jpg"
+        },
+        {
+          "number": 4,
+          "seconds": 16.778,
+          "file": "/media/candidate-frames/preview-0928-164234-4.jpg"
+        },
+        {
+          "number": 5,
+          "seconds": 21.286,
+          "file": "/media/candidate-frames/preview-0928-164234-5.jpg"
+        }
+      ],
+      "selectedFrame": 2,
+      "webMetadata": {
+        "width": 594,
+        "height": 1056,
+        "aspect": "9 / 16",
+        "durationSeconds": 25.042,
+        "frameRate": "24/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 3088452,
+        "encodeSeconds": 4.55,
+        "pixelFormat": "yuv420p"
+      },
+      "themeColors": [
+        "#ED1E24",
+        "#7E7EFF"
+      ],
+      "coverFit": "contain",
+      "cover": "/covers/preview-0928-164234.jpg",
+      "poster": "/media/preview-0928-164234-poster.jpg",
+      "video": "/videos/preview-0928-164234.mp4",
+      "title": "09.28 · 带货预热 03",
+      "category": "带货预热",
+      "validation": {
+        "h264": true,
+        "aac": true,
+        "faststart": true,
+        "originalAspect": true,
+        "durationMatches": true,
+        "coverSquare": true,
+        "posterAspect": true
+      }
+    },
+    {
+      "no": "11",
+      "slug": "preview-0928-164735",
+      "sourceFile": "带货预热视频/下载 - 2026-09-28T164735.502_剪辑版.mp4",
+      "sourceMetadata": {
+        "width": 720,
+        "height": 1280,
+        "aspect": "9 / 16",
+        "durationSeconds": 25.042,
+        "frameRate": "24/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 6051923
+      },
+      "frameCandidates": [
+        {
+          "number": 1,
+          "seconds": 2.504,
+          "file": "/media/candidate-frames/preview-0928-164735-1.jpg"
+        },
+        {
+          "number": 2,
+          "seconds": 7.012,
+          "file": "/media/candidate-frames/preview-0928-164735-2.jpg"
+        },
+        {
+          "number": 3,
+          "seconds": 11.77,
+          "file": "/media/candidate-frames/preview-0928-164735-3.jpg"
+        },
+        {
+          "number": 4,
+          "seconds": 16.778,
+          "file": "/media/candidate-frames/preview-0928-164735-4.jpg"
+        },
+        {
+          "number": 5,
+          "seconds": 21.286,
+          "file": "/media/candidate-frames/preview-0928-164735-5.jpg"
+        }
+      ],
+      "selectedFrame": 3,
+      "webMetadata": {
+        "width": 594,
+        "height": 1056,
+        "aspect": "9 / 16",
+        "durationSeconds": 25.042,
+        "frameRate": "24/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 3355088,
+        "encodeSeconds": 4.73,
+        "pixelFormat": "yuv420p"
+      },
+      "themeColors": [
+        "#EB8DB7",
+        "#F87800"
+      ],
+      "coverFit": "contain",
+      "cover": "/covers/preview-0928-164735.jpg",
+      "poster": "/media/preview-0928-164735-poster.jpg",
+      "video": "/videos/preview-0928-164735.mp4",
+      "title": "09.28 · 带货预热 04",
+      "category": "带货预热",
+      "validation": {
+        "h264": true,
+        "aac": true,
+        "faststart": true,
+        "originalAspect": true,
+        "durationMatches": true,
+        "coverSquare": true,
+        "posterAspect": true
+      }
+    },
+    {
+      "no": "12",
+      "slug": "preview-0928-180224",
+      "sourceFile": "带货预热视频/下载 - 2026-09-28T180224.004_剪辑版.mp4",
+      "sourceMetadata": {
+        "width": 720,
+        "height": 1280,
+        "aspect": "9 / 16",
+        "durationSeconds": 25.042,
+        "frameRate": "24/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 6636286
+      },
+      "frameCandidates": [
+        {
+          "number": 1,
+          "seconds": 2.504,
+          "file": "/media/candidate-frames/preview-0928-180224-1.jpg"
+        },
+        {
+          "number": 2,
+          "seconds": 7.012,
+          "file": "/media/candidate-frames/preview-0928-180224-2.jpg"
+        },
+        {
+          "number": 3,
+          "seconds": 11.77,
+          "file": "/media/candidate-frames/preview-0928-180224-3.jpg"
+        },
+        {
+          "number": 4,
+          "seconds": 16.778,
+          "file": "/media/candidate-frames/preview-0928-180224-4.jpg"
+        },
+        {
+          "number": 5,
+          "seconds": 21.286,
+          "file": "/media/candidate-frames/preview-0928-180224-5.jpg"
+        }
+      ],
+      "selectedFrame": 1,
+      "webMetadata": {
+        "width": 594,
+        "height": 1056,
+        "aspect": "9 / 16",
+        "durationSeconds": 25.042,
+        "frameRate": "24/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 3805330,
+        "encodeSeconds": 5.33,
+        "pixelFormat": "yuv420p"
+      },
+      "themeColors": [
+        "#EB8DB7",
+        "#7E7EFF"
+      ],
+      "coverFit": "contain",
+      "cover": "/covers/preview-0928-180224.jpg",
+      "poster": "/media/preview-0928-180224-poster.jpg",
+      "video": "/videos/preview-0928-180224.mp4",
+      "title": "09.28 · 带货预热 05",
+      "category": "带货预热",
+      "validation": {
+        "h264": true,
+        "aac": true,
+        "faststart": true,
+        "originalAspect": true,
+        "durationMatches": true,
+        "coverSquare": true,
+        "posterAspect": true
+      }
+    },
+    {
+      "no": "13",
+      "slug": "preview-0928-180226",
+      "sourceFile": "带货预热视频/下载 - 2026-09-28T180226.930_剪辑版.mp4",
+      "sourceMetadata": {
+        "width": 720,
+        "height": 1280,
+        "aspect": "9 / 16",
+        "durationSeconds": 25.042,
+        "frameRate": "24/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 8971971
+      },
+      "frameCandidates": [
+        {
+          "number": 1,
+          "seconds": 2.504,
+          "file": "/media/candidate-frames/preview-0928-180226-1.jpg"
+        },
+        {
+          "number": 2,
+          "seconds": 7.012,
+          "file": "/media/candidate-frames/preview-0928-180226-2.jpg"
+        },
+        {
+          "number": 3,
+          "seconds": 11.77,
+          "file": "/media/candidate-frames/preview-0928-180226-3.jpg"
+        },
+        {
+          "number": 4,
+          "seconds": 16.778,
+          "file": "/media/candidate-frames/preview-0928-180226-4.jpg"
+        },
+        {
+          "number": 5,
+          "seconds": 21.286,
+          "file": "/media/candidate-frames/preview-0928-180226-5.jpg"
+        }
+      ],
+      "selectedFrame": 3,
+      "webMetadata": {
+        "width": 594,
+        "height": 1056,
+        "aspect": "9 / 16",
+        "durationSeconds": 25.042,
+        "frameRate": "24/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 5189557,
+        "encodeSeconds": 4.98,
+        "pixelFormat": "yuv420p"
+      },
+      "themeColors": [
+        "#7E7EFF",
+        "#F87800"
+      ],
+      "coverFit": "contain",
+      "cover": "/covers/preview-0928-180226.jpg",
+      "poster": "/media/preview-0928-180226-poster.jpg",
+      "video": "/videos/preview-0928-180226.mp4",
+      "title": "09.28 · 带货预热 06",
+      "category": "带货预热",
+      "validation": {
+        "h264": true,
+        "aac": true,
+        "faststart": true,
+        "originalAspect": true,
+        "durationMatches": true,
+        "coverSquare": true,
+        "posterAspect": true
+      }
+    },
+    {
+      "no": "14",
+      "slug": "preview-0928-180306",
+      "sourceFile": "带货预热视频/下载 - 2026-09-28T180306.125_剪辑版.mp4",
+      "sourceMetadata": {
+        "width": 720,
+        "height": 1280,
+        "aspect": "9 / 16",
+        "durationSeconds": 25.042,
+        "frameRate": "24/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 5153396
+      },
+      "frameCandidates": [
+        {
+          "number": 1,
+          "seconds": 2.504,
+          "file": "/media/candidate-frames/preview-0928-180306-1.jpg"
+        },
+        {
+          "number": 2,
+          "seconds": 7.012,
+          "file": "/media/candidate-frames/preview-0928-180306-2.jpg"
+        },
+        {
+          "number": 3,
+          "seconds": 11.77,
+          "file": "/media/candidate-frames/preview-0928-180306-3.jpg"
+        },
+        {
+          "number": 4,
+          "seconds": 16.778,
+          "file": "/media/candidate-frames/preview-0928-180306-4.jpg"
+        },
+        {
+          "number": 5,
+          "seconds": 21.286,
+          "file": "/media/candidate-frames/preview-0928-180306-5.jpg"
+        }
+      ],
+      "selectedFrame": 3,
+      "webMetadata": {
+        "width": 594,
+        "height": 1056,
+        "aspect": "9 / 16",
+        "durationSeconds": 25.042,
+        "frameRate": "24/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 2996779,
+        "encodeSeconds": 4.2,
+        "pixelFormat": "yuv420p"
+      },
+      "themeColors": [
+        "#FFBC03",
+        "#ED1E24"
+      ],
+      "coverFit": "contain",
+      "cover": "/covers/preview-0928-180306.jpg",
+      "poster": "/media/preview-0928-180306-poster.jpg",
+      "video": "/videos/preview-0928-180306.mp4",
+      "title": "09.28 · 带货预热 07",
+      "category": "带货预热",
+      "validation": {
+        "h264": true,
+        "aac": true,
+        "faststart": true,
+        "originalAspect": true,
+        "durationMatches": true,
+        "coverSquare": true,
+        "posterAspect": true
+      }
+    },
+    {
+      "no": "15",
+      "slug": "preview-0928-180315",
+      "sourceFile": "带货预热视频/下载 - 2026-09-28T180315.242_剪辑版.mp4",
+      "sourceMetadata": {
+        "width": 720,
+        "height": 1280,
+        "aspect": "9 / 16",
+        "durationSeconds": 25.042,
+        "frameRate": "24/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 5008055
+      },
+      "frameCandidates": [
+        {
+          "number": 1,
+          "seconds": 2.504,
+          "file": "/media/candidate-frames/preview-0928-180315-1.jpg"
+        },
+        {
+          "number": 2,
+          "seconds": 7.012,
+          "file": "/media/candidate-frames/preview-0928-180315-2.jpg"
+        },
+        {
+          "number": 3,
+          "seconds": 11.77,
+          "file": "/media/candidate-frames/preview-0928-180315-3.jpg"
+        },
+        {
+          "number": 4,
+          "seconds": 16.778,
+          "file": "/media/candidate-frames/preview-0928-180315-4.jpg"
+        },
+        {
+          "number": 5,
+          "seconds": 21.286,
+          "file": "/media/candidate-frames/preview-0928-180315-5.jpg"
+        }
+      ],
+      "selectedFrame": 1,
+      "webMetadata": {
+        "width": 594,
+        "height": 1056,
+        "aspect": "9 / 16",
+        "durationSeconds": 25.042,
+        "frameRate": "24/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 2763332,
+        "encodeSeconds": 4.24,
+        "pixelFormat": "yuv420p"
+      },
+      "themeColors": [
+        "#ED1E24",
+        "#7E7EFF"
+      ],
+      "coverFit": "contain",
+      "cover": "/covers/preview-0928-180315.jpg",
+      "poster": "/media/preview-0928-180315-poster.jpg",
+      "video": "/videos/preview-0928-180315.mp4",
+      "title": "09.28 · 带货预热 08",
+      "category": "带货预热",
+      "validation": {
+        "h264": true,
+        "aac": true,
+        "faststart": true,
+        "originalAspect": true,
+        "durationMatches": true,
+        "coverSquare": true,
+        "posterAspect": true
+      }
+    },
+    {
+      "no": "16",
+      "slug": "preview-0929-164520",
+      "sourceFile": "带货预热视频/苏生阁视频_20260929_164520.mp4",
+      "sourceMetadata": {
+        "width": 720,
+        "height": 1280,
+        "aspect": "9 / 16",
+        "durationSeconds": 30.042,
+        "frameRate": "24/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 27141743
+      },
+      "frameCandidates": [
+        {
+          "number": 1,
+          "seconds": 3.004,
+          "file": "/media/candidate-frames/preview-0929-164520-1.jpg"
+        },
+        {
+          "number": 2,
+          "seconds": 8.412,
+          "file": "/media/candidate-frames/preview-0929-164520-2.jpg"
+        },
+        {
+          "number": 3,
+          "seconds": 14.12,
+          "file": "/media/candidate-frames/preview-0929-164520-3.jpg"
+        },
+        {
+          "number": 4,
+          "seconds": 20.128,
+          "file": "/media/candidate-frames/preview-0929-164520-4.jpg"
+        },
+        {
+          "number": 5,
+          "seconds": 25.536,
+          "file": "/media/candidate-frames/preview-0929-164520-5.jpg"
+        }
+      ],
+      "selectedFrame": 3,
+      "webMetadata": {
+        "width": 594,
+        "height": 1056,
+        "aspect": "9 / 16",
+        "durationSeconds": 30.042,
+        "frameRate": "24/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 4431414,
+        "encodeSeconds": 5.44,
+        "pixelFormat": "yuv420p"
+      },
+      "themeColors": [
+        "#EB8DB7",
+        "#F87800"
+      ],
+      "coverFit": "contain",
+      "cover": "/covers/preview-0929-164520.jpg",
+      "poster": "/media/preview-0929-164520-poster.jpg",
+      "video": "/videos/preview-0929-164520.mp4",
+      "title": "09.29 · 带货预热 09",
+      "category": "带货预热",
+      "validation": {
+        "h264": true,
+        "aac": true,
+        "faststart": true,
+        "originalAspect": true,
+        "durationMatches": true,
+        "coverSquare": true,
+        "posterAspect": true
+      }
+    },
+    {
+      "no": "17",
+      "slug": "preview-0929-164551",
+      "sourceFile": "带货预热视频/下载 - 2026-09-29T164551.506.mp4",
+      "sourceMetadata": {
+        "width": 720,
+        "height": 1280,
+        "aspect": "9 / 16",
+        "durationSeconds": 30.08,
+        "frameRate": "24/1",
+        "videoCodec": "hevc",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 2769669
+      },
+      "frameCandidates": [
+        {
+          "number": 1,
+          "seconds": 3.008,
+          "file": "/media/candidate-frames/preview-0929-164551-1.jpg"
+        },
+        {
+          "number": 2,
+          "seconds": 8.422,
+          "file": "/media/candidate-frames/preview-0929-164551-2.jpg"
+        },
+        {
+          "number": 3,
+          "seconds": 14.138,
+          "file": "/media/candidate-frames/preview-0929-164551-3.jpg"
+        },
+        {
+          "number": 4,
+          "seconds": 20.154,
+          "file": "/media/candidate-frames/preview-0929-164551-4.jpg"
+        },
+        {
+          "number": 5,
+          "seconds": 25.568,
+          "file": "/media/candidate-frames/preview-0929-164551-5.jpg"
+        }
+      ],
+      "selectedFrame": 1,
+      "webMetadata": {
+        "width": 594,
+        "height": 1056,
+        "aspect": "9 / 16",
+        "durationSeconds": 30.093,
+        "frameRate": "24/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 3713842,
+        "encodeSeconds": 5.36,
+        "pixelFormat": "yuv420p"
+      },
+      "themeColors": [
+        "#EB8DB7",
+        "#7E7EFF"
+      ],
+      "coverFit": "contain",
+      "cover": "/covers/preview-0929-164551.jpg",
+      "poster": "/media/preview-0929-164551-poster.jpg",
+      "video": "/videos/preview-0929-164551.mp4",
+      "title": "09.29 · 带货预热 10",
+      "category": "带货预热",
+      "validation": {
+        "h264": true,
+        "aac": true,
+        "faststart": true,
+        "originalAspect": true,
+        "durationMatches": true,
+        "coverSquare": true,
+        "posterAspect": true
+      }
+    },
+    {
+      "no": "18",
+      "slug": "preview-0929-164557",
+      "sourceFile": "带货预热视频/下载 - 2026-09-29T164557.830.mp4",
+      "sourceMetadata": {
+        "width": 720,
+        "height": 1280,
+        "aspect": "9 / 16",
+        "durationSeconds": 30.08,
+        "frameRate": "24/1",
+        "videoCodec": "hevc",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 2572067
+      },
+      "frameCandidates": [
+        {
+          "number": 1,
+          "seconds": 3.008,
+          "file": "/media/candidate-frames/preview-0929-164557-1.jpg"
+        },
+        {
+          "number": 2,
+          "seconds": 8.422,
+          "file": "/media/candidate-frames/preview-0929-164557-2.jpg"
+        },
+        {
+          "number": 3,
+          "seconds": 14.138,
+          "file": "/media/candidate-frames/preview-0929-164557-3.jpg"
+        },
+        {
+          "number": 4,
+          "seconds": 20.154,
+          "file": "/media/candidate-frames/preview-0929-164557-4.jpg"
+        },
+        {
+          "number": 5,
+          "seconds": 25.568,
+          "file": "/media/candidate-frames/preview-0929-164557-5.jpg"
+        }
+      ],
+      "selectedFrame": 1,
+      "webMetadata": {
+        "width": 594,
+        "height": 1056,
+        "aspect": "9 / 16",
+        "durationSeconds": 30.093,
+        "frameRate": "24/1",
+        "videoCodec": "h264",
+        "audioTracks": 1,
+        "audioCodecs": [
+          "aac"
+        ],
+        "bytes": 3035034,
+        "encodeSeconds": 4.14,
+        "pixelFormat": "yuv420p"
+      },
+      "themeColors": [
+        "#7E7EFF",
+        "#F87800"
+      ],
+      "coverFit": "contain",
+      "cover": "/covers/preview-0929-164557.jpg",
+      "poster": "/media/preview-0929-164557-poster.jpg",
+      "video": "/videos/preview-0929-164557.mp4",
+      "title": "09.29 · 带货预热 11",
+      "category": "带货预热",
+      "validation": {
+        "h264": true,
+        "aac": true,
+        "faststart": true,
+        "originalAspect": true,
+        "durationMatches": true,
+        "coverSquare": true,
+        "posterAspect": true
+      }
+    }
+  ],
+  "hero": {
+    "slug": "film-0903-02",
+    "sourceFile": "9月3日 (2).mp4",
+    "startSeconds": 40.01,
+    "still": "/media/hero-still.jpg",
+    "preview": "/media/hero-preview.mp4",
+    "reason": "横屏暖色人物与橘猫动画，来自现有作品的真实画面。",
+    "previewMetadata": {
+      "width": 1280,
+      "height": 720,
+      "aspect": "16 / 9",
+      "durationSeconds": 12.0,
+      "frameRate": "24/1",
+      "videoCodec": "h264",
+      "pixelFormat": "yuv420p",
+      "audioTracks": 0,
+      "audioCodecs": [],
+      "bytes": 1186240
+    }
+  },
+  "summary": {
+    "videoCount": 18,
+    "originalBytes": 1587055339,
+    "webVideoBytes": 141760749,
+    "reductionPercent": 91.07,
+    "landscapeCount": 2,
+    "portraitCount": 16,
+    "originalsUnmodified": true,
+    "allAssetsVerified": true
+  }
+}

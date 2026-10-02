@@ -1,0 +1,30 @@
+{
+  "source": "/home-ai/hero-v5.png",
+  "width": 1672,
+  "height": 941,
+  "method": "registered palette/contour masks + dark-outline recovery; local background repair for QA only; runtime scenery is code-painted",
+  "layers": [
+    "director",
+    "octopus",
+    "bird",
+    "balloon-1",
+    "balloon-2",
+    "balloon-3",
+    "clouds"
+  ],
+  "anchors": {
+    "director": [
+      835,
+      515
+    ],
+    "octopus": [
+      360,
+      665
+    ],
+    "bird": [
+      1260,
+      660
+    ]
+  },
+  "backgroundRepair": "Occluded background is approximated for small animation movements; no original hidden layers are claimed."
+}

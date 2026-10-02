@@ -1,0 +1,61 @@
+{
+  "layout": {
+    "build": "/assets/index-BfWFMuwJ.js",
+    "cta": {
+      "cx": 640,
+      "cy": 619,
+      "height": 58,
+      "width": 120,
+      "x": 580,
+      "y": 590
+    },
+    "ctaTextOffset": 0,
+    "glyphOpacity": [
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "glyphTransforms": [
+      "matrix(1, 0, 0, 1.0104, 0, -1.6611)",
+      "matrix(1, 0, 0, 1.0156, 0, -2.5052)",
+      "matrix(1, 0, 0, 1.0203, 0, -3.2506)",
+      "matrix(1, 0, 0, 1.0236, 0, -3.7743)",
+      "matrix(1, 0, 0, 1.0247, 0, -3.9596)"
+    ],
+    "label": {
+      "cx": 640,
+      "cy": 619,
+      "height": 24.1875,
+      "width": 88,
+      "x": 596,
+      "y": 606.90625
+    },
+    "leftInset": 16,
+    "letterSpacing": "normal",
+    "rightInset": 16,
+    "title": {
+      "cx": 640,
+      "cy": 71.21875,
+      "height": 94.4375,
+      "width": 1280,
+      "x": 0,
+      "y": 24
+    },
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    }
+  },
+  "secondSample": {
+    "glyphTransforms": [
+      "matrix(1, 0, 0, 1, 0, 0)",
+      "matrix(1, 0, 0, 1, 0, 0)",
+      "matrix(1, 0, 0, 1, 0, 0)",
+      "matrix(1, 0, 0, 1, 0, 0)",
+      "matrix(1, 0, 0, 1, 0, 0)"
+    ]
+  },
+  "animationChanged": true
+}

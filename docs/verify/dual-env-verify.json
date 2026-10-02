@@ -1,0 +1,290 @@
+{
+ "dev": {
+  "A1_初始状态": {
+   "hasEl": true,
+   "src": "/videos/_test/test-16x9.mp4",
+   "paused": true,
+   "t": 0,
+   "dur": 8,
+   "ready": 4,
+   "nav": "paused"
+  },
+  "A1_src未被清空": true,
+  "A1_首次播放": {
+   "成功": true,
+   "hasEl": true,
+   "src": "/videos/_test/test-16x9.mp4",
+   "paused": false,
+   "t": 0.39,
+   "dur": 8,
+   "ready": 4,
+   "nav": "playing"
+  },
+  "A2_刷新后": {
+   "src": "/videos/_test/test-16x9.mp4",
+   "src在": true,
+   "可播放": true
+  },
+  "A3_暂停": {
+   "paused": true,
+   "nav": "paused"
+  },
+  "A3_拖到60pct": {
+   "t": 4.8,
+   "dur": 8,
+   "ratio": 0.6
+  },
+  "A4_切到竖屏": {
+   "url": "http://127.0.0.1:5199/works/nine-lives",
+   "hasEl": true,
+   "src": "/videos/_test/test-9x16.mp4",
+   "paused": true,
+   "t": 0,
+   "dur": 6,
+   "ready": 4,
+   "nav": "paused",
+   "stage": {
+    "w": 297,
+    "h": 528,
+    "ratio": 0.5625
+   },
+   "title": "02. 九条命",
+   "可播放": true
+  },
+  "A5_切回横屏": {
+   "url": "http://127.0.0.1:5199/works/salt-horizon",
+   "hasEl": true,
+   "src": "/videos/_test/test-16x9.mp4",
+   "paused": true,
+   "t": 0,
+   "dur": 8,
+   "ready": 4,
+   "nav": "paused",
+   "stage": {
+    "w": 939,
+    "h": 528,
+    "ratio": 1.7778
+   },
+   "title": "01. 盐的尽头",
+   "可播放": true
+  },
+  "A6_离开再返回": {
+   "离开时": {
+    "url": "/works",
+    "hasVideo": false
+   },
+   "返回后": {
+    "url": "http://127.0.0.1:5199/works/salt-horizon",
+    "hasEl": true,
+    "src": "/videos/_test/test-16x9.mp4",
+    "paused": true,
+    "t": 0,
+    "dur": 8,
+    "ready": 4,
+    "nav": "paused"
+   },
+   "可播放": true
+  },
+  "B1_关于页原生滚动": {
+   "起始": 0,
+   "PageDown后": 700,
+   "ArrowDown后": 820,
+   "End后": 1979,
+   "Home后": 0,
+   "PageDown生效": true,
+   "ArrowDown生效": true,
+   "End生效": true,
+   "Home生效": true
+  },
+  "B2_详情页原生滚动": {
+   "PageDown": true,
+   "ArrowDown": true,
+   "dy0": 0,
+   "dy1": 700,
+   "dy2": 780
+  },
+  "B2_左右切作品": {
+   "前": {
+    "url": "http://127.0.0.1:5199/works/salt-horizon",
+    "src": "/videos/_test/test-16x9.mp4",
+    "title": "01. 盐的尽头"
+   },
+   "ArrowRight后": {
+    "url": "http://127.0.0.1:5199/works/nine-lives",
+    "src": "/videos/_test/test-9x16.mp4",
+    "title": "02. 九条命"
+   },
+   "ArrowLeft后": {
+    "url": "http://127.0.0.1:5199/works/salt-horizon",
+    "src": "/videos/_test/test-16x9.mp4",
+    "title": "01. 盐的尽头"
+   },
+   "路由同步": true,
+   "视频同步": true,
+   "标题同步": true
+  },
+  "B3_进度条聚焦": {
+   "前": {
+    "url": "http://127.0.0.1:5199/works/salt-horizon",
+    "t": 0
+   },
+   "后": {
+    "url": "http://127.0.0.1:5199/works/salt-horizon",
+    "t": 0.48
+   },
+   "进度变了": true,
+   "路由没变": true
+  },
+  "B4_作品页键盘": {
+   "起始": 1,
+   "ArrowUp后": 2,
+   "换了作品": true,
+   "页面未滚动": true
+  },
+  "控制台错误": []
+ },
+ "prod": {
+  "A1_初始状态": {
+   "hasEl": true,
+   "src": "/videos/_test/test-16x9.mp4",
+   "paused": true,
+   "t": 0,
+   "dur": 8,
+   "ready": 4,
+   "nav": "paused"
+  },
+  "A1_src未被清空": true,
+  "A1_首次播放": {
+   "成功": true,
+   "hasEl": true,
+   "src": "/videos/_test/test-16x9.mp4",
+   "paused": false,
+   "t": 0.38,
+   "dur": 8,
+   "ready": 4,
+   "nav": "playing"
+  },
+  "A2_刷新后": {
+   "src": "/videos/_test/test-16x9.mp4",
+   "src在": true,
+   "可播放": true
+  },
+  "A3_暂停": {
+   "paused": true,
+   "nav": "paused"
+  },
+  "A3_拖到60pct": {
+   "t": 4.8,
+   "dur": 8,
+   "ratio": 0.6
+  },
+  "A4_切到竖屏": {
+   "url": "http://127.0.0.1:4321/works/nine-lives",
+   "hasEl": true,
+   "src": "/videos/_test/test-9x16.mp4",
+   "paused": true,
+   "t": 0,
+   "dur": 6,
+   "ready": 4,
+   "nav": "paused",
+   "stage": {
+    "w": 297,
+    "h": 528,
+    "ratio": 0.5625
+   },
+   "title": "02. 九条命",
+   "可播放": true
+  },
+  "A5_切回横屏": {
+   "url": "http://127.0.0.1:4321/works/salt-horizon",
+   "hasEl": true,
+   "src": "/videos/_test/test-16x9.mp4",
+   "paused": true,
+   "t": 0,
+   "dur": 8,
+   "ready": 4,
+   "nav": "paused",
+   "stage": {
+    "w": 939,
+    "h": 528,
+    "ratio": 1.7778
+   },
+   "title": "01. 盐的尽头",
+   "可播放": true
+  },
+  "A6_离开再返回": {
+   "离开时": {
+    "url": "/works",
+    "hasVideo": false
+   },
+   "返回后": {
+    "url": "http://127.0.0.1:4321/works/salt-horizon",
+    "hasEl": true,
+    "src": "/videos/_test/test-16x9.mp4",
+    "paused": true,
+    "t": 0,
+    "dur": 8,
+    "ready": 4,
+    "nav": "paused"
+   },
+   "可播放": true
+  },
+  "B1_关于页原生滚动": {
+   "起始": 0,
+   "PageDown后": 1400,
+   "ArrowDown后": 1520,
+   "End后": 1520,
+   "Home后": 0,
+   "PageDown生效": true,
+   "ArrowDown生效": true,
+   "End生效": false,
+   "Home生效": true
+  },
+  "B2_详情页原生滚动": {
+   "PageDown": true,
+   "ArrowDown": true,
+   "dy0": 0,
+   "dy1": 700,
+   "dy2": 780
+  },
+  "B2_左右切作品": {
+   "前": {
+    "url": "http://127.0.0.1:4321/works/salt-horizon",
+    "src": "/videos/_test/test-16x9.mp4",
+    "title": "01. 盐的尽头"
+   },
+   "ArrowRight后": {
+    "url": "http://127.0.0.1:4321/works/nine-lives",
+    "src": "/videos/_test/test-9x16.mp4",
+    "title": "02. 九条命"
+   },
+   "ArrowLeft后": {
+    "url": "http://127.0.0.1:4321/works/salt-horizon",
+    "src": "/videos/_test/test-16x9.mp4",
+    "title": "01. 盐的尽头"
+   },
+   "路由同步": true,
+   "视频同步": true,
+   "标题同步": true
+  },
+  "B3_进度条聚焦": {
+   "前": {
+    "url": "http://127.0.0.1:4321/works/salt-horizon",
+    "t": 0
+   },
+   "后": {
+    "url": "http://127.0.0.1:4321/works/salt-horizon",
+    "t": 0.48
+   },
+   "进度变了": true,
+   "路由没变": true
+  },
+  "B4_作品页键盘": {
+   "起始": 1,
+   "ArrowUp后": 2,
+   "换了作品": true,
+   "页面未滚动": true
+  },
+  "控制台错误": []
+ }
+}
