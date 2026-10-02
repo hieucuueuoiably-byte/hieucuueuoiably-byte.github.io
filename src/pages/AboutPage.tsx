@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { SITE } from '../data/site'
 import { CloudShape, ScrollMouse } from '../components/icons'
 import { V } from '../config/motion'
-import { WORKS } from '../data/works'
+import { PUBLISHED_WORKS as WORKS } from '../data/works'
 
 gsap.registerPlugin(ScrollTrigger)
 

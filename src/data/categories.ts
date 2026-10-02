@@ -1,4 +1,4 @@
-import { WORKS, type Work } from './works'
+import { PUBLISHED_WORKS as WORKS, WORKS as LIBRARY, type Work } from './works'
 
 export type WorkCategoryId = 'all' | 'ai-shorts' | 'animation' | 'product-previews'
 
@@ -34,7 +34,7 @@ export const categoryForWork = (work?: Work): WorkCategoryId =>
 
 /** Reuse real film stills as the three collection covers; no new generated artwork. */
 export const CATEGORY_NODES: Work[] = collections.map((category, index) => {
-  const cover = WORKS.find((work) => work.slug === category.coverSlug)!
+  const cover = WORKS.find(work => work.slug === category.coverSlug) ?? WORKS.find(work => work.category === category.label) ?? LIBRARY.find(work => work.slug === category.coverSlug) ?? LIBRARY[0]
   const count = getCategory(category.id).count
   return {
     ...cover,

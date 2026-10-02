@@ -10,6 +10,8 @@
     "build:pages": "npm run build && node scripts/build-github-pages.mjs",
     "verify:playback": "node scripts/verify-video-buffering.mjs",
     "verify:collection": "node scripts/verify-selected-collection.mjs",
+    "admin": "node scripts/admin/start.mjs",
+    "verify:admin": "node --test scripts/admin/admin.test.mjs",
     "preview": "vite preview",
     "typecheck": "tsc -b --noEmit false --emitDeclarationOnly false || tsc -p tsconfig.app.json --noEmit",
     "gen:placeholders": "node scripts/gen-placeholders.mjs"

@@ -34,6 +34,14 @@ jobs:
         run: npm run verify:playback
       - name: Verify selected videos and material references
         run: npm run verify:collection
+      - name: Ensure media tools for admin checks
+        run: |
+          if ! command -v ffmpeg >/dev/null; then
+            sudo apt-get update
+            sudo apt-get install -y ffmpeg
+          fi
+      - name: Verify personal material admin
+        run: npm run verify:admin
       - name: Configure Pages
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         id: pages

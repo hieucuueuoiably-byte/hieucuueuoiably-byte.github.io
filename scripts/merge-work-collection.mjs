@@ -18,7 +18,7 @@ export function mergeWorkCollection(existing, imported) {
     const update = updates.get(work.slug)
     if (!update) return work
     updates.delete(work.slug)
-    return { ...update, id: work.id, no: work.no }
+    return { ...update, id: work.id, no: work.no, ...(work.visibility ? { visibility: work.visibility } : {}) }
   })
   for (const work of updates.values()) merged.push({ ...work, no: String(nextNumber++).padStart(2, '0') })
   for (const key of ['id', 'slug', 'video', 'no']) {

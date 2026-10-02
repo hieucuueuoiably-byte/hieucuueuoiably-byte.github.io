@@ -126,7 +126,7 @@ def main():
     works_file=PROJECT/'src/data/works.ts'
     old_text=works_file.read_text('utf-8')
     prefix=old_text[:old_text.index('export const WORKS: Work[] =')]
-    suffix=old_text[old_text.index('export const findWorkBySlug'):]
+    suffix=old_text[old_text.index('export const PUBLISHED_WORKS' if 'export const PUBLISHED_WORKS' in old_text else 'export const findWorkBySlug'):]
     prefix=re.sub(r'^/\*\*[\s\S]*?\*/','/** 保留已有作品，追加或更新本次选片；参考素材与成片截图分别标注。 */',prefix,count=1)
     if 'export interface WorkMaterial' not in prefix:
         prefix=prefix.replace('export interface Work {',"export interface WorkMaterial {\n  src: string\n  thumbnail: string\n  title: string\n  kind: 'reference' | 'screenshot'\n}\n\nexport interface Work {")

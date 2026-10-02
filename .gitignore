@@ -47,3 +47,6 @@ portfolio/
 # 环境文件只在本地使用
 .env.*
 !.env.example
+
+# Personal administration sessions, original uploads and recovery history
+.admin-data/

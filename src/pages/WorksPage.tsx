@@ -80,6 +80,7 @@ export function WorksPage({ works, category, onCategory, webgl, onEnter, onJump 
       <p aria-live="polite" className="sr-only">
         {announce}
       </p>
+      {!isRoot && !works.length ? <div className="works__empty"><h1>暂时没有上架作品</h1><button type="button" onClick={() => onCategory('all')}>返回作品分类</button></div> : null}
 
       {webgl || !isRoot ? (
         <>

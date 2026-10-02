@@ -2535,6 +2535,9 @@ body[data-route='home'] .app-header__title-wrapper { opacity: 1; }
 .control-bar { transition: opacity .22s ease; }
 .is-transitioning .control-bar { opacity: 0; pointer-events: none; }
 .is-transitioning .page { pointer-events: none; }
+.works__empty { position: absolute; inset: 35% 24px auto; text-align: center; color: var(--ink); pointer-events: auto; }
+.works__empty h1 { font-size: 24px; }
+.works__empty button { margin-top: 20px; padding: 12px 20px; border: 1px solid currentColor; border-radius: 24px; }
 @media (max-width: 700px) {
   .detail__hero { padding: var(--site-header-content-top) 0 150px; height: 100svh; }
   .detail__stage { width: min(92vw, calc((100svh - var(--site-header-content-top) - 188px) * var(--ar, 1.7778))); max-height: none; }

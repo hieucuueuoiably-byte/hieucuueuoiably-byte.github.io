@@ -1,7 +1,8 @@
-import { readFile, mkdir, copyFile, writeFile } from 'node:fs/promises'
+import { readFile, mkdir, copyFile, writeFile, unlink } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import ts from 'typescript'
+import { readWorkCollection } from './merge-work-collection.mjs'
 
 // GitHub Pages serves directory index files rather than an SPA rewrite rule.
 // Emit an entry for each real route while keeping the existing BrowserRouter.
@@ -59,9 +60,21 @@ async function routeValues(relativeFile, variableName, propertyName) {
   return values
 }
 
-const works = await routeValues('src/data/works.ts', 'WORKS', 'slug')
+const library = readWorkCollection(await readFile(join(project, 'src/data/works.ts'), 'utf8'))
+const published = library.filter(work => work.visibility !== 'offline')
+const works = published.map(work => work.slug)
+if (new Set(works).size !== works.length || works.some(slug => !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug))) throw new Error('Invalid published slugs.')
 const categories = await routeValues('src/data/categories.ts', 'collections', 'id')
 // Keep public assets in the deployment, including existing video URLs.
+// Only an explicit offline state excludes a video from the generated site.
+const publishedVideos = new Set(published.map(work => work.video))
+for (const work of library.filter(work => work.visibility === 'offline')) {
+  if (publishedVideos.has(work.video)) continue
+  if (!/^\/videos\/[a-z0-9-]+\.mp4$/.test(work.video)) throw new Error('Unsafe offline video path.')
+  for (const video of [work.video, work.video.replace('/videos/', '/videos/mobile/')]) {
+    if (!publishedVideos.has(video)) await unlink(join(output, video.slice(1))).catch(error => { if (error.code !== 'ENOENT') throw error })
+  }
+}
 const routes = [
   '/works',
   '/about',

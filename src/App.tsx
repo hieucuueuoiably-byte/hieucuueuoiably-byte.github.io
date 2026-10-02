@@ -3,7 +3,7 @@ import { Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-
 import { flushSync } from 'react-dom'
 import gsap from 'gsap'
 
-import { WORKS, findWorkIndexBySlug, type Work } from './data/works'
+import { PUBLISHED_WORKS as WORKS, findWorkIndexBySlug, type Work } from './data/works'
 import { SCENE_WORKS, WORK_CATEGORIES, categoryForPath, categoryForWork, getCategory, getWorksForCategory, type WorkCategoryId } from './data/categories'
 import { navigator } from './state/navController'
 import { video } from './state/videoController'
@@ -548,7 +548,7 @@ export function App() {
       <TransitionLayer wipeRef={wipeRef} shapeRef={wipeShapeRef} />
 
       {/* 底部胶囊控制条：挂在 App 上，跨路由是同一个元素，进入详情时"衔接为播放控件" */}
-      {mode === 'works' || mode === 'collection' || mode === 'player' ? (
+        {(mode === 'works' || mode === 'collection' || mode === 'player') && activeWorks.length > 0 ? (
         <ControlBar
           mode={mode === 'player' ? 'player' : mode === 'collection' ? 'inline' : 'categories'}
           index={nav.selectedIndex}

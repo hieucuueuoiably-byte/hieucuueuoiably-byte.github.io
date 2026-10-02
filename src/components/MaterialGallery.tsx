@@ -9,7 +9,7 @@ interface MaterialGalleryProps {
 function ImageGrid({ images }: { images: WorkMaterial[] }) {
   return (
     <div className="detail-materials__grid">
-      {images.map((image) => (
+      {images.filter(image => !image.hidden).map((image) => (
         <a className="detail-materials__image" key={image.src} href={image.src} target="_blank" rel="noopener noreferrer">
           <img src={image.thumbnail} alt={image.title} loading="lazy" decoding="async" width={480} height={360} />
           <span>{image.title}</span>
@@ -21,6 +21,8 @@ function ImageGrid({ images }: { images: WorkMaterial[] }) {
 
 /** Keep project references distinct from frames extracted from the finished film. */
 export function MaterialGallery({ references, screenshots }: MaterialGalleryProps) {
+  references = references.filter(image => !image.hidden)
+  screenshots = screenshots.filter(image => !image.hidden)
   if (!references.length && !screenshots.length) return null
   return (
     <section className="detail-materials" aria-label="作品素材与画面">

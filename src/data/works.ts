@@ -13,6 +13,7 @@ export interface WorkMaterial {
   thumbnail: string
   title: string
   kind: 'reference' | 'screenshot'
+  hidden?: boolean
 }
 
 export interface Work {
@@ -56,6 +57,9 @@ export interface Work {
   materials?: WorkMaterial[]
   screenshots?: WorkMaterial[]
   isPlaceholder: boolean
+  visibility?: 'published' | 'offline'
+  sourceSHA256?: string
+  updatedAt?: string
 }
 
 export const WORKS: Work[] = [
@@ -3658,10 +3662,12 @@ export const WORKS: Work[] = [
   }
 ]
 
-export const findWorkBySlug = (slug: string | undefined) => WORKS.find((w) => w.slug === slug)
+export const PUBLISHED_WORKS = WORKS.filter(work => work.visibility !== 'offline')
+
+export const findWorkBySlug = (slug: string | undefined) => PUBLISHED_WORKS.find((w) => w.slug === slug)
 
 export const findWorkIndexBySlug = (slug: string | undefined) =>
-  WORKS.findIndex((w) => w.slug === slug)
+  PUBLISHED_WORKS.findIndex((w) => w.slug === slug)
 
 /** 十六进制 → [0..1] 的 rgb，喂给着色器 */
 export function hexToRgb01(hex: string): [number, number, number] {

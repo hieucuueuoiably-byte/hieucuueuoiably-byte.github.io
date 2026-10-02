@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { WORKS, aspectRatioNumber, findWorkIndexBySlug } from '../data/works'
+import { PUBLISHED_WORKS as WORKS, aspectRatioNumber, findWorkIndexBySlug } from '../data/works'
 import { getCategory, type WorkCategoryId } from '../data/categories'
 import { navigator } from '../state/navController'
 import { useNav } from '../state/useNav'
