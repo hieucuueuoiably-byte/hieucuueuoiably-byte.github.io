@@ -115,7 +115,9 @@ export const WORKS: Work[] = [
       "#EB8DB7",
       "#7E7EFF"
     ],
-    isPlaceholder: false
+    isPlaceholder: false,
+    visibility: "offline",
+    updatedAt: "2026-10-02T13:28:14.897Z"
   },
   {
     id: "work-03",
@@ -169,7 +171,9 @@ export const WORKS: Work[] = [
       "#FFBC03",
       "#ED1E24"
     ],
-    isPlaceholder: false
+    isPlaceholder: false,
+    visibility: "offline",
+    updatedAt: "2026-10-02T13:27:40.376Z"
   },
   {
     id: "work-05",
@@ -1250,7 +1254,9 @@ export const WORKS: Work[] = [
         title: "成片画面 · 104.9 秒",
         kind: "screenshot"
       }
-    ]
+    ],
+    visibility: "offline",
+    updatedAt: "2026-10-02T13:28:37.909Z"
   },
   {
     id: "work-v0069",
@@ -1540,7 +1546,9 @@ export const WORKS: Work[] = [
         title: "成片画面 · 7.2 秒",
         kind: "screenshot"
       }
-    ]
+    ],
+    visibility: "offline",
+    updatedAt: "2026-10-02T13:28:24.915Z"
   },
   {
     id: "work-v0189",
@@ -1582,7 +1590,9 @@ export const WORKS: Work[] = [
         title: "成片画面 · 21.7 秒",
         kind: "screenshot"
       }
-    ]
+    ],
+    visibility: "offline",
+    updatedAt: "2026-10-02T13:28:29.567Z"
   },
   {
     id: "work-v0224",
@@ -1625,7 +1635,9 @@ export const WORKS: Work[] = [
         title: "成片画面 · 7.2 秒",
         kind: "screenshot"
       }
-    ]
+    ],
+    visibility: "offline",
+    updatedAt: "2026-10-02T13:28:30.785Z"
   },
   {
     id: "work-v0226",
